@@ -11,6 +11,9 @@ const Header = styled.div`
   height: 6vh;
   border-bottom: 2px solid black;
 `
+const Price = styled.p`
+margin:auto
+`
 const CompanyIcon = styled.img`
   width: 9vw;
   height: 5vh;
@@ -36,23 +39,52 @@ const FirstViewLeft = styled.div`
   margin-left: 5vw;
 `
 
-const TitleText = styled.div`
-  font-size: 30px;
-  margin-bottom: 2vh;
+const TitleText = styled.p`
+font-family: Charter;
+font-style: normal;
+font-weight: bold;
+font-size: 32px;
+line-height: 120%;
+/* or 38px */
+
+
+/* Black */
+
+color: #242728;
 `
-const TitleSubText1 = styled.div`
-  font-size: 20px;
-  margin-bottom: 1.5vh;
+const TitleSubText1 = styled.p`
+font-family: Charter;
+font-style: normal;
+font-weight: bold;
+font-size: 24px;
+line-height: 120%;
+/* identical to box height, or 29px */
+
+/* Black */
+
+color: #242728;
 `
-const TitleSubText2 = styled.div`
-  font-size: 12px;
-  color: #0f6b5c;
+const TitleSubText2 = styled.a`
+font-family: Fira Sans;
+font-style: normal;
+font-weight: 500;
+font-size: 16px;
+line-height: 20px;
+/* identical to box height, or 125% */
+
+letter-spacing: 0.5px;
+text-transform: uppercase;
+
+/* Green */
+
+color: #0F6B5C;
 `
 const OptionDiv = styled.div`
   border: 1px solid #bcc1c3;
-  width: 35vw;
-  height: 11vh;
-  display: flex;
+  height:131px;
+  width:auto;
+  display: block;
+  overflow:hidden;
   align-items: center;
   margin-top: 2vh;
   background: ${(p) => (p.active ? '#0f6b5c' : '')};
@@ -63,10 +95,13 @@ const OptionDiv = styled.div`
   }
 `
 const OptionDivLeft = styled.div`
-  margin-left: 2vw;
-  margin-right: 11.5vw;
+padding:15px;
+display:inline-block;
+width:50%;
+height:131px;
+
 `
-const OptionDivLeftTitle = styled.div`
+const OptionDivLeftTitle = styled.p`
   //styleName: H6;
   font-family: Charter;
   font-size: 18px;
@@ -76,7 +111,7 @@ const OptionDivLeftTitle = styled.div`
   text-align: left;
 `
 
-const OptionDivLeftBody = styled.div`
+const OptionDivLeftBody = styled.p`
   font-family: Fira Sans;
   font-size: 18px;
   line-height: 27px;
@@ -84,8 +119,10 @@ const OptionDivLeftBody = styled.div`
   text-align: left;
 `
 const OptionDivRight = styled.div`
-  margin-right: 2vw;
-  min-width: 6vw;
+display:inline-block;
+width:20%;
+padding:5px;
+height:auto;
 `
 
 const OptionDivTitles = [
@@ -136,6 +173,7 @@ export const App = () => {
           <TitleText>Make your space move-in ready</TitleText>
           <TitleSubText1>Furniture + Design</TitleSubText1>
           <TitleSubText2>WHICH FURNITURE PACKAGE FITS YOU BEST?</TitleSubText2>
+          <div>
           {OptionDivTitles.map((item, idx) => {
             return (
               <OptionDiv
@@ -149,12 +187,15 @@ export const App = () => {
                   <OptionDivLeftBody>{item.bodyText}</OptionDivLeftBody>
                 </OptionDivLeft>
                 <OptionDivRight>
+                  <Price>
                   {' '}
                   {idx !== 0 ? '+' : ''} SEK {item.price}
+                  </Price>
                 </OptionDivRight>
               </OptionDiv>
             )
           })}
+          </div>
         </FirstViewLeft>
         <FirstViewRight></FirstViewRight>
       </FirstView>
