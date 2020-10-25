@@ -1,6 +1,10 @@
 import React from 'react'
 import styled from 'styled-components'
 import Xnomad from './icons/Xnomad.svg'
+import Plus from './icons/Plus.svg'
+import Minus from './icons/Minus.svg'
+import { OptionDivTitles } from './consts.js'
+import { Login } from './Login.jsx'
 
 const Wrapper = styled.div``
 
@@ -14,6 +18,7 @@ const Header = styled.div`
 const CompanyIcon = styled.img`
   width: 9vw;
   height: 5vh;
+  margin-left: 5vw;
 `
 
 const HeaderTextBoxes = styled.p`
@@ -55,10 +60,13 @@ const OptionDiv = styled.div`
   display: flex;
   align-items: center;
   margin-top: 2vh;
-  background: ${(p) => (p.active ? '#0f6b5c' : '')};
-  color: ${(p) => (p.active ? 'white' : 'black')};
+  ${(p) => (p.active ? 'background: #0f6b5c;' : '')}
+  ${(p) => (p.active ? 'color: white;' : 'black;')}
+
+  ${(p) => (p.superActive ? 'background: #0f6b5c;' : '')}
+  ${(p) => (p.superActive ? 'color: white;' : 'black;')}
   &:hover {
-    cursor: url('cursor: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/9632/happy.png"), auto;'),
+    cursor: url('https://www.xnomad.co/static/media/LOGO_Name.bf44d7c0.svg'),
       auto;
   }
 `
@@ -88,76 +96,145 @@ const OptionDivRight = styled.div`
   min-width: 6vw;
 `
 
-const OptionDivTitles = [
-  {
-    titleText: 'I bring my own furniture',
-    bodyText:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris euismod duis nec nunc.',
-    price: 0,
-  },
-  {
-    titleText: '(S) Furniture package (0-80 m2)',
-    bodyText:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris euismod duis nec nunc.',
-    price: '27 000',
-  },
-  {
-    titleText: '(M) Furniture package  (80-200 m2)',
-    bodyText:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris euismod duis nec nunc.',
-    price: '40 000',
-  },
-  {
-    titleText: '(L) Furniture package (+200 m2)',
-    bodyText:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris euismod duis nec nunc.',
-    price: '54 000',
-  },
-]
-
 const FirstViewRight = styled.div``
+
+const StaffinDiv = styled.div`
+  margin-left: 5vw;
+  width: 35vw;
+`
+
+const StaffingTitle1 = styled.div`
+  font-size: 24px;
+  margin-bottom: 1.5vh;
+`
+
+const StaffingTitle2 = styled.div`
+  font-size: 16px;
+  color: #0f6b5c;
+  margin-bottom: 1.5vh;
+`
+const StaffingTitle3 = styled.div`
+  font-size: 18px;
+  margin-bottom: 3vh;
+  font-weight: bold;
+`
+const StaffingAnalyticsDiv = styled.div`
+  display: flex;
+  align-items: center;
+  height: 81px;
+`
+const StaffingAnalyticsDivCounter = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color: #f0eeea;
+  width: 170px;
+  height: 10vh;
+`
+const StaffingAnalyticsDivCounterIcon = styled.img`
+  width: 2.5vw;
+  height: 7vh;
+  &:hover {
+    cursor: pointer;
+  }
+`
+const StaffingAnalyticsDivDisplayer = styled.div`
+  width: 450px;
+  height: 100%;
+  margin-left: 5vw;
+  background-color: #f0eeea;
+  margin-left: 2vw;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+`
 
 export const App = () => {
   const [hoveredId, setHoveredId] = React.useState(null)
+  const [clickedId, setClickedId] = React.useState(null)
+  const [disableHover, setDisableHover] = React.useState(false)
+
+  const [staffingCounter, setStaffingCounter] = React.useState(0)
+  let StaffingAnalyticsDivDisplayerPrice = `SEK 350/h ${'   '}   x ${'   '}   14 days ${'   '}  = ${'   '}  SEK ${
+    39200 + staffingCounter * 4000
+  }`
   return (
-    <Wrapper>
-      <Header>
-        <CompanyIcon src={Xnomad} />
-        {headerTexts.map((item, idx) => {
-          return (
-            <HeaderTextBoxes id={idx}>
-              {idx + 1}. {item}
-            </HeaderTextBoxes>
-          )
-        })}
-      </Header>
-      <FirstView>
-        <FirstViewLeft>
-          <TitleText>Make your space move-in ready</TitleText>
-          <TitleSubText1>Furniture + Design</TitleSubText1>
-          <TitleSubText2>WHICH FURNITURE PACKAGE FITS YOU BEST?</TitleSubText2>
-          {OptionDivTitles.map((item, idx) => {
+    <>
+      <Login />
+      <Wrapper>
+        <Header>
+          <CompanyIcon src={Xnomad} />
+          {headerTexts.map((item, idx) => {
             return (
-              <OptionDiv
-                id={idx + 10}
-                onMouseEnter={() => setHoveredId(idx)}
-                active={hoveredId === idx}
-                onMouseLeave={() => setHoveredId(null)}
-              >
-                <OptionDivLeft>
-                  <OptionDivLeftTitle>{item.titleText}</OptionDivLeftTitle>
-                  <OptionDivLeftBody>{item.bodyText}</OptionDivLeftBody>
-                </OptionDivLeft>
-                <OptionDivRight>
-                  {' '}
-                  {idx !== 0 ? '+' : ''} SEK {item.price}
-                </OptionDivRight>
-              </OptionDiv>
+              <HeaderTextBoxes id={idx}>
+                {idx + 1}. {item}
+              </HeaderTextBoxes>
             )
           })}
-        </FirstViewLeft>
-        <FirstViewRight></FirstViewRight>
-      </FirstView>
-    </Wrapper>
+        </Header>
+        <FirstView>
+          <FirstViewLeft>
+            <TitleText>Make your space move-in ready</TitleText>
+            <TitleSubText1>Furniture + Design</TitleSubText1>
+            <TitleSubText2>
+              WHICH FURNITURE PACKAGE FITS YOU BEST?
+            </TitleSubText2>
+            {OptionDivTitles.map((item, idx) => {
+              return (
+                <OptionDiv
+                  id={idx + 10}
+                  onMouseEnter={() => setHoveredId(idx)}
+                  active={hoveredId === idx && !disableHover}
+                  onMouseLeave={() => setHoveredId(null)}
+                  // On-click I want to (1) set that element to its color, and (2) make sure that hoover is disabled
+                  onClick={() => setClickedId(idx) && setDisableHover(true)}
+                  superActive={clickedId === idx}
+                  // noHover={disableHover}
+                >
+                  <OptionDivLeft>
+                    <OptionDivLeftTitle>{item.titleText}</OptionDivLeftTitle>
+                    <OptionDivLeftBody>{item.bodyText}</OptionDivLeftBody>
+                  </OptionDivLeft>
+                  <OptionDivRight>
+                    {' '}
+                    {idx !== 0 ? '+' : ''} SEK {item.price}
+                  </OptionDivRight>
+                </OptionDiv>
+              )
+            })}
+          </FirstViewLeft>
+          <FirstViewRight></FirstViewRight>
+        </FirstView>
+        <StaffinDiv>
+          <StaffingTitle1>Staffing</StaffingTitle1>
+          <StaffingTitle2>HOW MANY STAFF DO YOU NEED?</StaffingTitle2>
+          <StaffingTitle3>Number of staff</StaffingTitle3>
+          <StaffingAnalyticsDiv>
+            <StaffingAnalyticsDivCounter>
+              <StaffingAnalyticsDivCounterIcon
+                onClick={(e) => {
+                  setStaffingCounter((...p) => {
+                    if (parseInt(p) === 0) {
+                      return 0
+                    } else return parseInt(p) - 1
+                  })
+                }}
+                src={Minus}
+              />
+              {staffingCounter}
+              <StaffingAnalyticsDivCounterIcon
+                onClick={(e) => {
+                  setStaffingCounter((...p) => parseInt(p) + 1)
+                }}
+                src={Plus}
+              />
+            </StaffingAnalyticsDivCounter>
+            <StaffingAnalyticsDivDisplayer>
+              {StaffingAnalyticsDivDisplayerPrice}
+            </StaffingAnalyticsDivDisplayer>
+          </StaffingAnalyticsDiv>
+        </StaffinDiv>
+      </Wrapper>
+    </>
   )
 }
