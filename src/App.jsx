@@ -31,7 +31,9 @@ const CompanyIcon = styled.img`
   margin-left: 5vw;
   &:hover {
     cursor: pointer;
+    border-bottom: 6px solid black;
   }
+  ${(p) => (p.active ? 'border-bottom: solid black;' : '')}
 `
 
 const HeaderTextBoxes = styled.p`
@@ -43,6 +45,7 @@ const HeaderTextBoxes = styled.p`
   color: ${(p) => (p.id === 0 ? '#0f6b5c' : '')};
   &:hover {
     cursor: pointer;
+    border-bottom: 3px solid #0f6b5c;
   }
 `
 
@@ -105,11 +108,11 @@ const OptionDiv = styled.div`
 
   ${(p) => (p.clickActive ? 'background: #0f6b5c;' : '')}
   ${(p) => (p.clickActive ? 'color: white;' : 'black;')}
-  &:hover {
+    &:hover {
     cursor: ${svgToBase64Url(
-        '<svg id="Lager_1" data-name="Lager 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 857.1763 133.1918"><defs><style>.cls-1,.cls-2,.cls-3,.cls-4,.cls-5{stroke:#000;}.cls-1{stroke-width:16.1175px;}.cls-2{fill:#252831;stroke-miterlimit:10;stroke-width:8.3734px;}.cls-3{fill:#4d4d4d;stroke-width:9.4719px;}.cls-4{stroke-width:9.472px;}.cls-5{stroke-width:9.1663px;}</style></defs><line class="cls-1" x1="27.0526" y1="31.7677" x2="96.2038" y2="100.9188"/><line class="cls-1" x1="96.2038" y1="31.7677" x2="27.0526" y2="100.9188"/><path d="M325.3969-.2386C313.2153,7.12,287.9279,27.59,287.836,66.1636c-.0884,37.1391,25.099,58.731,36.9853,66.7615-25.0908-5.6-52.9727-33.9818-52.8945-66.8117C272.0088,31.6434,302.095,4.0149,325.3969-.2386Z"/><path d="M372.3123,120.7652c12.9174-8.4247,22.455-28.2689,22.521-55.9961.0637-26.7434-8.3866-46.8148-22.2542-56.09,20.0768,5.7494,40.1176,26.6421,40.0474,56.1383C412.5577,93.7244,392.4172,114.7172,372.3123,120.7652Z"/><line class="cls-2" x1="656.8527" y1="10.7983" x2="603.1847" y2="131.376"/><polygon points="647.778 20.784 656.168 0.22 714.837 132.466 691.929 120.79 647.778 20.784"/><polygon points="747.811 13.692 762.841 -0.22 762.544 132.907 747.576 118.918 747.811 13.692"/><path d="M816.86,123.33c12.9177-8.526,22.4559-28.6083,22.5227-56.6679C839.4475,39.598,830.9979,19.2864,817.13,9.9c20.0767,5.8178,40.117,26.96,40.0459,56.81C857.1067,95.9639,836.9656,117.2088,816.86,123.33Z"/><path id="Path_85" data-name="Path 85" class="cls-3" d="M234.8,0V119"/><path id="Path_84" data-name="Path 84" class="cls-4" d="M124.8614,1.4447V132.5741"/><path id="Path_1" data-name="Path 1" d="M116.2171.04h19.1077L239.3,111.1068v21.58Z"/><polyline points="439.197 -0.505 498.002 95.563 494.326 112.593 439.131 25.964"/><polygon points="567.3 1.192 567.3 131.983 554.3 122.149 554.3 27.351 553.724 1.192 567.3 1.192"/><path id="Path_84-2" data-name="Path 84" class="cls-5" d="M443.7347,16.7809V133.1918"/></svg>',
-        '70',
-        '70'
+        '<svg xmlns="http://www.w3.org/2000/svg" id="Lager_1" data-name="Lager 1" width="40" height="40" viewBox="0 0 161.398 161.398"><defs><style>.cls-1,.cls-2,.cls-3,.cls-4{fill:none;stroke:#fff;}.cls-1,.cls-3{stroke-width:5px;}.cls-2{stroke-width:13px;}.cls-3,.cls-4{stroke-miterlimit:10;}.cls-4{stroke-width:4px;}.cls-5{fill:#fff;}</style></defs><title>nomad</title><g id="Symbol_1_3" data-name="Symbol 1 3"><circle id="Ellipse_3" data-name="Ellipse 3" class="cls-1" cx="80.699" cy="80.699" r="78.199"/><g id="Group_4" data-name="Group 4"><path id="Path_4" data-name="Path 4" class="cls-2" d="M53.403,87.5989l50.075,53.551" transform="translate(-19 -19.5)"/><line id="Line_2" data-name="Line 2" class="cls-3" x1="58.959" y1="33.0099" x2="58.959" y2="128.8649"/><line id="Line_3" data-name="Line 3" class="cls-4" x1="124.3062" y1="32.3879" x2="124.3062" y2="121"/><path id="Path_3" data-name="Path 3" class="cls-2" d="M104.478,86.5989l-18.706,20.005L54.403,140.15" transform="translate(-19 -19.5)"/><path id="Path_1" data-name="Path 1" class="cls-5" d="M75.1689,51.8879H86.01l58.987,79.552v15.456Z" transform="translate(-19 -19.5)"/></g></g></svg>',
+        '50',
+        '50'
       )},
       auto;
   }
@@ -241,7 +244,7 @@ export const App = () => {
                     setDisableHover(true)
                   }}
                   clickActive={clickedId === idx}
-                  // noHover={disableHover}
+                  // noHover={disableHover}t
                 >
                   <OptionDivLeft>
                     <OptionDivLeftTitle>{item.titleText}</OptionDivLeftTitle>
