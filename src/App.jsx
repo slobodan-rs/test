@@ -5,7 +5,7 @@ import Plus from './icons/Plus.svg'
 import Minus from './icons/Minus.svg'
 import { OptionDivTitles } from './consts.js'
 import { Login } from './Login.jsx'
-
+import  Home from './Home.jsx'
 function svgToBase64Url(svgString, width, height) {
   const base64SVG = btoa(
     `<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="${width}px" height="${height}px">${svgString}</svg>`
@@ -52,6 +52,7 @@ const FirstView = styled.div`
   display: flex;
   height: 100vw;
   margin-top: 7vh;
+  width: 50vw;
 `
 const FirstViewLeft = styled.div`
   margin-left: 5vw;
@@ -139,7 +140,7 @@ const OptionDivLeftTitle = styled.p`
 
 const OptionDivLeftBody = styled.p`
   font-family: Fira Sans;
-  font-size: 18px;
+  font-size: 14px;
   line-height: 27px;
   letter-spacing: 0px;
   text-align: left;
@@ -150,6 +151,7 @@ const FirstViewRight = styled.div``
 const StaffinDiv = styled.div`
   margin-left: 5vw;
   width: 35vw;
+  margin-top: -500px;
 `
 
 const StaffingTitle1 = styled.div`
@@ -196,6 +198,86 @@ const StaffingAnalyticsDivDisplayer = styled.div`
   display: flex;
   justify-content: space-around;
   align-items: center;
+`
+const PointofsaleDiv = styled.div`
+margin-left: 5vw;
+width: 35vw;
+`
+
+const PointofsaleTitle = styled.div`
+font-size: 24px;
+margin-bottom: 1.5vh;
+`
+const PointofsaleTitle1 = styled.div`
+font-size: 16px;
+color: #0f6b5c;
+margin-bottom: 1.5vh;
+`
+const POSDiv = styled.div`
+  display: flex;
+  align-items: center;
+  height: 81px;
+  margin-top: 10px;
+`
+
+const POSDivDisplayer = styled.div`
+  width: 300px;
+  height: 100px;
+  background-color: #0f6b5c;
+  margin-left: 5vw;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+`
+const POSDivDisplayer1 = styled.div`
+  width: 300px;
+  height: 100px;
+  background-color: white;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border: 1px solid black;
+`
+const POSText = styled.div`
+text-align: center;
+color: white;
+`
+const DataDiv = styled.div`
+margin-left: 5vw;
+width: 35vw;
+margin-top: -550px;
+`
+const DataAnalyticsDisplayer = styled.div`
+  width: 600px;
+  height: 100px;
+  background-color: #0f6b5c;
+  margin-left: 5vw;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+`
+const POSText1 = styled.div`
+text-align: center;
+color: black;
+`
+const DataAnalyticsTitle1 = styled.div`
+font-size: 24px;
+margin-bottom: 1.5vh;
+`
+const DataAnalyticsTitle2 = styled.div`
+font-size: 16px;
+color: #0f6b5c;
+margin-bottom: 1.5vh;
+`
+
+const DataAnalyticsDiv = styled.div`
+display: flex;
+align-items: center;
+height: 81px;
+`
+const DataAnalyticsText = styled.div`
+margin-left: -150px;
+color: white;
 `
 
 export const App = () => {
@@ -286,6 +368,64 @@ export const App = () => {
             </StaffingAnalyticsDivDisplayer>
           </StaffingAnalyticsDiv>
         </StaffinDiv>
+        <PointofsaleDiv>
+        <PointofsaleTitle>Points-of-sale</PointofsaleTitle>
+        <PointofsaleTitle1>DO I NEED A POINT OF SALE?</PointofsaleTitle1>
+        </PointofsaleDiv>
+        <POSDiv>
+         <POSDivDisplayer>
+          <POSText>I have my own PoS System <br /> SEK 0</POSText>
+         </POSDivDisplayer>
+         <POSDivDisplayer1>
+          <POSText1>I have my own PoS System <br /> SEK 0</POSText1>
+         </POSDivDisplayer1>
+        </POSDiv>
+
+        <FirstView>
+          <FirstViewLeft>
+            <TitleSubText1>Influencer Marketing</TitleSubText1>
+            <TitleSubText2>
+              WHICH Marketing PACKAGE FITS YOU BEST?
+            </TitleSubText2>
+            {OptionDivTitles.map((item, idx) => {
+              return (
+                <OptionDiv
+                  id={idx + 10}
+                  onMouseEnter={() => setHoveredId(idx)}
+                  hoverActive={hoveredId === idx && !disableHover}
+                  onMouseLeave={() => setHoveredId(null)}
+                  // On-click I want to (1) set that element to its color, and (2) make sure that hoover is disabled
+                  onClick={() => {
+                    setClickedId(idx)
+                    setDisableHover(true)
+                  }}
+                  clickActive={clickedId === idx}
+                  // noHover={disableHover}
+                >
+                  <OptionDivLeft>
+                    <OptionDivLeftTitle>Title Here</OptionDivLeftTitle>
+                    <OptionDivLeftBody>{item.bodyText}</OptionDivLeftBody>
+                  </OptionDivLeft>
+                  <OptionDivRight>
+                    {' '}
+                    {idx !== 0 ? '+' : ''} SEK {item.price}
+                  </OptionDivRight>
+                </OptionDiv>
+              )
+            })}
+          </FirstViewLeft>
+          <FirstViewRight></FirstViewRight>
+        </FirstView>
+        <DataDiv>
+        <DataAnalyticsTitle1>Data & Analytics</DataAnalyticsTitle1>
+        <DataAnalyticsTitle2>WHAT IS DATA & ANALYTICS</DataAnalyticsTitle2>
+        </DataDiv>
+        <DataAnalyticsDiv>
+         <DataAnalyticsDisplayer>
+          <DataAnalyticsText>Data & Analytics package <br /> Lorem ipsum dolor sit amet, consectetur <br /> adipiscing elit. Mauris euismod duis nec nunc.</DataAnalyticsText>
+         </DataAnalyticsDisplayer>
+        </DataAnalyticsDiv>
+        <Home />
       </Wrapper>
     </>
   )

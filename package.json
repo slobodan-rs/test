@@ -6,6 +6,7 @@
     "react-dom": "^16.13.1",
     "react-scripts": "^3.4.3",
     "react-sound": "^1.2.0",
+    "reactstrap": "^8.6.0",
     "styled-components": "^5.2.0",
     "type": "^2.0.0"
   },
