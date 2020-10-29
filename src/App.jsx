@@ -1,11 +1,15 @@
 import React from 'react'
 import styled from 'styled-components'
 import Xnomad from './icons/Xnomad.svg'
+import { Link, BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Plus from './icons/Plus.svg'
 import Minus from './icons/Minus.svg'
 import { OptionDivTitles } from './consts.js'
+import Image from './images/image.png'
 import { Login } from './Login.jsx'
 import  Home from './Home.jsx'
+import About from './About.jsx'
+
 function svgToBase64Url(svgString, width, height) {
   const base64SVG = btoa(
     `<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="${width}px" height="${height}px">${svgString}</svg>`
@@ -59,6 +63,10 @@ const FirstViewLeft = styled.div`
 `
 
 const TitleText = styled.p`
+clear: both;
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
   font-weight: bold;
   font-size: 32px;
   line-height: 120%;
@@ -146,7 +154,10 @@ const OptionDivLeftBody = styled.p`
   text-align: left;
 `
 
-const FirstViewRight = styled.div``
+const FirstViewRight = styled.div`
+margin-top: 20px;
+margin-left: 150px;
+`
 
 const StaffinDiv = styled.div`
   margin-left: 5vw;
@@ -279,7 +290,97 @@ const DataAnalyticsText = styled.div`
 margin-left: -150px;
 color: white;
 `
+const CardDiv = styled.div`
+width: 421px;
+height: 700px;
+background-color: #F0EEEA;
+`
+const CardTopTitle = styled.p`
+padding-top: 20px;
+margin-left: 30px;
+color: #555C5E;
+`
+const CardTitle = styled.h1`
+margin-left: 20px;
+`
+const CardImageDiv = styled.div`
+display: flex;
+`
+const CardImage = styled.img`
+width: 169px;
+height: 118px;
+margin-left: 30px;
+`
+const CardImageCaption = styled.div`
+margin-top: 10px;
+margin-left: 30px;
+color: #868F92;
+`
+const CardImageCaption1 = styled.div`
 
+`
+const Line = styled.hr`
+margin-top: 25px;
+width: 80%;
+background-color: #868F92;
+
+`
+const CardCalendar = styled.div`
+color: #868F92;
+margin-top: 25px;
+margin-left: 50px;
+`
+const CardInfoDiv = styled.div`
+display: flex;
+`
+const CardInfo1 = styled.div`
+color: #868F92;
+margin-left: 30px;
+margin-top: 20px;
+`
+const CardInfo2 = styled.div`
+color: black;
+margin-left: 30px;
+margin-top: 20px;
+`
+const CardSpan1 = styled.span`
+margin-left: 210px;
+color: #868F92;
+margin-top: 20px;
+`
+const CardSpan2 = styled.span`
+margin-left: 140px;
+margin-top: 20px;
+color: #868F92;
+`
+const CardSpan3 = styled.span`
+margin-left: 133px;
+margin-top: 20px;
+color: #868F92;
+`
+const CardSpan4 = styled.span`
+margin-left: 110px;
+margin-top: 20px;
+color: #868F92;
+`
+const CardSpan5 = styled.span`
+margin-left: 207px;
+margin-top: 20px;
+`
+const DownloadBtn = styled.button`
+margin-top: 20px;
+background-color: #0f6b5c;
+color: white;
+width:370px;
+height:50px;
+margin-left: 20px;
+border: 1px solid #0f6b5c;
+`
+const CardFooter = styled.div`
+color: #868F92;
+margin-top: 20px;
+margin-left: 20px;
+`
 export const App = () => {
   const [hoveredId, setHoveredId] = React.useState(null)
   const [clickedId, setClickedId] = React.useState(null)
@@ -337,7 +438,41 @@ export const App = () => {
               )
             })}
           </FirstViewLeft>
-          <FirstViewRight></FirstViewRight>
+          <FirstViewRight><CardDiv>
+          <CardTopTitle>Stockholm, Ostermalm</CardTopTitle>
+          <CardTitle>Artillerigatan - Snoot</CardTitle>
+          <CardImageDiv>
+          <CardImage src={Image} alt="" />
+          <CardImageCaption>30 m2 <br /> <br /> 10 000 visitors / day</CardImageCaption>
+          </CardImageDiv>
+          <Line />
+          <CardCalendar><i class="far fa-calendar-alt"></i>7 August 2020 <i class="fas fa-arrow-right"></i> 30 August 2020 </CardCalendar>
+          <Line />
+          <CardInfoDiv>
+          <CardInfo1>Rent </CardInfo1>
+          <CardSpan1>SEK 140 000 </CardSpan1>
+          </CardInfoDiv>
+          <CardInfoDiv>
+          <CardInfo1>Furniture (S) </CardInfo1>
+          <CardSpan2>SEK 27 000 </CardSpan2>
+          </CardInfoDiv>
+          <CardInfoDiv>
+          <CardInfo1>Marketing (S) </CardInfo1>
+          <CardSpan3>SEK 50 000 </CardSpan3>
+          </CardInfoDiv>
+          <CardInfoDiv>
+          <CardInfo1>Data & Analytics </CardInfo1>
+          <CardSpan4>SEK 0 </CardSpan4>
+          </CardInfoDiv>
+          <CardInfoDiv>
+          <CardInfo2>Total </CardInfo2>
+          <CardSpan5>SEK 217 000 </CardSpan5>
+          </CardInfoDiv>
+          <Line />
+          <DownloadBtn>DOWNLOAD ESTIMATE AS PDF</DownloadBtn>
+          <CardFooter>The estimate is an approximation of final cost</CardFooter>
+          </CardDiv>
+          </FirstViewRight>
         </FirstView>
         <StaffinDiv>
           <StaffingTitle1>Staffing</StaffingTitle1>
@@ -425,8 +560,15 @@ export const App = () => {
           <DataAnalyticsText>Data & Analytics package <br /> Lorem ipsum dolor sit amet, consectetur <br /> adipiscing elit. Mauris euismod duis nec nunc.</DataAnalyticsText>
          </DataAnalyticsDisplayer>
         </DataAnalyticsDiv>
+        <About />
         <Home />
       </Wrapper>
+      <Router>
+
+        <Switch>
+            <Route path='/about' component={About} />
+        </Switch>
+      </Router>
     </>
   )
 }

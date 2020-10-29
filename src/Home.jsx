@@ -8,7 +8,7 @@ import Featured from './Featured'
 import Services from './Services'
 
 const Header = styled.section`
-margin-top: 50px;
+margin-top: 200px;
 `
 const BgOverlay = styled.div``
 const Container = styled.div``
