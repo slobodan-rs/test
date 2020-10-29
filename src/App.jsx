@@ -5,6 +5,7 @@ import Plus from './icons/Plus.svg'
 import Minus from './icons/Minus.svg'
 import { OptionDivTitles } from './consts.js'
 import { Login } from './Login.jsx'
+import Idea from './Idea';
 import  Home from './Home.jsx'
 function svgToBase64Url(svgString, width, height) {
   const base64SVG = btoa(
@@ -280,6 +281,20 @@ margin-left: -150px;
 color: white;
 `
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 export const App = () => {
   const [hoveredId, setHoveredId] = React.useState(null)
   const [clickedId, setClickedId] = React.useState(null)
@@ -339,6 +354,16 @@ export const App = () => {
           </FirstViewLeft>
           <FirstViewRight></FirstViewRight>
         </FirstView>
+
+        <FirstView>
+          <FirstViewLeft>
+
+            <Idea />
+
+          </FirstViewLeft>
+        </FirstView>
+
+
         <StaffinDiv>
           <StaffingTitle1>Staffing</StaffingTitle1>
           <StaffingTitle2>HOW MANY STAFF DO YOU NEED?</StaffingTitle2>
@@ -380,6 +405,7 @@ export const App = () => {
           <POSText1>I have my own PoS System <br /> SEK 0</POSText1>
          </POSDivDisplayer1>
         </POSDiv>
+        
 
         <FirstView>
           <FirstViewLeft>
@@ -415,7 +441,12 @@ export const App = () => {
             })}
           </FirstViewLeft>
           <FirstViewRight></FirstViewRight>
+          
         </FirstView>
+
+        
+
+
         <DataDiv>
         <DataAnalyticsTitle1>Data & Analytics</DataAnalyticsTitle1>
         <DataAnalyticsTitle2>WHAT IS DATA & ANALYTICS</DataAnalyticsTitle2>

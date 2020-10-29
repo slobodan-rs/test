@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import image from './images/img.jpg'
 import Client from './Client';
 import Blog from './Blog';
+
 import SinglePost from './SinglePost'
 import Featured from './Featured'
 import Services from './Services'
@@ -100,9 +101,13 @@ class Home extends Component {
       </Container>
     </Header>
 
+    
+
     <Client />
 
+
     <Blog />
+
 
     <SinglePost />
 
