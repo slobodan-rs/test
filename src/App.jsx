@@ -7,8 +7,12 @@ import Minus from './icons/Minus.svg'
 import { OptionDivTitles } from './consts.js'
 import Image from './images/image.png'
 import { Login } from './Login.jsx'
-import  Home from './Home.jsx'
+import Home from './Home.jsx'
 import About from './About.jsx'
+
+import Section from './components/Section'
+import SectionDescription from './components/SectionDescription'
+import Form from './components/Form'
 
 function svgToBase64Url(svgString, width, height) {
   const base64SVG = btoa(
@@ -116,10 +120,10 @@ const OptionDiv = styled.div`
   ${(p) => (p.clickActive ? 'color: white;' : 'black;')}
   &:hover {
     cursor: ${svgToBase64Url(
-        '<svg id="Lager_1" data-name="Lager 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 857.1763 133.1918"><defs><style>.cls-1,.cls-2,.cls-3,.cls-4,.cls-5{stroke:#000;}.cls-1{stroke-width:16.1175px;}.cls-2{fill:#252831;stroke-miterlimit:10;stroke-width:8.3734px;}.cls-3{fill:#4d4d4d;stroke-width:9.4719px;}.cls-4{stroke-width:9.472px;}.cls-5{stroke-width:9.1663px;}</style></defs><line class="cls-1" x1="27.0526" y1="31.7677" x2="96.2038" y2="100.9188"/><line class="cls-1" x1="96.2038" y1="31.7677" x2="27.0526" y2="100.9188"/><path d="M325.3969-.2386C313.2153,7.12,287.9279,27.59,287.836,66.1636c-.0884,37.1391,25.099,58.731,36.9853,66.7615-25.0908-5.6-52.9727-33.9818-52.8945-66.8117C272.0088,31.6434,302.095,4.0149,325.3969-.2386Z"/><path d="M372.3123,120.7652c12.9174-8.4247,22.455-28.2689,22.521-55.9961.0637-26.7434-8.3866-46.8148-22.2542-56.09,20.0768,5.7494,40.1176,26.6421,40.0474,56.1383C412.5577,93.7244,392.4172,114.7172,372.3123,120.7652Z"/><line class="cls-2" x1="656.8527" y1="10.7983" x2="603.1847" y2="131.376"/><polygon points="647.778 20.784 656.168 0.22 714.837 132.466 691.929 120.79 647.778 20.784"/><polygon points="747.811 13.692 762.841 -0.22 762.544 132.907 747.576 118.918 747.811 13.692"/><path d="M816.86,123.33c12.9177-8.526,22.4559-28.6083,22.5227-56.6679C839.4475,39.598,830.9979,19.2864,817.13,9.9c20.0767,5.8178,40.117,26.96,40.0459,56.81C857.1067,95.9639,836.9656,117.2088,816.86,123.33Z"/><path id="Path_85" data-name="Path 85" class="cls-3" d="M234.8,0V119"/><path id="Path_84" data-name="Path 84" class="cls-4" d="M124.8614,1.4447V132.5741"/><path id="Path_1" data-name="Path 1" d="M116.2171.04h19.1077L239.3,111.1068v21.58Z"/><polyline points="439.197 -0.505 498.002 95.563 494.326 112.593 439.131 25.964"/><polygon points="567.3 1.192 567.3 131.983 554.3 122.149 554.3 27.351 553.724 1.192 567.3 1.192"/><path id="Path_84-2" data-name="Path 84" class="cls-5" d="M443.7347,16.7809V133.1918"/></svg>',
-        '70',
-        '70'
-      )},
+  '<svg id="Lager_1" data-name="Lager 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 857.1763 133.1918"><defs><style>.cls-1,.cls-2,.cls-3,.cls-4,.cls-5{stroke:#000;}.cls-1{stroke-width:16.1175px;}.cls-2{fill:#252831;stroke-miterlimit:10;stroke-width:8.3734px;}.cls-3{fill:#4d4d4d;stroke-width:9.4719px;}.cls-4{stroke-width:9.472px;}.cls-5{stroke-width:9.1663px;}</style></defs><line class="cls-1" x1="27.0526" y1="31.7677" x2="96.2038" y2="100.9188"/><line class="cls-1" x1="96.2038" y1="31.7677" x2="27.0526" y2="100.9188"/><path d="M325.3969-.2386C313.2153,7.12,287.9279,27.59,287.836,66.1636c-.0884,37.1391,25.099,58.731,36.9853,66.7615-25.0908-5.6-52.9727-33.9818-52.8945-66.8117C272.0088,31.6434,302.095,4.0149,325.3969-.2386Z"/><path d="M372.3123,120.7652c12.9174-8.4247,22.455-28.2689,22.521-55.9961.0637-26.7434-8.3866-46.8148-22.2542-56.09,20.0768,5.7494,40.1176,26.6421,40.0474,56.1383C412.5577,93.7244,392.4172,114.7172,372.3123,120.7652Z"/><line class="cls-2" x1="656.8527" y1="10.7983" x2="603.1847" y2="131.376"/><polygon points="647.778 20.784 656.168 0.22 714.837 132.466 691.929 120.79 647.778 20.784"/><polygon points="747.811 13.692 762.841 -0.22 762.544 132.907 747.576 118.918 747.811 13.692"/><path d="M816.86,123.33c12.9177-8.526,22.4559-28.6083,22.5227-56.6679C839.4475,39.598,830.9979,19.2864,817.13,9.9c20.0767,5.8178,40.117,26.96,40.0459,56.81C857.1067,95.9639,836.9656,117.2088,816.86,123.33Z"/><path id="Path_85" data-name="Path 85" class="cls-3" d="M234.8,0V119"/><path id="Path_84" data-name="Path 84" class="cls-4" d="M124.8614,1.4447V132.5741"/><path id="Path_1" data-name="Path 1" d="M116.2171.04h19.1077L239.3,111.1068v21.58Z"/><polyline points="439.197 -0.505 498.002 95.563 494.326 112.593 439.131 25.964"/><polygon points="567.3 1.192 567.3 131.983 554.3 122.149 554.3 27.351 553.724 1.192 567.3 1.192"/><path id="Path_84-2" data-name="Path 84" class="cls-5" d="M443.7347,16.7809V133.1918"/></svg>',
+  '70',
+  '70'
+)},
       auto;
   }
 `
@@ -387,12 +391,11 @@ export const App = () => {
   const [disableHover, setDisableHover] = React.useState(false)
 
   const [staffingCounter, setStaffingCounter] = React.useState(0)
-  let StaffingAnalyticsDivDisplayerPrice = `SEK 350/h ${'   '}   x ${'   '}   14 days ${'   '}  = ${'   '}  SEK ${
-    39200 + staffingCounter * 4000
-  }`
+  let StaffingAnalyticsDivDisplayerPrice = `SEK 350/h ${'   '}   x ${'   '}   14 days ${'   '}  = ${'   '}  SEK ${39200 + staffingCounter * 4000
+    }`
   return (
     <>
-      <Login />
+      {/* <Login /> */}
       <Wrapper>
         <Header>
           <CompanyIcon src={Xnomad} href='https://www.xnomad.co/' />
@@ -424,7 +427,7 @@ export const App = () => {
                     setDisableHover(true)
                   }}
                   clickActive={clickedId === idx}
-                  // noHover={disableHover}
+                // noHover={disableHover}
                 >
                   <OptionDivLeft>
                     <OptionDivLeftTitle>{item.titleText}</OptionDivLeftTitle>
@@ -439,38 +442,38 @@ export const App = () => {
             })}
           </FirstViewLeft>
           <FirstViewRight><CardDiv>
-          <CardTopTitle>Stockholm, Ostermalm</CardTopTitle>
-          <CardTitle>Artillerigatan - Snoot</CardTitle>
-          <CardImageDiv>
-          <CardImage src={Image} alt="" />
-          <CardImageCaption>30 m2 <br /> <br /> 10 000 visitors / day</CardImageCaption>
-          </CardImageDiv>
-          <Line />
-          <CardCalendar><i class="far fa-calendar-alt"></i>7 August 2020 <i class="fas fa-arrow-right"></i> 30 August 2020 </CardCalendar>
-          <Line />
-          <CardInfoDiv>
-          <CardInfo1>Rent </CardInfo1>
-          <CardSpan1>SEK 140 000 </CardSpan1>
-          </CardInfoDiv>
-          <CardInfoDiv>
-          <CardInfo1>Furniture (S) </CardInfo1>
-          <CardSpan2>SEK 27 000 </CardSpan2>
-          </CardInfoDiv>
-          <CardInfoDiv>
-          <CardInfo1>Marketing (S) </CardInfo1>
-          <CardSpan3>SEK 50 000 </CardSpan3>
-          </CardInfoDiv>
-          <CardInfoDiv>
-          <CardInfo1>Data & Analytics </CardInfo1>
-          <CardSpan4>SEK 0 </CardSpan4>
-          </CardInfoDiv>
-          <CardInfoDiv>
-          <CardInfo2>Total </CardInfo2>
-          <CardSpan5>SEK 217 000 </CardSpan5>
-          </CardInfoDiv>
-          <Line />
-          <DownloadBtn>DOWNLOAD ESTIMATE AS PDF</DownloadBtn>
-          <CardFooter>The estimate is an approximation of final cost</CardFooter>
+            <CardTopTitle>Stockholm, Ostermalm</CardTopTitle>
+            <CardTitle>Artillerigatan - Snoot</CardTitle>
+            <CardImageDiv>
+              <CardImage src={Image} alt="" />
+              <CardImageCaption>30 m2 <br /> <br /> 10 000 visitors / day</CardImageCaption>
+            </CardImageDiv>
+            <Line />
+            <CardCalendar><i class="far fa-calendar-alt"></i>7 August 2020 <i class="fas fa-arrow-right"></i> 30 August 2020 </CardCalendar>
+            <Line />
+            <CardInfoDiv>
+              <CardInfo1>Rent </CardInfo1>
+              <CardSpan1>SEK 140 000 </CardSpan1>
+            </CardInfoDiv>
+            <CardInfoDiv>
+              <CardInfo1>Furniture (S) </CardInfo1>
+              <CardSpan2>SEK 27 000 </CardSpan2>
+            </CardInfoDiv>
+            <CardInfoDiv>
+              <CardInfo1>Marketing (S) </CardInfo1>
+              <CardSpan3>SEK 50 000 </CardSpan3>
+            </CardInfoDiv>
+            <CardInfoDiv>
+              <CardInfo1>Data & Analytics </CardInfo1>
+              <CardSpan4>SEK 0 </CardSpan4>
+            </CardInfoDiv>
+            <CardInfoDiv>
+              <CardInfo2>Total </CardInfo2>
+              <CardSpan5>SEK 217 000 </CardSpan5>
+            </CardInfoDiv>
+            <Line />
+            <DownloadBtn>DOWNLOAD ESTIMATE AS PDF</DownloadBtn>
+            <CardFooter>The estimate is an approximation of final cost</CardFooter>
           </CardDiv>
           </FirstViewRight>
         </FirstView>
@@ -504,16 +507,16 @@ export const App = () => {
           </StaffingAnalyticsDiv>
         </StaffinDiv>
         <PointofsaleDiv>
-        <PointofsaleTitle>Points-of-sale</PointofsaleTitle>
-        <PointofsaleTitle1>DO I NEED A POINT OF SALE?</PointofsaleTitle1>
+          <PointofsaleTitle>Points-of-sale</PointofsaleTitle>
+          <PointofsaleTitle1>DO I NEED A POINT OF SALE?</PointofsaleTitle1>
         </PointofsaleDiv>
         <POSDiv>
-         <POSDivDisplayer>
-          <POSText>I have my own PoS System <br /> SEK 0</POSText>
-         </POSDivDisplayer>
-         <POSDivDisplayer1>
-          <POSText1>I have my own PoS System <br /> SEK 0</POSText1>
-         </POSDivDisplayer1>
+          <POSDivDisplayer>
+            <POSText>I have my own PoS System <br /> SEK 0</POSText>
+          </POSDivDisplayer>
+          <POSDivDisplayer1>
+            <POSText1>I have my own PoS System <br /> SEK 0</POSText1>
+          </POSDivDisplayer1>
         </POSDiv>
 
         <FirstView>
@@ -535,7 +538,7 @@ export const App = () => {
                     setDisableHover(true)
                   }}
                   clickActive={clickedId === idx}
-                  // noHover={disableHover}
+                // noHover={disableHover}
                 >
                   <OptionDivLeft>
                     <OptionDivLeftTitle>Title Here</OptionDivLeftTitle>
@@ -552,23 +555,92 @@ export const App = () => {
           <FirstViewRight></FirstViewRight>
         </FirstView>
         <DataDiv>
-        <DataAnalyticsTitle1>Data & Analytics</DataAnalyticsTitle1>
-        <DataAnalyticsTitle2>WHAT IS DATA & ANALYTICS</DataAnalyticsTitle2>
+          <DataAnalyticsTitle1>Data & Analytics</DataAnalyticsTitle1>
+          <DataAnalyticsTitle2>WHAT IS DATA & ANALYTICS</DataAnalyticsTitle2>
         </DataDiv>
         <DataAnalyticsDiv>
-         <DataAnalyticsDisplayer>
-          <DataAnalyticsText>Data & Analytics package <br /> Lorem ipsum dolor sit amet, consectetur <br /> adipiscing elit. Mauris euismod duis nec nunc.</DataAnalyticsText>
-         </DataAnalyticsDisplayer>
+          <DataAnalyticsDisplayer>
+            <DataAnalyticsText>Data & Analytics package <br /> Lorem ipsum dolor sit amet, consectetur <br /> adipiscing elit. Mauris euismod duis nec nunc.</DataAnalyticsText>
+          </DataAnalyticsDisplayer>
         </DataAnalyticsDiv>
         <About />
         <Home />
+
+        {/* ---------ENQUIRY STEP 3--------- */}
+
+
+        {/* <Header>
+          <CompanyIcon src={Xnomad} href='https://www.xnomad.co/' />
+          {headerTexts.map((item, idx) => {
+            return (
+              <HeaderTextBoxes id={idx}>
+                {idx + 1}. {item}
+              </HeaderTextBoxes>
+            )
+          })}
+        </Header>
+        <FirstView>
+          <FirstViewLeft>
+            <Section>
+              <h4>Pitch your idea to the landlord</h4>
+            </Section>
+            <SectionDescription>
+              <p>To send an enquiry, landlords require some information about your idea for the space. If they like your idea, you'll be able to ask any questions and set up a viewing.</p>
+            </SectionDescription>
+            <Form />
+          </FirstViewLeft>
+          <FirstViewRight2><CardDiv>
+            <CardTopTitle>Stockholm, Ostermalm</CardTopTitle>
+            <CardTitle>Artillerigatan - Snoot</CardTitle>
+            <CardImageDiv>
+              <CardImage src={Image} alt="" />
+              <CardImageCaption>30 m2 <br /> <br /> 10 000 visitors / day</CardImageCaption>
+            </CardImageDiv>
+            <Line />
+            <CardCalendar><i class="far fa-calendar-alt"></i>7 August 2020 <i class="fas fa-arrow-right"></i> 30 August 2020 </CardCalendar>
+            <Line />
+            <CardInfoDiv>
+              <CardInfo1>Rent </CardInfo1>
+              <CardSpan1>SEK 140 000 </CardSpan1>
+            </CardInfoDiv>
+            <CardInfoDiv>
+              <CardInfo1>Furniture (S) </CardInfo1>
+              <CardSpan2>SEK 27 000 </CardSpan2>
+            </CardInfoDiv>
+            <CardInfoDiv>
+              <CardInfo1>Marketing (S) </CardInfo1>
+              <CardSpan3>SEK 50 000 </CardSpan3>
+            </CardInfoDiv>
+            <CardInfoDiv>
+              <CardInfo1>Data & Analytics </CardInfo1>
+              <CardSpan4>SEK 0 </CardSpan4>
+            </CardInfoDiv>
+            <CardInfoDiv>
+              <CardInfo2>Total </CardInfo2>
+              <CardSpan5>SEK 217 000 </CardSpan5>
+            </CardInfoDiv>
+            <Line />
+            <DownloadBtn>DOWNLOAD ESTIMATE AS PDF</DownloadBtn>
+            <CardFooter>The estimate is an approximation of final cost</CardFooter>
+          </CardDiv>
+          </FirstViewRight2>
+        </FirstView> */}
+
       </Wrapper>
       <Router>
 
         <Switch>
-            <Route path='/about' component={About} />
+          <Route path='/about' component={About} />
         </Switch>
       </Router>
     </>
   )
 }
+
+const FirstViewRight2 = styled.div`
+  position: absolute;
+width: 421px;
+height: 723px;
+left: 955px;
+top: 189px;
+`
