@@ -6,7 +6,7 @@ import Blog from './Blog';
 
 import SinglePost from './SinglePost'
 import Featured from './Featured'
-import Services from './Services'
+import Service from './Service'
 
 const Header = styled.section`
 margin-top: 200px;
@@ -101,7 +101,7 @@ class Home extends Component {
       </Container>
     </Header>
 
-    
+
 
     <Client />
 
@@ -113,7 +113,8 @@ class Home extends Component {
 
     <Featured />
 
-    <Services />
+    <Service />
+
     </>
   )
   }

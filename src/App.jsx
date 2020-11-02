@@ -20,8 +20,13 @@ import About from './About'
 import SelectSection from './components/SelectSection'
 import SpacesSection from './components/SpacesSection'
 import PerfectSpaceSection from './components/PerfectSpaceSection'
-
-
+import FeaturedSection from './components/FeaturedSection'
+import BookSection from './components/BookSection'
+import ManageSection from './components/ManageSection'
+import MeasureSection from './components/MeasureSection'
+import MoveinSection from './components/MoveinSection'
+import GuideSection from './components/GuideSection'
+import ClientSection from './components/ClientSection'
 // <<<<<<< HEAD
 
 
@@ -432,9 +437,13 @@ export const App = () => {
             <SelectSection />
             <SpacesSection />
             <PerfectSpaceSection />
-
-
-
+            <FeaturedSection />
+            <BookSection />
+            <ManageSection />
+            <MeasureSection />
+            <MoveinSection />
+            <GuideSection />
+            <ClientSection />
             {/* --------- / LANDING PAGE --------- */}
           </Route>
 
