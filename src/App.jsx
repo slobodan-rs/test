@@ -1,26 +1,31 @@
 import React from 'react'
 import styled from 'styled-components'
+import { Link, BrowserRouter as Router, Switch, Route } from 'react-router-dom'
+
+//Icons and images
 import Xnomad from './icons/Xnomad.svg'
 import Plus from './icons/Plus.svg'
 import Minus from './icons/Minus.svg'
-import { OptionDivTitles } from './consts.js'
-import { Login } from './Login.jsx'
-import { Link, BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Image from './images/image.png'
-// <<<<<<< HEAD
-// import Home from './Home.jsx'
-// import About from './About.jsx'
 
-// import Section from './components/Section'
-// import SectionDescription from './components/SectionDescription'
-// import Form from './components/Form'
-
-// =======
-import Idea from './Idea';
+//Components
+import { Login } from './Login.jsx'
+import { OptionDivTitles } from './consts.js'
+import Idea from './Idea'
 import Home from './Home.jsx'
 import Section from './components/Section'
 import SectionDescription from './components/SectionDescription'
 import Form from './components/Form'
+import About from './About'
+import SelectSection from './components/SelectSection'
+import SpacesSection from './components/SpacesSection'
+import PerfectSpaceSection from './components/PerfectSpaceSection'
+
+
+// <<<<<<< HEAD
+
+
+// =======
 // >>>>>>> 4e9f743ac8d6c08f9410ff3b9b022c26fe6f8430
 function svgToBase64Url(svgString, width, height) {
   const base64SVG = btoa(
@@ -302,8 +307,11 @@ margin-left: -150px;
 color: white;
 `
 const CardDiv = styled.div`
+position: absolute;
 width: 421px;
-height: 700px;
+height: 723px;
+right: 64px;
+top: 189px;
 background-color: #F0EEEA;
 `
 const CardTopTitle = styled.p`
@@ -418,209 +426,226 @@ export const App = () => {
     <>
       {/* <Login /> */}
       <Wrapper>
-        <Header>
-          <CompanyIcon src={Xnomad} href='https://www.xnomad.co/' />
-          {headerTexts.map((item, idx) => {
-            return (
-              <HeaderTextBoxes id={idx}>
-                {idx + 1}. {item}
-              </HeaderTextBoxes>
-            )
-          })}
-        </Header>
-        <FirstView>
-          <FirstViewLeft>
-            <TitleText>Make your space move-in ready</TitleText>
-            <TitleSubText1>Furniture + Design</TitleSubText1>
-            <TitleSubText2>
-              WHICH FURNITURE PACKAGE FITS YOU BEST?
+        <Router>
+          <Route exact path="/">
+            {/* --------- LANDING PAGE --------- */}
+            <SelectSection />
+            <SpacesSection />
+            <PerfectSpaceSection />
+
+
+
+            {/* --------- / LANDING PAGE --------- */}
+          </Route>
+
+          <Route exact path="/enquiry1">
+            {/* --------- ENQUIRY PAGE 1 --------- */}
+            <Header>
+              <CompanyIcon src={Xnomad} href='https://www.xnomad.co/' />
+              {headerTexts.map((item, idx) => {
+                return (
+                  <HeaderTextBoxes id={idx}>
+                    {idx + 1}. {item}
+                  </HeaderTextBoxes>
+                )
+              })}
+            </Header>
+            <FirstView>
+              <FirstViewLeft>
+                <TitleText>Make your space move-in ready</TitleText>
+                <TitleSubText1>Furniture + Design</TitleSubText1>
+                <TitleSubText2>
+                  WHICH FURNITURE PACKAGE FITS YOU BEST?
             </TitleSubText2>
-            {OptionDivTitles.map((item, idx) => {
-              return (
-                <OptionDiv
-                  id={idx + 10}
-                  onMouseEnter={() => setHoveredId(idx)}
-                  hoverActive={hoveredId === idx && !disableHover}
-                  onMouseLeave={() => setHoveredId(null)}
-                  // On-click I want to (1) set that element to its color, and (2) make sure that hoover is disabled
-                  onClick={() => {
-                    setClickedId(idx)
-                    setDisableHover(true)
-                  }}
-                  clickActive={clickedId === idx}
-                // noHover={disableHover}
-                >
-                  <OptionDivLeft>
-                    <OptionDivLeftTitle>{item.titleText}</OptionDivLeftTitle>
-                    <OptionDivLeftBody>{item.bodyText}</OptionDivLeftBody>
-                  </OptionDivLeft>
-                  <OptionDivRight>
-                    {' '}
-                    {idx !== 0 ? '+' : ''} SEK {item.price}
-                  </OptionDivRight>
-                </OptionDiv>
-              )
-            })}
-          </FirstViewLeft>
-          {/* <<<<<<< HEAD */}
-          <FirstViewRight><CardDiv>
-            <CardTopTitle>Stockholm, Ostermalm</CardTopTitle>
-            <CardTitle>Artillerigatan - Snoot</CardTitle>
-            <CardImageDiv>
-              <CardImage src={Image} alt="" />
-              <CardImageCaption>30 m2 <br /> <br /> 10 000 visitors / day</CardImageCaption>
-            </CardImageDiv>
-            <Line />
-            <CardCalendar><i class="far fa-calendar-alt"></i>7 August 2020 <i class="fas fa-arrow-right"></i> 30 August 2020 </CardCalendar>
-            <Line />
-            <CardInfoDiv>
-              <CardInfo1>Rent </CardInfo1>
-              <CardSpan1>SEK 140 000 </CardSpan1>
-            </CardInfoDiv>
-            <CardInfoDiv>
-              <CardInfo1>Furniture (S) </CardInfo1>
-              <CardSpan2>SEK 27 000 </CardSpan2>
-            </CardInfoDiv>
-            <CardInfoDiv>
-              <CardInfo1>Marketing (S) </CardInfo1>
-              <CardSpan3>SEK 50 000 </CardSpan3>
-            </CardInfoDiv>
-            <CardInfoDiv>
-              <CardInfo1>Data & Analytics </CardInfo1>
-              <CardSpan4>SEK 0 </CardSpan4>
-            </CardInfoDiv>
-            <CardInfoDiv>
-              <CardInfo2>Total </CardInfo2>
-              <CardSpan5>SEK 217 000 </CardSpan5>
-            </CardInfoDiv>
-            <Line />
-            <DownloadBtn>DOWNLOAD ESTIMATE AS PDF</DownloadBtn>
-            <CardFooter>The estimate is an approximation of final cost</CardFooter>
-          </CardDiv>
-          </FirstViewRight>
-          {/* ======= */}
-          <FirstViewRight></FirstViewRight>
-          {/* >>>>>>> 4e9f743ac8d6c08f9410ff3b9b022c26fe6f8430 */}
-        </FirstView>
-
-        <FirstView>
-          <FirstViewLeft>
-
-            <Idea />
-
-          </FirstViewLeft>
-        </FirstView>
-
-
-        <StaffinDiv>
-          <StaffingTitle1>Staffing</StaffingTitle1>
-          <StaffingTitle2>HOW MANY STAFF DO YOU NEED?</StaffingTitle2>
-          <StaffingTitle3>Number of staff</StaffingTitle3>
-          <StaffingAnalyticsDiv>
-            <StaffingAnalyticsDivCounter>
-              <StaffingAnalyticsDivCounterIcon
-                onClick={(e) => {
-                  setStaffingCounter((...p) => {
-                    if (parseInt(p) === 0) {
-                      return 0
-                    } else return parseInt(p) - 1
-                  })
-                }}
-                src={Minus}
-              />
-              {staffingCounter}
-              <StaffingAnalyticsDivCounterIcon
-                onClick={(e) => {
-                  setStaffingCounter((...p) => parseInt(p) + 1)
-                }}
-                src={Plus}
-              />
-            </StaffingAnalyticsDivCounter>
-            <StaffingAnalyticsDivDisplayer>
-              {StaffingAnalyticsDivDisplayerPrice}
-            </StaffingAnalyticsDivDisplayer>
-          </StaffingAnalyticsDiv>
-        </StaffinDiv>
-        <PointofsaleDiv>
-          <PointofsaleTitle>Points-of-sale</PointofsaleTitle>
-          <PointofsaleTitle1>DO I NEED A POINT OF SALE?</PointofsaleTitle1>
-        </PointofsaleDiv>
-        <POSDiv>
-          <POSDivDisplayer>
-            <POSText>I have my own PoS System <br /> SEK 0</POSText>
-          </POSDivDisplayer>
-          <POSDivDisplayer1>
-            <POSText1>I have my own PoS System <br /> SEK 0</POSText1>
-          </POSDivDisplayer1>
-        </POSDiv>
-
-
-        <FirstView>
-          <FirstViewLeft>
-            <TitleSubText1>Influencer Marketing</TitleSubText1>
-            <TitleSubText2>
-              WHICH Marketing PACKAGE FITS YOU BEST?
+                {OptionDivTitles.map((item, idx) => {
+                  return (
+                    <OptionDiv
+                      id={idx + 10}
+                      onMouseEnter={() => setHoveredId(idx)}
+                      hoverActive={hoveredId === idx && !disableHover}
+                      onMouseLeave={() => setHoveredId(null)}
+                      // On-click I want to (1) set that element to its color, and (2) make sure that hoover is disabled
+                      onClick={() => {
+                        setClickedId(idx)
+                        setDisableHover(true)
+                      }}
+                      clickActive={clickedId === idx}
+                    // noHover={disableHover}
+                    >
+                      <OptionDivLeft>
+                        <OptionDivLeftTitle>{item.titleText}</OptionDivLeftTitle>
+                        <OptionDivLeftBody>{item.bodyText}</OptionDivLeftBody>
+                      </OptionDivLeft>
+                      <OptionDivRight>
+                        {' '}
+                        {idx !== 0 ? '+' : ''} SEK {item.price}
+                      </OptionDivRight>
+                    </OptionDiv>
+                  )
+                })}
+              </FirstViewLeft>
+              {/* <<<<<<< HEAD */}
+              <FirstViewRight><CardDiv>
+                <CardTopTitle>Stockholm, Ostermalm</CardTopTitle>
+                <CardTitle>Artillerigatan - Snoot</CardTitle>
+                <CardImageDiv>
+                  <CardImage src={Image} alt="" />
+                  <CardImageCaption>30 m2 <br /> <br /> 10 000 visitors / day</CardImageCaption>
+                </CardImageDiv>
+                <Line />
+                <CardCalendar><i class="far fa-calendar-alt"></i>7 August 2020 <i class="fas fa-arrow-right"></i> 30 August 2020 </CardCalendar>
+                <Line />
+                <CardInfoDiv>
+                  <CardInfo1>Rent </CardInfo1>
+                  <CardSpan1>SEK 140 000 </CardSpan1>
+                </CardInfoDiv>
+                <CardInfoDiv>
+                  <CardInfo1>Furniture (S) </CardInfo1>
+                  <CardSpan2>SEK 27 000 </CardSpan2>
+                </CardInfoDiv>
+                <CardInfoDiv>
+                  <CardInfo1>Marketing (S) </CardInfo1>
+                  <CardSpan3>SEK 50 000 </CardSpan3>
+                </CardInfoDiv>
+                <CardInfoDiv>
+                  <CardInfo1>Data & Analytics </CardInfo1>
+                  <CardSpan4>SEK 0 </CardSpan4>
+                </CardInfoDiv>
+                <CardInfoDiv>
+                  <CardInfo2>Total </CardInfo2>
+                  <CardSpan5>SEK 217 000 </CardSpan5>
+                </CardInfoDiv>
+                <Line />
+                <DownloadBtn>DOWNLOAD ESTIMATE AS PDF</DownloadBtn>
+                <CardFooter>The estimate is an approximation of final cost</CardFooter>
+              </CardDiv>
+              </FirstViewRight>
+              {/* ======= */}
+              <FirstViewRight></FirstViewRight>
+              {/* >>>>>>> 4e9f743ac8d6c08f9410ff3b9b022c26fe6f8430 */}
+            </FirstView>
+            <StaffinDiv>
+              <StaffingTitle1>Staffing</StaffingTitle1>
+              <StaffingTitle2>HOW MANY STAFF DO YOU NEED?</StaffingTitle2>
+              <StaffingTitle3>Number of staff</StaffingTitle3>
+              <StaffingAnalyticsDiv>
+                <StaffingAnalyticsDivCounter>
+                  <StaffingAnalyticsDivCounterIcon
+                    onClick={(e) => {
+                      setStaffingCounter((...p) => {
+                        if (parseInt(p) === 0) {
+                          return 0
+                        } else return parseInt(p) - 1
+                      })
+                    }}
+                    src={Minus}
+                  />
+                  {staffingCounter}
+                  <StaffingAnalyticsDivCounterIcon
+                    onClick={(e) => {
+                      setStaffingCounter((...p) => parseInt(p) + 1)
+                    }}
+                    src={Plus}
+                  />
+                </StaffingAnalyticsDivCounter>
+                <StaffingAnalyticsDivDisplayer>
+                  {StaffingAnalyticsDivDisplayerPrice}
+                </StaffingAnalyticsDivDisplayer>
+              </StaffingAnalyticsDiv>
+            </StaffinDiv>
+            <PointofsaleDiv>
+              <PointofsaleTitle>Points-of-sale</PointofsaleTitle>
+              <PointofsaleTitle1>DO I NEED A POINT OF SALE?</PointofsaleTitle1>
+            </PointofsaleDiv>
+            <POSDiv>
+              <POSDivDisplayer>
+                <POSText>I have my own PoS System <br /> SEK 0</POSText>
+              </POSDivDisplayer>
+              <POSDivDisplayer1>
+                <POSText1>I have my own PoS System <br /> SEK 0</POSText1>
+              </POSDivDisplayer1>
+            </POSDiv>
+            <FirstView>
+              <FirstViewLeft>
+                <TitleSubText1>Influencer Marketing</TitleSubText1>
+                <TitleSubText2>
+                  WHICH Marketing PACKAGE FITS YOU BEST?
             </TitleSubText2>
-            {OptionDivTitles.map((item, idx) => {
-              return (
-                <OptionDiv
-                  id={idx + 10}
-                  onMouseEnter={() => setHoveredId(idx)}
-                  hoverActive={hoveredId === idx && !disableHover}
-                  onMouseLeave={() => setHoveredId(null)}
-                  // On-click I want to (1) set that element to its color, and (2) make sure that hoover is disabled
-                  onClick={() => {
-                    setClickedId(idx)
-                    setDisableHover(true)
-                  }}
-                  clickActive={clickedId === idx}
-                // noHover={disableHover}
-                >
-                  <OptionDivLeft>
-                    <OptionDivLeftTitle>Title Here</OptionDivLeftTitle>
-                    <OptionDivLeftBody>{item.bodyText}</OptionDivLeftBody>
-                  </OptionDivLeft>
-                  <OptionDivRight>
-                    {' '}
-                    {idx !== 0 ? '+' : ''} SEK {item.price}
-                  </OptionDivRight>
-                </OptionDiv>
-              )
-            })}
-          </FirstViewLeft>
-          <FirstViewRight></FirstViewRight>
+                {OptionDivTitles.map((item, idx) => {
+                  return (
+                    <OptionDiv
+                      id={idx + 10}
+                      onMouseEnter={() => setHoveredId(idx)}
+                      hoverActive={hoveredId === idx && !disableHover}
+                      onMouseLeave={() => setHoveredId(null)}
+                      // On-click I want to (1) set that element to its color, and (2) make sure that hoover is disabled
+                      onClick={() => {
+                        setClickedId(idx)
+                        setDisableHover(true)
+                      }}
+                      clickActive={clickedId === idx}
+                    // noHover={disableHover}
+                    >
+                      <OptionDivLeft>
+                        <OptionDivLeftTitle>Title Here</OptionDivLeftTitle>
+                        <OptionDivLeftBody>{item.bodyText}</OptionDivLeftBody>
+                      </OptionDivLeft>
+                      <OptionDivRight>
+                        {' '}
+                        {idx !== 0 ? '+' : ''} SEK {item.price}
+                      </OptionDivRight>
+                    </OptionDiv>
+                  )
+                })}
+              </FirstViewLeft>
+              <FirstViewRight></FirstViewRight>
 
-        </FirstView>
-
-
+            </FirstView>
 
 
-        <DataDiv>
-          <DataAnalyticsTitle1>Data & Analytics</DataAnalyticsTitle1>
-          <DataAnalyticsTitle2>WHAT IS DATA & ANALYTICS</DataAnalyticsTitle2>
-        </DataDiv>
-        <DataAnalyticsDiv>
-          <DataAnalyticsDisplayer>
-            <DataAnalyticsText>Data & Analytics package <br /> Lorem ipsum dolor sit amet, consectetur <br /> adipiscing elit. Mauris euismod duis nec nunc.</DataAnalyticsText>
-          </DataAnalyticsDisplayer>
-        </DataAnalyticsDiv>
-        <Home />
-
-        {/* ---------ENQUIRY STEP 3--------- */}
 
 
-        {/* <Header>
-          <CompanyIcon src={Xnomad} href='https://www.xnomad.co/' />
-          {headerTexts.map((item, idx) => {
-            return (
-              <HeaderTextBoxes id={idx}>
-                {idx + 1}. {item}
-              </HeaderTextBoxes>
-            )
-          })}
-        </Header>
-        <FirstView>
-          <FirstViewLeft>
+            <DataDiv>
+              <DataAnalyticsTitle1>Data & Analytics</DataAnalyticsTitle1>
+              <DataAnalyticsTitle2>WHAT IS DATA & ANALYTICS</DataAnalyticsTitle2>
+            </DataDiv>
+            <DataAnalyticsDiv>
+              <DataAnalyticsDisplayer>
+                <DataAnalyticsText>Data & Analytics package <br /> Lorem ipsum dolor sit amet, consectetur <br /> adipiscing elit. Mauris euismod duis nec nunc.</DataAnalyticsText>
+              </DataAnalyticsDisplayer>
+            </DataAnalyticsDiv>
+            <Home />
+            {/* --------- / ENQUIRY PAGE 1 --------- */}
+          </Route>
+          <Route exact path="/enquiry2">
+            {/* --------- ENQUIRY PAGE 2 --------- */}
+            <Header>
+              <CompanyIcon src={Xnomad} href='https://www.xnomad.co/' />
+              {headerTexts.map((item, idx) => {
+                return (
+                  <HeaderTextBoxes id={idx}>
+                    {idx + 1}. {item}
+                  </HeaderTextBoxes>
+                )
+              })}
+            </Header>
+            <About />
+            <Home />
+            {/* --------- / ENQUIRY PAGE 2 --------- */}
+          </Route>
+          <Route exact path="/enquiry3">
+            {/* --------- ENQUIRY PAGE 3 --------- */}
+            {/* <Header>
+              <CompanyIcon src={Xnomad} href='https://www.xnomad.co/' />
+              {headerTexts.map((item, idx) => {
+                return (
+                  <HeaderTextBoxes id={idx}>
+                    {idx + 1}. {item}
+                  </HeaderTextBoxes>
+                )
+              })}
+            </Header> */}
+
             <Section>
               <h4>Pitch your idea to the landlord</h4>
             </Section>
@@ -628,44 +653,58 @@ export const App = () => {
               <p>To send an enquiry, landlords require some information about your idea for the space. If they like your idea, you'll be able to ask any questions and set up a viewing.</p>
             </SectionDescription>
             <Form />
-          </FirstViewLeft>
-          <FirstViewRight2><CardDiv>
-            <CardTopTitle>Stockholm, Ostermalm</CardTopTitle>
-            <CardTitle>Artillerigatan - Snoot</CardTitle>
-            <CardImageDiv>
-              <CardImage src={Image} alt="" />
-              <CardImageCaption>30 m2 <br /> <br /> 10 000 visitors / day</CardImageCaption>
-            </CardImageDiv>
-            <Line />
-            <CardCalendar><i class="far fa-calendar-alt"></i>7 August 2020 <i class="fas fa-arrow-right"></i> 30 August 2020 </CardCalendar>
-            <Line />
-            <CardInfoDiv>
-              <CardInfo1>Rent </CardInfo1>
-              <CardSpan1>SEK 140 000 </CardSpan1>
-            </CardInfoDiv>
-            <CardInfoDiv>
-              <CardInfo1>Furniture (S) </CardInfo1>
-              <CardSpan2>SEK 27 000 </CardSpan2>
-            </CardInfoDiv>
-            <CardInfoDiv>
-              <CardInfo1>Marketing (S) </CardInfo1>
-              <CardSpan3>SEK 50 000 </CardSpan3>
-            </CardInfoDiv>
-            <CardInfoDiv>
-              <CardInfo1>Data & Analytics </CardInfo1>
-              <CardSpan4>SEK 0 </CardSpan4>
-            </CardInfoDiv>
-            <CardInfoDiv>
-              <CardInfo2>Total </CardInfo2>
-              <CardSpan5>SEK 217 000 </CardSpan5>
-            </CardInfoDiv>
-            <Line />
-            <DownloadBtn>DOWNLOAD ESTIMATE AS PDF</DownloadBtn>
-            <CardFooter>The estimate is an approximation of final cost</CardFooter>
-          </CardDiv>
-          </FirstViewRight2>
-        </FirstView> */}
+            {/* <CardDiv>
+              <CardTopTitle>Stockholm, Ostermalm</CardTopTitle>
+              <CardTitle>Artillerigatan - Snoot</CardTitle>
+              <CardImageDiv>
+                <CardImage src={Image} alt="" />
+                <CardImageCaption>30 m2 <br /> <br /> 10 000 visitors / day</CardImageCaption>
+              </CardImageDiv>
+              <Line />
+              <CardCalendar><i class="far fa-calendar-alt"></i>7 August 2020 <i class="fas fa-arrow-right"></i> 30 August 2020 </CardCalendar>
+              <Line />
+              <CardInfoDiv>
+                <CardInfo1>Rent </CardInfo1>
+                <CardSpan1>SEK 140 000 </CardSpan1>
+              </CardInfoDiv>
+              <CardInfoDiv>
+                <CardInfo1>Furniture (S) </CardInfo1>
+                <CardSpan2>SEK 27 000 </CardSpan2>
+              </CardInfoDiv>
+              <CardInfoDiv>
+                <CardInfo1>Marketing (S) </CardInfo1>
+                <CardSpan3>SEK 50 000 </CardSpan3>
+              </CardInfoDiv>
+              <CardInfoDiv>
+                <CardInfo1>Data & Analytics </CardInfo1>
+                <CardSpan4>SEK 0 </CardSpan4>
+              </CardInfoDiv>
+              <CardInfoDiv>
+                <CardInfo2>Total </CardInfo2>
+                <CardSpan5>SEK 217 000 </CardSpan5>
+              </CardInfoDiv>
+              <Line />
+              <DownloadBtn>DOWNLOAD ESTIMATE AS PDF</DownloadBtn>
+              <CardFooter>The estimate is an approximation of final cost</CardFooter>
+            </CardDiv> */}
 
+
+
+            {/* <FirstView>
+              <FirstViewLeft>
+
+                <Idea />
+
+              </FirstViewLeft>
+            </FirstView> */}
+            {/* --------- / ENQUIRY PAGE 3 --------- */}
+          </Route>
+
+
+
+
+
+        </Router>
       </Wrapper>
       {/* <<<<<<< HEAD
   <Router>

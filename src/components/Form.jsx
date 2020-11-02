@@ -79,6 +79,7 @@ export default Form
 
 // Slyled Components
 const TitleDiv = styled.div`
+/* Name your idea */
     position: absolute;
     width: 644px;
     height: 22px;
@@ -91,6 +92,22 @@ const TitleDiv = styled.div`
         font-weight: bold;
         font-size: 18px;
         line-height: 120%;
+    }
+    @media(max-width: 1024px){
+        position: absolute;
+        width: 343px;
+        height: 22px;
+        left: 16px;
+        top: 415px;
+        h6 {
+            font-family: Charter;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 18px;
+            line-height: 120%;
+
+
+        }
     }
 `
 
@@ -120,13 +137,40 @@ const StyledTitleInput = styled.input`
         font-size: 16px;
         line-height: 150%;
     }
+    @media(max-width: 1024px){
+        position: absolute;
+        width: 343px;
+        height: 52px;
+        left: 16px;
+        top: 453px;
+
+
+        ::placeholder,
+        ::-webkit-input-placeholder  {
+            position: absolute;
+            width: 197px;
+            height: 24px;
+            left: 30px;
+            top: 467px;
+            font-family: Fira Sans;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 16px;
+            line-height: 150%;
+            color: #868F92;
+
+
+        }
+    }
+
 `
 const MessageDiv = styled.div`
+/* Tell the landlord about your brand and what you want to do in the space */
     position: absolute;
-    width: 610px;
-    height: 22px;
-    left: 64px;
-    top: 455px;
+    width: 343px;
+    height: 44px;
+    left: 16px;
+    top: 537px;
 
     h6 {
         font-family: Charter;
@@ -135,8 +179,15 @@ const MessageDiv = styled.div`
         font-size: 18px;
         line-height: 120%;
     }
+    @media(max-width: 1024px){
+        width: 343px;
+        height: 44px;
+        left: 16px;
+        top: 537px;
+    }
 `
 const StyledMessageInput = styled.textarea`
+/* Rectangle 149 */
     position: absolute;
     width: 644px;
     height: 158px;
@@ -159,8 +210,21 @@ const StyledMessageInput = styled.textarea`
         font-weight: normal;
         font-size: 16px;
         line-height: 150%;
-
     }
+    @media(max-width: 1024px){
+        width: 343px;
+        height: 158px;
+        left: 16px;
+        top: 597px;
+    }
+    ::placeholder,
+    ::-webkit-input-placeholder  {
+        width: 315px;
+        height: 48px;
+        left: 30px;
+        top: 611px;
+    }
+
 `
 const SocialDiv = styled.div`
     position: absolute;
@@ -350,6 +414,7 @@ const StyledSocialInputWeb = styled.input`
        
 `
 const ImgDivTitle = styled.div`
+/* Upload your best brand images */
     position: absolute;
     width: 262px;
     height: 22px;
@@ -362,9 +427,13 @@ const ImgDivTitle = styled.div`
         font-weight: bold;
         font-size: 18px;
         line-height: 120%;
-        /* Black */
         color: #242728;
-
+    }
+    @media(max-width: 1024px) {
+        width: 343px;
+        height: 22px;
+        left: 16px;
+        top: 787px;
     }
 `
 const ImgDivDiscription = styled.div`
@@ -381,11 +450,15 @@ const ImgDivDiscription = styled.div`
         font-weight: normal;
         font-size: 16px;
         line-height: 150%;
-
-        /* or 24px */
-
-        /* Gray 2 */
         color: #555C5E;
+    }
+    @media(max-width: 1024px){
+        width: 343px;
+        height: 72px;
+        left: 16px;
+        top: 825px;
+
+
     }
 `
 const CoverImg = styled.div`
@@ -437,6 +510,7 @@ const StyledButton = styled.button`
     margin: 0px 12px;
 `
 const ImgContainer = styled.div`
+/* Rectangle 149 */
     position: absolute;
     width: 644px;
     height: 244px;
@@ -475,6 +549,18 @@ const ImgContainer = styled.div`
         right: 69.93%;
         top: 33.23%;
         bottom: 58.92%;
+    }
+    @media(max-width: 1024px) {
+        width: 343px;
+        height: 244px;
+        left: 16px;
+        top: 913px;
+    }
+    p {
+        width: 93px;
+        height: 20px;
+        left: 141px;
+        top: 1038px;
     }
 `
 const ImgDivOne = styled.div`
