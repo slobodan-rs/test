@@ -11,16 +11,25 @@ width: full-width;
 height: 350px;
 background-color: #F0EEEA;
 position: relative;
-top: 2750px;
+top: 2550px;
 `
 const Container = styled.div``
 const Row = styled.div``
 const TitleContainer = styled.div`
 `
 const Title = styled.h1`
-position: relative;
-color: white;
-margin-top: 50px;
+font-family: Charter;
+font-style: normal;
+font-weight: bold;
+font-size: 45px;
+line-height: 120%;
+
+/* or 54px */
+text-align: center;
+
+/* Brown */
+color: #686058;
+padding-top:30px;
 text-align: center;
 `
 
@@ -136,8 +145,9 @@ class BookSection extends Component {
 export default BookSection;
 const Wrapper = styled.div`
     position: absolute;
-    width: 1027px;
+    width: full-width;
     height: 27.77px;
-    left: 486px;
-    top: 200px;
+    justify-content: center;
+    left: 16%;
+    top: 270px;
 `

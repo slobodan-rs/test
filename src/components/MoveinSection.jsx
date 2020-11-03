@@ -1,16 +1,16 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
-import realestate from '../icons/realestate.png'
-import icon from '../icons/Icon.png'
-import message from '../icons/Message.png'
-import iconreal from '../icons/Iconreal.png'
-import shop from '../icons/Shop.png'
+import icon1 from '../icons/1.png'
+import icon2 from '../icons/2.png'
+import icon3 from '../icons/3.png'
+import icon4 from '../icons/4.png'
+import icon5 from '../icons/5.png'
 const Section = styled.section`
 width: full-width;
-height: 400px;
+height: 450px;
 background-color: #144745;
 position: relative;
-top: 2800px;
+top: 2600px;
 `
 const Container = styled.div``
 const Row = styled.div``
@@ -19,12 +19,20 @@ const TitleContainer = styled.div`
 const Title = styled.h1`
 position: relative;
 left: 10%;
-color: white;
-margin-top: 30px;
+font-family: Charter;
+font-style: normal;
+font-weight: bold;
+font-size: 32px;
+line-height: 120%;
+
+/* or 38px */
+
+color: #FFFFFF;
+padding-top: 20px;
 `
 
 const GalleryContainer = styled.div`
-margin-top: 100px;
+padding-top: 10px;
 `
 const ImgContainer = styled.div`
 
@@ -43,7 +51,29 @@ const Img = styled.img`
   height: 50px;
 `
 const Text = styled.h4`
-color: white;
+font-family: Charter;
+font-style: normal;
+font-weight: bold;
+font-size: 18px;
+line-height: 120%;
+
+/* identical to box height, or 22px */
+
+color: #F4F5F4;
+
+
+margin-right: 30px;
+`
+const Text1 = styled.h4`
+font-family: Fira Sans;
+font-style: normal;
+font-weight: normal;
+font-size: 16px;
+line-height: 150%;
+
+/* or 24px */
+
+color: #D7D2CB;
 margin-right: 30px;
 `
 class MoveinSection extends Component {
@@ -54,7 +84,7 @@ class MoveinSection extends Component {
       <Row>
          <TitleContainer>
          <Title>
-             <h4>Book a space as easy a hotel</h4>
+             <h4>Make your space move-in-ready</h4>
          </Title>
          </TitleContainer>
         </Row>
@@ -62,30 +92,30 @@ class MoveinSection extends Component {
 
                   <ImgContainer>
                   <ImgDiv>
-                  <Img src={realestate} alt="test" />
-                  <Text>Find your space</Text>
-                  <Text>Use our data to find a <br />retail space available daily, <br />weekly or monthly.</Text>
+                  <Img src={icon5} alt="test" />
+                  <Text>Design & furniture</Text>
+                  <Text1>Lorem ipsum dolor sit <br /> amet, consectetur <br /> adipiscing elit. Ut turpis.</Text1>
                   </ImgDiv>
                   <ImgDiv>
-                  <Img src={message} alt="test" />
-                    <Text>Find your space</Text>
-                  <Text>TExt</Text>
+                  <Img src={icon4} alt="test" />
+                    <Text>Staffing</Text>
+                    <Text1>Lorem ipsum dolor sit <br /> amet, consectetur <br /> adipiscing elit. Ut turpis.</Text1>
                   </ImgDiv>
                   <ImgDiv>
-                  <Img src={icon} alt="test" />
-                    <Text>Find your space</Text>
-                  <Text>TExt</Text>
+                  <Img src={icon1} alt="test" />
+                    <Text>Influencer marketing</Text>
+                  <Text1>Lorem ipsum dolor sit <br /> amet, consectetur <br /> adipiscing elit. Ut turpis.</Text1>
                   </ImgDiv>
 
                   <ImgDiv>
-                  <Img src={iconreal} alt="test" />
-                    <Text>Find your space</Text>
-                  <Text>TExt</Text>
+                  <Img src={icon3} alt="test" />
+                    <Text>Cleaning</Text>
+                <Text1>Lorem ipsum dolor sit <br /> amet, consectetur <br /> adipiscing elit. Ut turpis.</Text1>
                   </ImgDiv>
                   <ImgDiv>
-                  <Img src={shop} alt="test" />
-                    <Text>Find your space</Text>
-                  <Text>TExt</Text>
+                  <Img src={icon2} alt="test" />
+                    <Text>Data & Analytics</Text>
+                  <Text1>Lorem ipsum dolor sit <br /> amet, consectetur <br /> adipiscing elit. Ut turpis.</Text1>
                   </ImgDiv>
                   </ImgContainer>
                    </GalleryContainer>

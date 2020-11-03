@@ -80,10 +80,9 @@ class ClientSection extends Component {
 export default ClientSection
 
 const Wrapper = styled.div`
-    position: absolute;
-    width: 1027px;
-    height: 27.77px;
-    left: 486px;
-    top: 5676px;
-    background: grey;
+    position: relative;
+    width: full-width;
+    height: 50px;
+    top: 2900px;
+    background-color: #D7D2CB;
 `

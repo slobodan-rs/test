@@ -24,9 +24,11 @@ import ManageSection from './components/ManageSection'
 import MeasureSection from './components/MeasureSection'
 import MoveinSection from './components/MoveinSection'
 import GuideSection from './components/GuideSection'
-import ClientSection from './components/ClientSection'
 import EnquiryMobileIcons from './components/EnquiryMobileIcons'
 import CardPDF from './components/CardPDF'
+import SuccessSection from './components/SuccessSection'
+import ClientSection from './components/ClientSection'
+import PerfectSection from './components/PerfectSection'
 // <<<<<<< HEAD
 
 
@@ -67,7 +69,7 @@ const CompanyIcon = styled.img`
 `
 const CompanyIconMobile = styled.img`
     display: none;
-    
+
     @media(max-width: 1024px) {
       display: block;
       width: 90%;
@@ -415,9 +417,12 @@ export const App = () => {
             <BookSection />
             <ManageSection />
             <MeasureSection />
+
             <MoveinSection />
+            <SuccessSection />
             <GuideSection />
             <ClientSection />
+            <PerfectSection />
             {/* --------- / LANDING PAGE --------- */}
           </Route>
 

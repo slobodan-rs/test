@@ -20,11 +20,11 @@ const Title = styled.h1`
 position: relative;
 left: 10%;
 color: white;
-margin-top: 30px;
+padding-top: 20px;
 `
 
 const GalleryContainer = styled.div`
-margin-top: 100px;
+margin-top: 50px;
 `
 const ImgContainer = styled.div`
 
@@ -43,8 +43,33 @@ const Img = styled.img`
   height: 50px;
 `
 const Text = styled.h4`
+margin-right: 30px;
+font-family: Charter;
+font-style: normal;
+font-weight: bold;
+font-size: 18px;
+line-height: 120%;
+
+/* identical to box height, or 22px */
+
+color: #F4F5F4;
+
+
+`
+const Text1 = styled.h4`
 color: white;
 margin-right: 30px;
+
+/* Body Small */
+font-family: Fira Sans;
+font-style: normal;
+font-weight: normal;
+font-size: 16px;
+line-height: 150%;
+
+/* or 24px */
+
+color: #D7D2CB;
 `
 class BookSection extends Component {
   render() {
@@ -64,28 +89,29 @@ class BookSection extends Component {
                   <ImgDiv>
                   <Img src={realestate} alt="test" />
                   <Text>Find your space</Text>
-                  <Text>Use our data to find a <br />retail space available daily, <br />weekly or monthly.</Text>
-                  </ImgDiv>
-                  <ImgDiv>
-                  <Img src={message} alt="test" />
-                    <Text>Find your space</Text>
-                  <Text>TExt</Text>
-                  </ImgDiv>
-                  <ImgDiv>
-                  <Img src={icon} alt="test" />
-                    <Text>Find your space</Text>
-                  <Text>TExt</Text>
+                  <Text1>Use our data to find a <br />retail space available daily, <br />weekly or monthly.</Text1>
                   </ImgDiv>
 
                   <ImgDiv>
+                  <Img src={message} alt="test" />
+                    <Text>Propose your idea</Text>
+                  <Text1>Describe your idea and <br />brand to ensure the space <br /> matches your vision</Text1>
+                  </ImgDiv>
+
+                  <ImgDiv>
+                  <Img src={icon} alt="test" />
+                    <Text>Select add-ons</Text>
+                  <Text1>Remove all the hard work. <br />Design, furniture, staffing <br /> you name it!</Text1>
+                  </ImgDiv>
+                  <ImgDiv>
                   <Img src={iconreal} alt="test" />
-                    <Text>Find your space</Text>
-                  <Text>TExt</Text>
+                    <Text>Book & pay</Text>
+                  <Text1>We’ll handle all the <br />paperwork and details all<br /> online.</Text1>
                   </ImgDiv>
                   <ImgDiv>
                   <Img src={shop} alt="test" />
-                    <Text>Find your space</Text>
-                  <Text>TExt</Text>
+                    <Text>Open your store</Text>
+                  <Text1>Get out there and tell your<br /> stories with your new <br /> physical presence.</Text1>
                   </ImgDiv>
                   </ImgContainer>
                    </GalleryContainer>

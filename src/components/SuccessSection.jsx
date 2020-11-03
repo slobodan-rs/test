@@ -1,121 +1,156 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
-import image from './images/img.jpg'
-import image1 from './images/img.jpg'
-import image2 from './images/img.jpg'
+import image4 from '../images/12.png'
+import image5 from '../images/13.png'
 const Section = styled.section`
-margin-top: 300px;
+position: relative;
+top: 2600px;
 `
-const Container = styled.div`
-`
+const Container = styled.div``
 const Row = styled.div``
 const TitleContainer = styled.div``
 const Title = styled.h1`
 position: relative;
 left: 10%;
-`
-const PostContainer = styled.div`
-position: relative;
-  text-align: center;
-  color: white;
-`
-const Post = styled.div``
-const Blog1 = styled.div`
-margin-top: 100px;
-`
-const Image = styled.img`
-position:absolute;
-  top: 50%;
-  left: 20%;
-  transform: translate(-50%, -50%);
-  width: 250px;
-  height: 250px;
-`
-const Image1 = styled.img`
-position:absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 250px;
-  height: 250px;
-`
-const Image2 = styled.img`
-position:absolute;
-  top: 50%;
-  left: 80%;
-  transform: translate(-50%, -50%);
-  width: 250px;
-  height: 250px;
+font-family: Charter;
+font-style: normal;
+font-weight: bold;
+font-size: 32px;
+line-height: 120%;
+
+/* or 38px */
+
+color: #686058;
 `
 
-  const PostTitle1 = styled.h5`
-  position:absolute;
-  top: 10%;
-  left: 15%;
-  transform: translate(-50%, -50%);
-    `
-    const PostTitle2 = styled.h5`
-    position:absolute;
-      top: 16%;
-      left: 12%;
-      transform: translate(-50%, -50%);
-      `
-const PostDesc = styled.h6`
-position:absolute;
-  bottom: 0%;
-  left: 15%;
-  transform: translate(-50%, -50%);
+const GalleryContainer = styled.div``
+const ImgContainer = styled.div`
+
+  justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 30px 0 0 0;
 `
-const PostPrice = styled.h5`
-position:absolute;
-  top: 25%;
-  left: 11%;
-  transform: translate(-50%, -50%);
+const ImgDiv = styled.div`
+
+margin-left: 100px;
 `
-const PostText = styled.p`
-position:absolute;
-  top: 30%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+
+const Img = styled.img`
+  width: 600px;
+  height: 430px;
+  background-color: grey;
 `
-const Bg = styled.img``
-const Info = styled.div`
-position:absolute;
-  top: 130%;
-  left: 40%;
-  transform: translate(-50%, -50%);
-width: 800px;
-height: 400px;
-background-color: grey;
+const Text = styled.h4`
+font-family: Charter;
+font-style: normal;
+font-weight: bold;
+font-size: 24px;
+line-height: 120%;
+
+/* identical to box height, or 29px */
+
+color: #111118;
+
+
 `
-class SinglePost extends Component {
+const Text1 = styled.h4`
+font-family: Fira Sans;
+font-style: normal;
+font-weight: normal;
+font-size: 18px;
+line-height: 150%;
+left: 30px;
+/* or 27px */
+
+color: #111118;
+`
+const Textdiv = styled.div`
+position: absolute;
+width: 533px;
+height: 335px;
+top: 350px;
+left: 300px;
+background: #F0EEEA;
+border-radius: 2px;
+`
+const Textdiv1 = styled.div`
+position: absolute;
+width: 533px;
+height: 335px;
+top: 350px;
+left: 1000px;
+background: #F0EEEA;
+border-radius: 2px;
+`
+const ButtonDiv = styled.div`
+position: relative;
+left: 30%;
+padding-top: 250px;
+`
+const Button = styled.button `
+  position: absolute;
+width: 533px;
+height: 64px;
+
+/* Green */
+background: #0F6B5C;
+border-radius: 2px;
+
+font-family: Fira Sans;
+font-style: normal;
+font-weight: 500;
+font-size: 16px;
+line-height: 20px;
+
+/* identical to box height, or 125% */
+letter-spacing: 0.5px;
+text-transform: uppercase;
+
+/* White */
+color: #FFFFFF;
+`
+class SuccessSection extends Component {
   render() {
     return (
-      <>
       <Section>
         <Container>
          <Row>
           <TitleContainer>
-          <Title>A perfect space for your brand</Title>
+          <Title>
+              <h4>Success Stories</h4>
+          </Title>
           </TitleContainer>
          </Row>
-         <Row>
-         <PostContainer>
-          <Bg src={image} alt="some"/>
-          <Info>
-          <PostTitle1>Ostermaln, Stockholm</PostTitle1>
-          <PostTitle2>Grev Turegatan</PostTitle2>
-          <PostPrice>5.000kr/week</PostPrice>
-          <PostText>TEXT</PostText>
-          <PostDesc>32 m2 * 1600 visitors/week</PostDesc>
-          </Info>
-         </PostContainer>
-         </Row>
-        </Container>
-      </Section>
-      </>
+         <GalleryContainer>
+                  <ImgContainer>
+                  <ImgDiv>
+                  <Img src={image4} alt="test" />
+                  </ImgDiv>
+                  <Textdiv>
+                  <Text>Custom helmets in an art gallery</Text>
+                  <Text1>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque magna duis rhoncus tincidunt est parturient tortor proin. Hac eleifend placerat a sem adipiscing iaculis. Tincidunt convallis amet amet at et mi arcu faucibus luctus.</Text1>
+                  </Textdiv>
+
+
+                  <ImgDiv>
+                  <Img src={image5} alt="test" />
+
+
+                  </ImgDiv>
+                  <Textdiv1>
+                  <Text>Walking the walk</Text>
+                  <Text1>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque magna duis rhoncus tincidunt est parturient tortor proin. Hac eleifend placerat a sem adipiscing iaculis. Tincidunt convallis amet amet at et mi arcu faucibus luctus.</Text1>
+                  </Textdiv1>
+                  </ImgContainer>
+                  <ButtonDiv>
+                  <Button>EXPLORE OUR BLOG</Button>
+                  </ButtonDiv>
+                   </GalleryContainer>
+
+         </Container>
+         </Section>
     )
   }
 }
-
-export default S;
+export default SuccessSection;
