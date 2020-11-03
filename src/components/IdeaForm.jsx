@@ -2,24 +2,16 @@ import React, { Component } from 'react'
 import styled from 'styled-components'
 
 
-class Form extends Component {
+class IdeaForm extends Component {
     render() {
         return (
             <form>
-                <TitleDiv>
-                    <h6>Name your idea</h6>
-                </TitleDiv>
+                <TitleDiv>Name your idea</TitleDiv>
                 <StyledTitleInput type="text" placeholder="ex. Custom made ice cream" />
-                <MessageDiv>
-                    <h6>Tell the landlord about your brand and what you want to do in the space</h6>
-                </MessageDiv>
-                <StyledMessageInput type="text" placeholder="Describe what your brand is about and what you want to do" />
-                <ImgDivTitle>
-                    <h6>Upload your best brand images</h6>
-                </ImgDivTitle>
-                <ImgDivDiscription>
-                    <p>Landlords love to see images so include some good quality product shots, press images or event photos.</p>
-                </ImgDivDiscription>
+                <MessageDiv>Tell the landlord about your brand and what you want to do in the space</MessageDiv>
+                <StyledMessageInput type="text" rows='10' placeholder="Describe what your brand is about and what you want to do" />
+                <ImgDivTitle>Upload your best brand images</ImgDivTitle>
+                <ImgDivDiscription>Landlords love to see images so include some good quality product shots, press images or event photos.</ImgDivDiscription>
                 <ImgContainer>
                     <p><i class="fas fa-plus"></i></p>
                     <p>Add images</p>
@@ -75,10 +67,10 @@ class Form extends Component {
     }
 }
 
-export default Form
+export default IdeaForm
 
 // Slyled Components
-const TitleDiv = styled.div`
+const TitleDiv = styled.h6`
 /* Name your idea */
     position: absolute;
     width: 644px;
@@ -86,28 +78,19 @@ const TitleDiv = styled.div`
     left: 64px;
     top: 341px;
     
-    h6 {
-        font-family: Charter;
-        font-style: normal;
-        font-weight: bold;
-        font-size: 18px;
-        line-height: 120%;
-    }
+    font-family: Charter;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 120%;
+
     @media(max-width: 1024px){
         position: absolute;
-        width: 343px;
+        width: 80%;
         height: 22px;
-        left: 16px;
-        top: 415px;
-        h6 {
-            font-family: Charter;
-            font-style: normal;
-            font-weight: bold;
-            font-size: 18px;
-            line-height: 120%;
-
-
-        }
+        left: 0;
+        top: 345px;
+        padding: 16px;
     }
 `
 
@@ -139,11 +122,10 @@ const StyledTitleInput = styled.input`
     }
     @media(max-width: 1024px){
         position: absolute;
-        width: 343px;
+        width: 90%;
         height: 52px;
         left: 16px;
-        top: 453px;
-
+        top: 443px;
 
         ::placeholder,
         ::-webkit-input-placeholder  {
@@ -158,32 +140,31 @@ const StyledTitleInput = styled.input`
             font-size: 16px;
             line-height: 150%;
             color: #868F92;
-
-
         }
     }
 
 `
-const MessageDiv = styled.div`
+const MessageDiv = styled.h6`
 /* Tell the landlord about your brand and what you want to do in the space */
     position: absolute;
-    width: 343px;
-    height: 44px;
-    left: 16px;
-    top: 537px;
+    width: 610px;
+    height: 22px;
+    left: 64px;
+    top: 415px;
+    padding: 24px 0 16px 0;
 
-    h6 {
-        font-family: Charter;
-        font-style: normal;
-        font-weight: bold;
-        font-size: 18px;
-        line-height: 120%;
-    }
+    font-family: Charter;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 120%;
+
     @media(max-width: 1024px){
-        width: 343px;
+        width: 80%;
         height: 44px;
-        left: 16px;
-        top: 537px;
+        left: 0px;
+        top: 477px;
+        padding: 16px;
     }
 `
 const StyledMessageInput = styled.textarea`
@@ -212,11 +193,11 @@ const StyledMessageInput = styled.textarea`
         line-height: 150%;
     }
     @media(max-width: 1024px){
-        width: 343px;
+        width: 90%;
         height: 158px;
         left: 16px;
         top: 597px;
-    }
+        
     ::placeholder,
     ::-webkit-input-placeholder  {
         width: 315px;
@@ -224,13 +205,14 @@ const StyledMessageInput = styled.textarea`
         left: 30px;
         top: 611px;
     }
+    }
 
 `
 const SocialDiv = styled.div`
     position: absolute;
-    width: 164px;
+    width: 224px;
     height: 22px;
-    left: ${({ optional }) => optional ? '236px' : '64px'};
+    left: ${({ optional }) => optional ? '266px' : '64px'};
     top: ${({ optional }) => optional ? '1060px' : '1035px'};
 
     h6 {
@@ -248,6 +230,20 @@ const SocialDiv = styled.div`
         line-height: 150%;
         color: #868F92;
     }
+    @media(max-width: 1024px){
+        position: absolute;
+        width: 164px;
+        height: 22px;
+        left: ${({ optional }) => optional ? '184px' : '16px'};
+        top: ${({ optional }) => optional ? '1173px' : '1149px'};
+        p{
+            font-family: Charter;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 18px;
+            line-height: 120%;
+        }
+    }
 
 `
 const StyledIconInsta = styled.div`
@@ -256,6 +252,10 @@ const StyledIconInsta = styled.div`
     top: 1131px;
     z-index: 1;
     color: #555C5E;
+    @media(max-width: 1024px){
+        left: 26px;
+        top: 1245px;
+    }
 `
 
 const StyledSocialInputInsta = styled.input`
@@ -276,19 +276,21 @@ const StyledSocialInputInsta = styled.input`
         height: 24px;
         left: 112px;
         top: 1195px;
-        
 
-        /* Body Small */
         font-family: Fira Sans;
         font-style: normal;
         font-weight: normal;
         font-size: 16px;
         line-height: 150%;
 
-        /* identical to box height, or 24px */
-
         /* Gray 4 */
         color: #868F92;
+    }
+    @media(max-width: 1024px){
+        width: 90%;
+        height: 52px;
+        left: 16px;
+        top: 1227px;
     }
        
 `
@@ -298,6 +300,10 @@ const StyledIconFace = styled.div`
     top: 1199px;
     z-index: 1;
     color: #555C5E;
+    @media(max-width: 1024px){
+        left: 26px;
+        top: 1314px;
+    }
 `
 const StyledSocialInputFace = styled.input`
     position: absolute;
@@ -327,6 +333,12 @@ const StyledSocialInputFace = styled.input`
         font-size: 16px;
         line-height: 150%;
     }
+    @media(max-width: 1024px){
+        width: 90%;
+        height: 52px;
+        left: 16px;
+        top: 1295px;
+    }
        
 `
 const StyledIconTwitter = styled.div`
@@ -335,6 +347,10 @@ const StyledIconTwitter = styled.div`
     top: 1267px;
     z-index: 1;
     color: #555C5E;
+    @media(max-width: 1024px){
+        left: 26px;
+        top: 1382px;
+    }
 `
 const StyledSocialInputTwitter = styled.input`
     position: absolute;
@@ -357,17 +373,19 @@ const StyledSocialInputTwitter = styled.input`
         left: 112px;
         top: 1195px;
 
-        /* Body Small */
         font-family: Fira Sans;
         font-style: normal;
         font-weight: normal;
         font-size: 16px;
         line-height: 150%;
-
-        /* identical to box height, or 24px */
-
         /* Gray 4 */
         color: #868F92;
+    }
+    @media(max-width: 1024px){
+        width: 90%;
+        height: 52px;
+        left: 16px;
+        top: 1363px;
     }
        
 `
@@ -377,6 +395,10 @@ const StyledIconWeb = styled.div`
     top: 1335px;
     z-index: 1;
     color: #555C5E;
+    @media(max-width: 1024px){
+        left: 26px;
+        top: 1449px;
+    }
 `
 const StyledSocialInputWeb = styled.input`
     position: absolute;
@@ -399,66 +421,67 @@ const StyledSocialInputWeb = styled.input`
         left: 112px;
         top: 1195px;
 
-        /* Body Small */
         font-family: Fira Sans;
         font-style: normal;
         font-weight: normal;
         font-size: 16px;
         line-height: 150%;
 
-        /* identical to box height, or 24px */
-
         /* Gray 4 */
         color: #868F92;
     }
+    @media(max-width: 1024px){
+        width: 90%;
+        height: 52px;
+        left: 16px;
+        top: 1431px;
+    }
        
 `
-const ImgDivTitle = styled.div`
+const ImgDivTitle = styled.h6`
 /* Upload your best brand images */
     position: absolute;
-    width: 262px;
+    width: 322px;
     height: 22px;
     left: 64px;
     top: 685px;
 
-    h6 {
-        font-family: Charter;
-        font-style: normal;
-        font-weight: bold;
-        font-size: 18px;
-        line-height: 120%;
-        color: #242728;
-    }
+    font-family: Charter;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 120%;
+    color: #242728;
+
     @media(max-width: 1024px) {
         width: 343px;
         height: 22px;
-        left: 16px;
-        top: 787px;
+        left: 0;
+        top: 747px;
+        padding: 16px;
     }
 `
-const ImgDivDiscription = styled.div`
+const ImgDivDiscription = styled.p`
     position: absolute;
     width: 644px;
     height: 48px;
     left: 64px;
     top: 743px;
 
-    p {
-        /* Body Small */
-        font-family: Fira Sans;
-        font-style: normal;
-        font-weight: normal;
-        font-size: 16px;
-        line-height: 150%;
-        color: #555C5E;
-    }
+    /* Body Small */
+    font-family: Fira Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 150%;
+    color: #555C5E;
+
     @media(max-width: 1024px){
         width: 343px;
         height: 72px;
-        left: 16px;
-        top: 825px;
-
-
+        left: 0;
+        top: 805px;
+        padding: 16px;
     }
 `
 const CoverImg = styled.div`
@@ -551,7 +574,7 @@ const ImgContainer = styled.div`
         bottom: 58.92%;
     }
     @media(max-width: 1024px) {
-        width: 343px;
+        width: 90%;
         height: 244px;
         left: 16px;
         top: 913px;
@@ -559,8 +582,16 @@ const ImgContainer = styled.div`
     p {
         width: 93px;
         height: 20px;
-        left: 141px;
+        left: 0px;
         top: 1038px;
+        
+        :nth-child(2){
+            width: 93px;
+            height: 20px;
+            left: calc(50% - 93px/2);
+            top: 100px;
+            z-index: 1;
+        }
     }
 `
 const ImgDivOne = styled.div`
@@ -607,11 +638,14 @@ const SelectTitle = styled.div`
         font-weight: bold;
         font-size: 18px;
         line-height: 120%;
-
-        /* identical to box height, or 22px */
-
         /* Black */
         color: #242728;
+    }
+    @media(max-width: 1024px){
+        width: 90%;
+        height: 22px;
+        left: 16px;
+        top: 1477px;
     }
 `
 const StyledSelect = styled.select`
@@ -632,15 +666,36 @@ const StyledSelect = styled.select`
     line-height: 150%;
     background-color: white;
     padding: 10px;
+
+    @media(max-width: 1024px){
+        width: 90%;
+        height: 52px;
+        left: 16px;
+        top: 1545px;
+    }
 `
 const ButtonsDiv = styled.div`
     display: flex;
     margin-top: 7vh;
     width: 50vw;
+    height: 15vh;
     margin-left: 5vw;
     position: absolute;
     left: -32px;
-    top: 1450px;  
+    top: 1450px;
+
+    @media(max-width: 1024px){
+        margin: 0px;
+        position: absolute;
+        padding: 10px 10px 10px 10px;
+        width: 95%;
+        height: 52px;
+        left: 0%;
+        right: 0%;
+        bottom: 0px;
+        top: 2529px;
+        box-shadow: 0px 8px 28px rgba(0, 0, 0, 0.28);
+    }
 `
 const PrevBtn = styled.button`
     background-color: white;
@@ -657,6 +712,15 @@ const PrevBtn = styled.button`
     color: #0f6b5c;
     border-color:  #0f6b5c;
 
+    @media(max-width: 1024px){
+        width: 167px;
+        height: 52px;
+        left: 0%;
+        right: 0%;
+        bottom: 0px;
+        border: none;
+    }
+
 `
 const NextBtn = styled.button`
     background-color: #0f6b5c;
@@ -671,6 +735,14 @@ const NextBtn = styled.button`
     line-height: 20px;
     letter-spacing: 0.5px;
     text-transform: uppercase;
+    @media(max-width: 1024px){
+        width: 167px;
+        height: 52px;
+        left: 0%;
+        right: 0%;
+        bottom: 0px;
+        margin-left: 40px;
+    }
 `
 const SendToBtn = styled.button`
     background-color: #0f6b5c;

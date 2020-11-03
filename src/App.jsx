@@ -4,18 +4,16 @@ import { Link, BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 
 //Icons and images
 import Xnomad from './icons/Xnomad.svg'
+import XnomadMobile from './icons/XnomadMobile.svg'
 import Plus from './icons/Plus.svg'
 import Minus from './icons/Minus.svg'
-import Image from './images/image.png'
 
 //Components
-import { Login } from './Login.jsx'
 import { OptionDivTitles } from './consts.js'
-import Idea from './Idea'
 import Home from './Home.jsx'
-import Section from './components/Section'
-import SectionDescription from './components/SectionDescription'
-import Form from './components/Form'
+import IdeaSection from './components/IdeaSection'
+import IdeaSectionDiscript from './components/IdeaSectionDiscript'
+import IdeaForm from './components/IdeaForm'
 import About from './About'
 import SelectSection from './components/SelectSection'
 import SpacesSection from './components/SpacesSection'
@@ -27,6 +25,8 @@ import MeasureSection from './components/MeasureSection'
 import MoveinSection from './components/MoveinSection'
 import GuideSection from './components/GuideSection'
 import ClientSection from './components/ClientSection'
+import EnquiryMobileIcons from './components/EnquiryMobileIcons'
+import CardPDF from './components/CardPDF'
 // <<<<<<< HEAD
 
 
@@ -47,9 +47,12 @@ const Header = styled.div`
   align-items: center;
   height: 6vh;
   border-bottom: 2px solid black;
-`
-const Price = styled.p`
-  margin: auto;
+
+  @media(max-width: 1024px){
+    border-bottom: none;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+    height: 60px;
+  }
 `
 const CompanyIcon = styled.img`
   width: 9vw;
@@ -58,8 +61,23 @@ const CompanyIcon = styled.img`
   &:hover {
     cursor: pointer;
   }
+  @media(max-width: 1024px) {
+    display: none;
+  }
 `
-
+const CompanyIconMobile = styled.img`
+    display: none;
+    
+    @media(max-width: 1024px) {
+      display: block;
+      width: 90%;
+      height: 5vh;
+      margin-right: 80%;
+      &:hover {
+        cursor: pointer;
+      }
+  }
+`
 const HeaderTextBoxes = styled.p`
   display: flex;
   justify-content: center;
@@ -69,6 +87,37 @@ const HeaderTextBoxes = styled.p`
   color: ${(p) => (p.id === 0 ? '#0f6b5c' : '')};
   &:hover {
     cursor: pointer;
+  }
+  @media(max-width: 1024px){
+    display: none;
+  }
+`
+const HeaderTextBoxesRewiev = styled.p`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 3vw;
+  font-weight: 500px;
+  color: ${(p) => (p.id === 1 ? '#0f6b5c' : '')};
+  &:hover {
+    cursor: pointer;
+  }
+  @media(max-width: 1024px){
+    display: none;
+  }
+`
+const HeaderTextBoxesIdea = styled.p`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 3vw;
+  font-weight: 500px;
+  color: ${(p) => (p.id === 2 ? '#0f6b5c' : '')};
+  &:hover {
+    cursor: pointer;
+  }
+  @media(max-width: 1024px){
+    display: none;
   }
 `
 
@@ -311,110 +360,32 @@ const DataAnalyticsText = styled.div`
 margin-left: -150px;
 color: white;
 `
-const CardDiv = styled.div`
-position: absolute;
-width: 421px;
-height: 723px;
-right: 64px;
-top: 189px;
-background-color: #F0EEEA;
+const SpaceCardWrapper = styled.div`
+    position: absolute;
+    width: 421px;
+    height: 723px;
+    left: 955px;
+    top: 189px;
+    background-color: #F0EEEA;
+    @media(max-width: 1024px){
+        left: 17px;
+        top: 1659px;
+        width: 90%;
+    }
 `
-const CardTopTitle = styled.p`
-padding-top: 20px;
-margin-left: 30px;
-color: #555C5E;
+const IdeaCardWrapper = styled.div`
+    position: absolute;
+    width: 421px;
+    height: 723px;
+    left: 955px;
+    top: 189px;
+    background-color: #F0EEEA;
+    @media(max-width: 1024px){
+        left: 17px;
+        top: 1659px;
+        width: 90%;
+    }
 `
-const CardTitle = styled.h1`
-margin-left: 20px;
-`
-const CardImageDiv = styled.div`
-display: flex;
-`
-const CardImage = styled.img`
-width: 169px;
-height: 118px;
-margin-left: 30px;
-`
-const CardImageCaption = styled.div`
-margin-top: 10px;
-margin-left: 30px;
-color: #868F92;
-`
-const CardImageCaption1 = styled.div`
-
-`
-const Line = styled.hr`
-margin-top: 25px;
-width: 80%;
-background-color: #868F92;
-
-`
-const CardCalendar = styled.div`
-color: #868F92;
-margin-top: 25px;
-margin-left: 50px;
-`
-const CardInfoDiv = styled.div`
-display: flex;
-`
-const CardInfo1 = styled.div`
-color: #868F92;
-margin-left: 30px;
-margin-top: 20px;
-`
-const CardInfo2 = styled.div`
-color: black;
-margin-left: 30px;
-margin-top: 20px;
-`
-const CardSpan1 = styled.span`
-margin-left: 210px;
-color: #868F92;
-margin-top: 20px;
-`
-const CardSpan2 = styled.span`
-margin-left: 140px;
-margin-top: 20px;
-color: #868F92;
-`
-const CardSpan3 = styled.span`
-margin-left: 133px;
-margin-top: 20px;
-color: #868F92;
-`
-const CardSpan4 = styled.span`
-margin-left: 110px;
-margin-top: 20px;
-color: #868F92;
-`
-const CardSpan5 = styled.span`
-margin-left: 207px;
-margin-top: 20px;
-`
-const DownloadBtn = styled.button`
-margin-top: 20px;
-background-color: #0f6b5c;
-color: white;
-width:370px;
-height:50px;
-margin-left: 20px;
-border: 1px solid #0f6b5c;
-`
-const CardFooter = styled.div`
-color: #868F92;
-margin-top: 20px;
-margin-left: 20px;
-`
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -423,6 +394,9 @@ export const App = () => {
   const [hoveredId, setHoveredId] = React.useState(null)
   const [clickedId, setClickedId] = React.useState(null)
   const [disableHover, setDisableHover] = React.useState(false)
+
+  let frontColor = '#FFFF'
+  let backColor = '#0F6B5C'
 
   const [staffingCounter, setStaffingCounter] = React.useState(0)
   let StaffingAnalyticsDivDisplayerPrice = `SEK 350/h ${'   '}   x ${'   '}   14 days ${'   '}  = ${'   '}  SEK ${39200 + staffingCounter * 4000
@@ -451,11 +425,14 @@ export const App = () => {
             {/* --------- ENQUIRY PAGE 1 --------- */}
             <Header>
               <CompanyIcon src={Xnomad} href='https://www.xnomad.co/' />
+              <CompanyIconMobile src={XnomadMobile} href='https://www.xnomad.co/' />
+              <EnquiryMobileIcons firstBack={backColor} firstFront={frontColor} />
               {headerTexts.map((item, idx) => {
                 return (
                   <HeaderTextBoxes id={idx}>
                     {idx + 1}. {item}
                   </HeaderTextBoxes>
+
                 )
               })}
             </Header>
@@ -494,40 +471,11 @@ export const App = () => {
                 })}
               </FirstViewLeft>
               {/* <<<<<<< HEAD */}
-              <FirstViewRight><CardDiv>
-                <CardTopTitle>Stockholm, Ostermalm</CardTopTitle>
-                <CardTitle>Artillerigatan - Snoot</CardTitle>
-                <CardImageDiv>
-                  <CardImage src={Image} alt="" />
-                  <CardImageCaption>30 m2 <br /> <br /> 10 000 visitors / day</CardImageCaption>
-                </CardImageDiv>
-                <Line />
-                <CardCalendar><i class="far fa-calendar-alt"></i>7 August 2020 <i class="fas fa-arrow-right"></i> 30 August 2020 </CardCalendar>
-                <Line />
-                <CardInfoDiv>
-                  <CardInfo1>Rent </CardInfo1>
-                  <CardSpan1>SEK 140 000 </CardSpan1>
-                </CardInfoDiv>
-                <CardInfoDiv>
-                  <CardInfo1>Furniture (S) </CardInfo1>
-                  <CardSpan2>SEK 27 000 </CardSpan2>
-                </CardInfoDiv>
-                <CardInfoDiv>
-                  <CardInfo1>Marketing (S) </CardInfo1>
-                  <CardSpan3>SEK 50 000 </CardSpan3>
-                </CardInfoDiv>
-                <CardInfoDiv>
-                  <CardInfo1>Data & Analytics </CardInfo1>
-                  <CardSpan4>SEK 0 </CardSpan4>
-                </CardInfoDiv>
-                <CardInfoDiv>
-                  <CardInfo2>Total </CardInfo2>
-                  <CardSpan5>SEK 217 000 </CardSpan5>
-                </CardInfoDiv>
-                <Line />
-                <DownloadBtn>DOWNLOAD ESTIMATE AS PDF</DownloadBtn>
-                <CardFooter>The estimate is an approximation of final cost</CardFooter>
-              </CardDiv>
+              <FirstViewRight>
+                <SpaceCardWrapper>
+                  <CardPDF />
+                </SpaceCardWrapper>
+
               </FirstViewRight>
               {/* ======= */}
               <FirstViewRight></FirstViewRight>
@@ -608,12 +556,7 @@ export const App = () => {
                 })}
               </FirstViewLeft>
               <FirstViewRight></FirstViewRight>
-
             </FirstView>
-
-
-
-
             <DataDiv>
               <DataAnalyticsTitle1>Data & Analytics</DataAnalyticsTitle1>
               <DataAnalyticsTitle2>WHAT IS DATA & ANALYTICS</DataAnalyticsTitle2>
@@ -626,15 +569,18 @@ export const App = () => {
             <Home />
             {/* --------- / ENQUIRY PAGE 1 --------- */}
           </Route>
+
           <Route exact path="/enquiry2">
             {/* --------- ENQUIRY PAGE 2 --------- */}
             <Header>
               <CompanyIcon src={Xnomad} href='https://www.xnomad.co/' />
+              <CompanyIconMobile src={XnomadMobile} href='https://www.xnomad.co/' />
+              <EnquiryMobileIcons secondBack={backColor} secondFront={frontColor} />
               {headerTexts.map((item, idx) => {
                 return (
-                  <HeaderTextBoxes id={idx}>
+                  <HeaderTextBoxesRewiev id={idx}>
                     {idx + 1}. {item}
-                  </HeaderTextBoxes>
+                  </HeaderTextBoxesRewiev>
                 )
               })}
             </Header>
@@ -642,77 +588,33 @@ export const App = () => {
             <Home />
             {/* --------- / ENQUIRY PAGE 2 --------- */}
           </Route>
+
           <Route exact path="/enquiry3">
             {/* --------- ENQUIRY PAGE 3 --------- */}
-            {/* <Header>
+            <Header>
               <CompanyIcon src={Xnomad} href='https://www.xnomad.co/' />
+              <CompanyIconMobile src={XnomadMobile} href='https://www.xnomad.co/' />
+              <EnquiryMobileIcons thirdBack={backColor} thirdFront={frontColor} />
               {headerTexts.map((item, idx) => {
                 return (
-                  <HeaderTextBoxes id={idx}>
+                  <HeaderTextBoxesIdea id={idx}>
                     {idx + 1}. {item}
-                  </HeaderTextBoxes>
+                  </HeaderTextBoxesIdea>
                 )
               })}
-            </Header> */}
-
-            <Section>
+            </Header>
+            <IdeaSection>
               <h4>Pitch your idea to the landlord</h4>
-            </Section>
-            <SectionDescription>
-              <p>To send an enquiry, landlords require some information about your idea for the space. If they like your idea, you'll be able to ask any questions and set up a viewing.</p>
-            </SectionDescription>
-            <Form />
-            {/* <CardDiv>
-              <CardTopTitle>Stockholm, Ostermalm</CardTopTitle>
-              <CardTitle>Artillerigatan - Snoot</CardTitle>
-              <CardImageDiv>
-                <CardImage src={Image} alt="" />
-                <CardImageCaption>30 m2 <br /> <br /> 10 000 visitors / day</CardImageCaption>
-              </CardImageDiv>
-              <Line />
-              <CardCalendar><i class="far fa-calendar-alt"></i>7 August 2020 <i class="fas fa-arrow-right"></i> 30 August 2020 </CardCalendar>
-              <Line />
-              <CardInfoDiv>
-                <CardInfo1>Rent </CardInfo1>
-                <CardSpan1>SEK 140 000 </CardSpan1>
-              </CardInfoDiv>
-              <CardInfoDiv>
-                <CardInfo1>Furniture (S) </CardInfo1>
-                <CardSpan2>SEK 27 000 </CardSpan2>
-              </CardInfoDiv>
-              <CardInfoDiv>
-                <CardInfo1>Marketing (S) </CardInfo1>
-                <CardSpan3>SEK 50 000 </CardSpan3>
-              </CardInfoDiv>
-              <CardInfoDiv>
-                <CardInfo1>Data & Analytics </CardInfo1>
-                <CardSpan4>SEK 0 </CardSpan4>
-              </CardInfoDiv>
-              <CardInfoDiv>
-                <CardInfo2>Total </CardInfo2>
-                <CardSpan5>SEK 217 000 </CardSpan5>
-              </CardInfoDiv>
-              <Line />
-              <DownloadBtn>DOWNLOAD ESTIMATE AS PDF</DownloadBtn>
-              <CardFooter>The estimate is an approximation of final cost</CardFooter>
-            </CardDiv> */}
+            </IdeaSection>
+            <IdeaSectionDiscript>To send an enquiry, landlords require some information about your idea for the space. If they like your idea, you'll be able to ask any questions and set up a viewing.
+            </IdeaSectionDiscript>
+            <IdeaForm />
+            <IdeaCardWrapper>
+              <CardPDF />
+            </IdeaCardWrapper>
 
-
-
-            {/* <FirstView>
-              <FirstViewLeft>
-
-                <Idea />
-
-              </FirstViewLeft>
-            </FirstView> */}
             {/* --------- / ENQUIRY PAGE 3 --------- */}
           </Route>
-
-
-
-
-
         </Router>
       </Wrapper>
       {/* <<<<<<< HEAD
@@ -727,11 +629,3 @@ export const App = () => {
     </>
   )
 }
-
-const FirstViewRight2 = styled.div`
-  position: absolute;
-width: 421px;
-height: 723px;
-left: 955px;
-top: 189px;
-`
