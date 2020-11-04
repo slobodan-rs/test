@@ -7,6 +7,7 @@ import Xnomad from './icons/Xnomad.svg'
 import XnomadMobile from './icons/XnomadMobile.svg'
 import Plus from './icons/Plus.svg'
 import Minus from './icons/Minus.svg'
+import search from './icons/search.svg'
 
 //Components
 import { OptionDivTitles } from './consts.js'
@@ -29,6 +30,7 @@ import CardPDF from './components/CardPDF'
 import SuccessSection from './components/SuccessSection'
 import ClientSection from './components/ClientSection'
 import PerfectSection from './components/PerfectSection'
+import Nav from './components/Nav'
 // <<<<<<< HEAD
 
 
@@ -79,6 +81,25 @@ const CompanyIconMobile = styled.img`
         cursor: pointer;
       }
   }
+`
+const CompanyIconMain = styled.img`
+    width: 183px;
+    margin-top: 5px;
+    padding: 55px 40px 10px 10px;
+    background: url(${Xnomad});
+    background-size: 183px 27px;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    @media(max-width: 1024px){
+      background: ${({ mobile }) => mobile ? `url(${XnomadMobile})` : `url(${Xnomad})`};
+      position: relative;
+      left: 20%;
+      background-size: 50px;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+    
 `
 const HeaderTextBoxes = styled.p`
   display: flex;
@@ -388,6 +409,39 @@ const IdeaCardWrapper = styled.div`
         width: 90%;
     }
 `
+const FloatRight = styled.div`
+  float: right;
+  @media(max-width: 1024px){
+    display:none;
+  }
+`
+const StyledSearchInput = styled.input`
+        position: absolute;
+        top: 0%;
+        width: 900px;
+        border: 1px solid #D7DADB;
+        border-right: none;
+        border-bottom: none;
+        border-top: none;
+        padding: 38px 40px;
+        background-image: url(${search});
+        background-repeat: no-repeat;
+        background-position-x: 10px;
+        background-position-y: 35px;
+        
+        ::placeholder{
+            font-family: Fira Sans;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 18px;
+        }
+        :focus{
+          outline: none;
+        }
+        @media(max-width: 1024px){
+          display: none;
+        }
+`
 
 
 
@@ -396,6 +450,9 @@ export const App = () => {
   const [hoveredId, setHoveredId] = React.useState(null)
   const [clickedId, setClickedId] = React.useState(null)
   const [disableHover, setDisableHover] = React.useState(false)
+
+  const [burgerMenu, setBurgerMenu] = React.useState(false)
+  const [navExpand, setNavExpend] = React.useState(false)
 
   let frontColor = '#FFFF'
   let backColor = '#0F6B5C'
@@ -408,8 +465,20 @@ export const App = () => {
       {/* <Login /> */}
       <Wrapper>
         <Router>
+          {/* --------- LANDING PAGE --------- */}
           <Route exact path="/">
-            {/* --------- LANDING PAGE --------- */}
+            <Nav onClick={() => !navExpand ? setNavExpend(true) : setNavExpend(false)} expand={navExpand} >
+              <CompanyIconMain href='https://www.xnomad.co/' mobile={!burgerMenu ? setBurgerMenu(true) : burgerMenu} />
+              <StyledSearchInput type="text" placeholder="Search retail spaces..." />
+              <FloatRight>
+                <Link to="/"></Link>
+                <Link to="/add-listening">ADD LISTENING</Link>
+                <Link to="/for-brands">FOR BRANDS</Link>
+                <Link to="/for-landlords">FOR LANDLORDS</Link>
+                <Link to="/signup">SIGN UP</Link>
+                <Link to="/login">LOG IN</Link>
+              </FloatRight>
+            </Nav>
             <SelectSection />
             <SpacesSection />
             <PerfectSpaceSection />
@@ -434,7 +503,7 @@ export const App = () => {
               <EnquiryMobileIcons firstBack={backColor} firstFront={frontColor} />
               {headerTexts.map((item, idx) => {
                 return (
-                  <HeaderTextBoxes id={idx}>
+                  <HeaderTextBoxes id={idx} key={idx}>
                     {idx + 1}. {item}
                   </HeaderTextBoxes>
 
@@ -451,6 +520,7 @@ export const App = () => {
                 {OptionDivTitles.map((item, idx) => {
                   return (
                     <OptionDiv
+                      key={idx}
                       id={idx + 10}
                       onMouseEnter={() => setHoveredId(idx)}
                       hoverActive={hoveredId === idx && !disableHover}
@@ -536,6 +606,7 @@ export const App = () => {
                 {OptionDivTitles.map((item, idx) => {
                   return (
                     <OptionDiv
+                      key={idx}
                       id={idx + 10}
                       onMouseEnter={() => setHoveredId(idx)}
                       hoverActive={hoveredId === idx && !disableHover}
@@ -583,14 +654,14 @@ export const App = () => {
               <EnquiryMobileIcons secondBack={backColor} secondFront={frontColor} />
               {headerTexts.map((item, idx) => {
                 return (
-                  <HeaderTextBoxesRewiev id={idx}>
+                  <HeaderTextBoxesRewiev id={idx} key={idx}>
                     {idx + 1}. {item}
                   </HeaderTextBoxesRewiev>
                 )
               })}
             </Header>
             <About />
-            <Home />
+            {/* <Home /> */}
             {/* --------- / ENQUIRY PAGE 2 --------- */}
           </Route>
 
@@ -602,7 +673,7 @@ export const App = () => {
               <EnquiryMobileIcons thirdBack={backColor} thirdFront={frontColor} />
               {headerTexts.map((item, idx) => {
                 return (
-                  <HeaderTextBoxesIdea id={idx}>
+                  <HeaderTextBoxesIdea id={idx} key={idx}>
                     {idx + 1}. {item}
                   </HeaderTextBoxesIdea>
                 )

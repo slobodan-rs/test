@@ -6,7 +6,7 @@ class EnquiryMobileIcons extends Component {
         return (
             <Wrapper>
                 <svg width="160" height="32" viewBox="0 0 160 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <line x1="16" y1="15" x2="144" y2="15" stroke="#BCC1C3" stroke-width="2" />
+                    <line x1="16" y1="15" x2="144" y2="15" stroke="#BCC1C3" strokeWidth="2" />
                     <circle cx="16" cy="16" r="15.5" fill={this.props.firstBack ? this.props.firstBack : "white"} stroke="#0F6B5C" />
                     <path d="M16.8 7.656L11.616 9.408V10.632L15.024 10.128L15.24 10.416V22.224L14.952 22.656L12.552 22.8V24H20.88V22.8L18.624 22.704L18.36 22.32V7.656H16.8Z" fill={this.props.firstFront ? this.props.firstFront : "#0F6B5C"} />
                     <circle cx="80" cy="16" r="15.5" fill={this.props.secondBack ? this.props.secondBack : "white"} stroke="#0F6B5C" />

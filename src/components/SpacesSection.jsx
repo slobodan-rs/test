@@ -44,6 +44,9 @@ const Wrapper = styled.div`
     flex-wrap: wrap;
     justify-content: space-evenly;
     text-align: left;
+    @media(max-width: 1024px){
+        width: 100%;
+    }
 `
 const TitleH4 = styled.h4`
     position: absolute;
@@ -56,6 +59,13 @@ const TitleH4 = styled.h4`
     font-size: 32px;
     line-height: 120%;
     color: #686058;
+    @media(max-width: 1024px){
+        position: relative;
+        left: 0;
+        top: 759px;
+        font-size: 28px;
+        text-align: center
+    }
 `
 const ArticleOne = styled.article`
     position: absolute;
@@ -82,6 +92,35 @@ const ArticleOne = styled.article`
         font-size: 16px;
         line-height: 150%;
         padding: 0px 40px 20px 40px;
+    }
+    @media(max-width: 1024px){
+        width: 93%;
+        height: 128px;
+        left: 16px;
+        top: 857px;
+
+        h5{
+            position: absolute;
+            width: 207px;
+            height: 24px;
+            left: 104px;
+            top: 0px;
+            font-family: Charter;
+            font-size: 20px;
+            z-index: 1;
+        }
+        div{
+            position: absolute;
+            width: 207px;
+            height: 48px;
+            left: 104px;
+            top: 60px;
+
+            &:nth-child(3){
+            display: none;
+            }
+        }
+        
     }
 `
 const ArticleTwo = styled.article`
@@ -110,6 +149,34 @@ const ArticleTwo = styled.article`
         line-height: 150%;
         padding: 0px 40px 20px 40px;
     }
+    @media(max-width: 1024px){
+        width: 93%;
+        height: 128px;
+        left: 16px;
+        top: 1001px;
+        h5{
+            position: absolute;
+            width: 207px;
+            height: 24px;
+            left: 104px;
+            top: 0px;
+            font-family: Charter;
+            font-size: 20px;
+            z-index: 1;
+        }
+        div{
+            position: absolute;
+            width: 207px;
+            height: 48px;
+            left: 104px;
+            top: 60px;
+
+           &:nth-child(3){
+            display: none;
+            }
+
+        }
+    }
 `
 const ArticleThree = styled.article`
     position: absolute;
@@ -137,8 +204,39 @@ const ArticleThree = styled.article`
         line-height: 150%;
         padding: 0px 40px 20px 40px;
     }
+    @media(max-width: 1024px){
+        width: 93%;
+        height: 128px;
+        left: 16px;
+        top: 1145px;
+        h5{
+            position: absolute;
+            width: 207px;
+            height: 24px;
+            left: 104px;
+            top: 0px;
+            font-family: Charter;
+            font-size: 20px;
+        }
+        div{
+            position: absolute;
+            width: 207px;
+            height: 48px;
+            left: 104px;
+            top: 60px;
+
+            &:nth-child(3){
+            display: none;
+            }
+        }   
+    }
 `
 const ArticleImg = styled.img`
     width: 421px;
     height: 315px;
+    @media(max-width: 1024px){
+        width: 112px;
+        height: 112px;
+        padding: 10px;
+    }
 `

@@ -3,8 +3,9 @@ import styled from 'styled-components'
 
 //images
 import landibgImg from '../images/tryck-16.jpg'
+import trustedMobile from '../images/trusted-mobile.svg'
 
-
+//Components
 import TrustedSVG from './TrustedSVG'
 
 class SelectSection extends Component {
@@ -14,13 +15,13 @@ class SelectSection extends Component {
                 <ImgDiv>
                     <StyledH1>Where your customer<br></br> meets your brand</StyledH1>
                     <StyledSelect1 name="Size">
-                        <option value="" disabled selected>Size</option>
+                        <option value="">Size</option>
                     </StyledSelect1>
                     <StyledSelect2 name="Month">
-                        <option value="" disabled selected>Month</option>
+                        <option value="">Month</option>
                     </StyledSelect2>
                     <StyledSelect3 name="Location">
-                        <option value="" disabled selected>Location</option>
+                        <option value="">Location</option>
                     </StyledSelect3>
                     <StyledButton>Browse our spaces</StyledButton>
                 </ImgDiv>
@@ -38,10 +39,11 @@ const Wrapper = styled.section`
     position: absolute;
     left: 0%;
     right: 0%;
-    top: 5.56%;
+    top: 89px;
     bottom: 0%;
     width: 100vw;
     margin: auto;
+
 `
 const ImgDiv = styled.div`
     position: absolute;
@@ -56,11 +58,15 @@ const ImgDiv = styled.div`
 
     @media(max-width: 1024px) {
         position: absolute;
+        width: 100vw;
         height: 475px;
         left: 0px;
         right: 0px;
         top: 0px;
         background: linear-gradient(0deg, rgba(25, 25, 25, 0.25), rgba(25, 25, 25, 0.25)), url(${landibgImg}), url(DSCF1674.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
     }
 `
 const StyledH1 = styled.h1`
@@ -75,12 +81,21 @@ const StyledH1 = styled.h1`
     font-weight: bold;
     font-size: 72px;
     line-height: 115%;
+    color: #FFFFFF;
 
     /* or 83px */
     text-align: center;
 
     /* White */
     color: #FFFFFF;
+    @media(max-width: 1024px){
+        position: relative;
+        font-size: 40px;
+        line-height: 115%;
+        text-align: center;
+        top: 50px;
+        left: -230px;
+    }
 `
 const StyledSelect1 = styled.select`
 /* Rectangle 3 */
@@ -99,6 +114,10 @@ const StyledSelect1 = styled.select`
     font-size: 18px;
     line-height: 150%;
     padding: 20px 20px 21px 24px;
+
+    @media(max-width: 1024px){
+        display: none;
+    }
 `
 const StyledSelect2 = styled.select`
     position: absolute;
@@ -117,6 +136,9 @@ const StyledSelect2 = styled.select`
     line-height: 150%;
     padding: 20px 20px 21px 24px;
 
+    @media(max-width: 1024px){
+        display: none;
+    }
 `
 const StyledSelect3 = styled.select`
     position: absolute;
@@ -134,6 +156,10 @@ const StyledSelect3 = styled.select`
     font-size: 18px;
     line-height: 150%;
     padding: 20px 20px 21px 24px;
+
+    @media(max-width: 1024px){
+        display: none;
+    }
 `
 const StyledButton = styled.button`
 /* button */
@@ -162,6 +188,14 @@ const StyledButton = styled.button`
     letter-spacing: 0.5px;
     text-transform: uppercase;
     color: #FFFFFF;
+
+    @media(max-width: 1024px){
+        position: absolute;
+        width: 210px;
+        height: 68px;
+        left: calc(50% - 210px/2 - 0.5px);
+        top: 294px;
+    }
 `
 const Referals = styled.div`
     position: absolute;
@@ -170,4 +204,15 @@ const Referals = styled.div`
     left: 0px;
     top: 736px;
     background: #D7D2CB;
+    @media(max-width: 1024px){
+        background: url(${trustedMobile});
+        background-repeat: no-repeat;
+        background-color:#D7D2CB;
+        background-position: center;
+        width: 100%;
+        height: 276px;
+        left: 0px;
+        right: 0px;
+        top: 475px;
+    }
 `

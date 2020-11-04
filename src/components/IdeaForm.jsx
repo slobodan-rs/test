@@ -13,7 +13,7 @@ class IdeaForm extends Component {
                 <ImgDivTitle>Upload your best brand images</ImgDivTitle>
                 <ImgDivDiscription>Landlords love to see images so include some good quality product shots, press images or event photos.</ImgDivDiscription>
                 <ImgContainer>
-                    <p><i class="fas fa-plus"></i></p>
+                    <p><i className="fas fa-plus"></i></p>
                     <p>Add images</p>
                 </ImgContainer>
                 <SocialDiv>
@@ -24,26 +24,26 @@ class IdeaForm extends Component {
                 </SocialDiv>
                 {/*--------- Input Feelds ------------*/}
                 <StyledIconInsta>
-                    <i class="fab fa-instagram" ></i>
+                    <i className="fab fa-instagram" ></i>
                 </StyledIconInsta>
                 <StyledSocialInputInsta type="text" placeholder="@yourbrand" />
                 <StyledIconFace>
-                    <i class="fab fa-facebook-f"></i>
+                    <i className="fab fa-facebook-f"></i>
                 </StyledIconFace>
                 <StyledSocialInputFace type="text" placeholder="@yourbrand" />
                 <StyledIconTwitter>
-                    <i class="fab fa-twitter"></i>
+                    <i className="fab fa-twitter"></i>
                 </StyledIconTwitter>
                 <StyledSocialInputTwitter type="text" placeholder="@yourbrand" />
                 <StyledIconWeb>
-                    <i class="fas fa-globe"></i>
+                    <i className="fas fa-globe"></i>
                 </StyledIconWeb>
                 <StyledSocialInputWeb type="text" placeholder="@yourbrand" />
                 <SelectTitle>
                     <h6>How did you discover xNomad?</h6>
                 </SelectTitle>
                 <StyledSelect >
-                    <option value="" disabled selected>Select your option</option>
+                    <option value="Select your option">Select your option</option>
                     <option value="1"></option>
                     <option value="2"></option>
                 </StyledSelect>
