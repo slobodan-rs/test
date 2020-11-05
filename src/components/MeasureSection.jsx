@@ -4,6 +4,11 @@ import image4 from '../images/9.png'
 import image5 from '../images/10.png'
 import image6 from '../images/11.png'
 const Section = styled.section`
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  position: relative;
+  top: 1450px;
+}
 position: relative;
 top: 2600px;
 `
@@ -11,6 +16,20 @@ const Container = styled.div``
 const Row = styled.div``
 const TitleContainer = styled.div``
 const Title = styled.h1`
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  position: relative;
+  left: 3%;
+  font-family: Charter;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 120%;
+
+  /* or 38px */
+
+  color: #686058;
+}
 position: relative;
 left: 10%;
 font-family: Charter;
@@ -26,21 +45,44 @@ color: #686058;
 
 const GalleryContainer = styled.div``
 const ImgContainer = styled.div`
-
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 30px 0 0 0;
+}
   justify-content: center;
   display: flex;
   flex-wrap: wrap;
   padding: 30px 0 0 0;
 `
 const ImgDiv = styled.div`
-
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+margin-left: 5px;
+}
 margin-left: 20px;
 `
 
 const Img = styled.img`
-
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+ width: 300px;
+ height: 200px;
+}
 `
 const Text = styled.h4`
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  text-align: left;
+  font-family: Charter;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 120%;
+  color: #111118;
+}
 text-align: left;
 font-family: Charter;
 font-style: normal;
@@ -53,6 +95,19 @@ line-height: 120%;
 color: #111118;
 `
 const Text1 = styled.h4`
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  text-align: left;
+  font-family: Fira Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 150%;
+
+  /* or 24px */
+
+  color: #111118;
+}
 text-align: left;
 font-family: Fira Sans;
 font-style: normal;
@@ -79,7 +134,7 @@ class MeasureSection extends Component {
          <GalleryContainer>
                   <ImgContainer>
                   <ImgDiv>
-                  <Img src={image5} alt="test" />
+                  <Img src={image4} alt="test" />
                     <Text>Daily foot traffic</Text>
                   <Text1>Understand how your customer interacts with the city,<br /> how they move around and where they shop.</Text1>
                   </ImgDiv>

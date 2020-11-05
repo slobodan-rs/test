@@ -77,7 +77,7 @@ const TitleDiv = styled.h6`
     height: 22px;
     left: 64px;
     top: 341px;
-    
+
     font-family: Charter;
     font-style: normal;
     font-weight: bold;
@@ -197,7 +197,7 @@ const StyledMessageInput = styled.textarea`
         height: 158px;
         left: 16px;
         top: 597px;
-        
+
     ::placeholder,
     ::-webkit-input-placeholder  {
         width: 315px;
@@ -292,7 +292,7 @@ const StyledSocialInputInsta = styled.input`
         left: 16px;
         top: 1227px;
     }
-       
+
 `
 const StyledIconFace = styled.div`
     position: absolute;
@@ -339,7 +339,7 @@ const StyledSocialInputFace = styled.input`
         left: 16px;
         top: 1295px;
     }
-       
+
 `
 const StyledIconTwitter = styled.div`
     position: absolute;
@@ -387,7 +387,7 @@ const StyledSocialInputTwitter = styled.input`
         left: 16px;
         top: 1363px;
     }
-       
+
 `
 const StyledIconWeb = styled.div`
     position: absolute;
@@ -436,7 +436,7 @@ const StyledSocialInputWeb = styled.input`
         left: 16px;
         top: 1431px;
     }
-       
+
 `
 const ImgDivTitle = styled.h6`
 /* Upload your best brand images */
@@ -484,54 +484,7 @@ const ImgDivDiscription = styled.p`
         padding: 16px;
     }
 `
-const CoverImg = styled.div`
-    position: absolute;
-    width: 644px;
-    height: 244px;
-    left: calc(50% - 644px/2 - 334px);
-    top: calc(50% - 244px/2 + 70px);
 
-    background: url(tips_cover-26648e9dc0e66239924af3734b7be0be.jpg);
-    border-radius: 2px;
-`
-const StyledButton = styled.button`
-    /* Auto Layout */
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 12px 0px 0px 12px;
-
-    position: absolute;
-    width: 196px;
-    height: 44px;
-    right: 744px;
-    top: 1316px;
-    
-
-    background: #FFFFFF;
-    border-radius: 2px;
-
-    /* Nav Link */
-    font-family: Fira Sans;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 20px;
-
-    /* identical to box height, or 125% */
-    letter-spacing: 0.5px;
-    text-transform: uppercase;
-
-    /* Green */
-    color: #0F6B5C;
-
-    /* Inside Auto Layout */
-    flex: none;
-    order: 0;
-    align-self: center;
-    flex-grow: 0;
-    margin: 0px 12px;
-`
 const ImgContainer = styled.div`
 /* Rectangle 149 */
     position: absolute;
@@ -584,7 +537,7 @@ const ImgContainer = styled.div`
         height: 20px;
         left: 0px;
         top: 1038px;
-        
+
         :nth-child(2){
             width: 93px;
             height: 20px;
@@ -594,37 +547,7 @@ const ImgContainer = styled.div`
         }
     }
 `
-const ImgDivOne = styled.div`
-    position: absolute;
-    width: 199px;
-    height: 199px;
-    left: 64px;
-    top: 1385px;
 
-    background: url(Tip_AH_2-741c343588b3b15cfae6f521a2098a1d.jpg);
-    border-radius: 2px;
-`
-const ImgDivTwo = styled.div`
-    position: absolute;
-    width: 199px;
-    height: 199px;
-    left: 287px;
-    top: 1385px;
-
-    background: url(Tip_AH_1-d91e38de507a057276682ad3e1dad653.jpg);
-    border-radius: 2px;
-`
-const ImgDivThree = styled.div`
-    position: absolute;
-    width: 199px;
-    height: 199px;
-    left: 509px;
-    top: 1385px;
-
-    border: 1px dashed #868F92;
-    box-sizing: border-box;
-    border-radius: 2px;
-`
 const SelectTitle = styled.div`
     position: absolute;
     width: 644px;
@@ -743,18 +666,4 @@ const NextBtn = styled.button`
         bottom: 0px;
         margin-left: 40px;
     }
-`
-const SendToBtn = styled.button`
-    background-color: #0f6b5c;
-    color: white;
-    width:203px;
-    height:68px;
-    margin-left: 20px;
-    border-radius: 2px;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 20px;
-    letter-spacing: 0.5px;
-    text-transform: uppercase;
 `

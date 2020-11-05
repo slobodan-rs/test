@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 import image from './images/img.jpg'
-import image1 from './images/img.jpg'
-import image2 from './images/img.jpg'
 const Section = styled.section`
 margin-top: 300px;
 `
@@ -19,35 +17,6 @@ position: relative;
   text-align: center;
   color: white;
 `
-const Post = styled.div``
-const Blog1 = styled.div`
-margin-top: 100px;
-`
-const Image = styled.img`
-position:absolute;
-  top: 50%;
-  left: 20%;
-  transform: translate(-50%, -50%);
-  width: 250px;
-  height: 250px;
-`
-const Image1 = styled.img`
-position:absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 250px;
-  height: 250px;
-`
-const Image2 = styled.img`
-position:absolute;
-  top: 50%;
-  left: 80%;
-  transform: translate(-50%, -50%);
-  width: 250px;
-  height: 250px;
-`
-
   const PostTitle1 = styled.h5`
   position:absolute;
   top: 10%;

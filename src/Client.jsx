@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import styled from 'styled-components'
 import {Col, Row} from 'reactstrap';
-import img from './images/img.jpg'
 import img1 from './images/1.png';
 import img2 from './images/2.png';
 import img3 from './images/3.png';
@@ -16,9 +15,6 @@ position: relative;
   height: 60px;
 
 `
-const ImageContainer = styled.div`
-`
-
 const ClientImages = styled.div`
 `
 

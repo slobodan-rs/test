@@ -1,6 +1,6 @@
-import React, { useCallback, useEffect, useRef } from 'react'
+import React, { useRef } from 'react'
 import styled from 'styled-components'
-import { Link, BrowserRouter as Router, Switch, Route } from 'react-router-dom'
+import { Link, BrowserRouter as Router, Route } from 'react-router-dom'
 
 //Icons and images
 import Xnomad from './icons/Xnomad.svg'
@@ -15,7 +15,6 @@ import Home from './Home.jsx'
 import IdeaSection from './components/IdeaSection'
 import IdeaSectionDiscript from './components/IdeaSectionDiscript'
 import IdeaForm from './components/IdeaForm'
-import About from './About'
 import SelectSection from './components/SelectSection'
 import SpacesSection from './components/SpacesSection'
 import PerfectSpaceSection from './components/PerfectSpaceSection'
@@ -28,9 +27,11 @@ import GuideSection from './components/GuideSection'
 import EnquiryMobileIcons from './components/EnquiryMobileIcons'
 import CardPDF from './components/CardPDF'
 import SuccessSection from './components/SuccessSection'
-import ClientSection from './components/ClientSection'
 import PerfectSection from './components/PerfectSection'
 import Nav from './components/Nav'
+import EnquiryStep2 from './components/EnquiryStep2'
+import FooterSection from './components/FooterSection'
+import PartnerSection from './components/PartnerSection'
 // <<<<<<< HEAD
 
 // =======
@@ -536,12 +537,12 @@ export const App = () => {
             <BookSection />
             <ManageSection />
             <MeasureSection />
-
             <MoveinSection />
             <SuccessSection />
             <GuideSection />
-            <ClientSection />
+            <PartnerSection />
             <PerfectSection />
+            <FooterSection />
             {/* --------- / LANDING PAGE --------- */}
           </Route>
 
@@ -732,7 +733,7 @@ export const App = () => {
                 )
               })}
             </Header>
-            <About />
+            <EnquiryStep2 />
             {/* <Home /> */}
             {/* --------- / ENQUIRY PAGE 2 --------- */}
           </Route>

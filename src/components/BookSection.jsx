@@ -6,6 +6,14 @@ import message from '../icons/Message.png'
 import iconreal from '../icons/Iconreal.png'
 import shop from '../icons/Shop.png'
 const Section = styled.section`
+
+@media only screen and (max-width: 768px) {
+  width: full-width;
+  height: 800px;
+  background-color: #686058;
+  position: relative;
+  top: 1500px;
+}
 width: full-width;
 height: 474px;
 background-color: #686058;
@@ -17,6 +25,15 @@ const Row = styled.div``
 const TitleContainer = styled.div`
 `
 const Title = styled.h1`
+
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  position: relative;
+  left: 10%;
+  color: white;
+  padding-top: 20px;
+  font-size: 20px;
+}
 position: relative;
 left: 10%;
 color: white;
@@ -24,10 +41,32 @@ padding-top: 20px;
 `
 
 const GalleryContainer = styled.div`
+
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+margin-top: 20px;
+display: flex;
+clear: both;
+   display: inline-block;
+   overflow: hidden;
+   white-space: nowrap;
+}
 margin-top: 50px;
 `
 const ImgContainer = styled.div`
 
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  display: flex;
+  flex-wrap: wrap;
+  padding: 30px 0 0 0;
+  clear: both;
+   display: inline-block;
+   overflow: hidden;
+   white-space: nowrap;
+
+  }
+}
   justify-content: center;
   display: flex;
   flex-wrap: wrap;
@@ -35,14 +74,42 @@ const ImgContainer = styled.div`
 `
 const ImgDiv = styled.div`
 
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  margin-left: 20px;
+}
 margin-left: 20px;
 `
 
 const Img = styled.img`
+
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  width: 50px;
+  height: 50px;
+}
   width: 50px;
   height: 50px;
 `
 const Text = styled.h4`
+
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  margin-left: 20px;
+  font-family: Charter;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 120%;
+
+  /* identical to box height, or 22px */
+
+  color: #F4F5F4;
+  clear: both;
+   display: inline-block;
+   overflow: hidden;
+   white-space: nowrap;
+}
 margin-right: 30px;
 font-family: Charter;
 font-style: normal;
@@ -57,6 +124,25 @@ color: #F4F5F4;
 
 `
 const Text1 = styled.h4`
+
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  color: white;
+  margin-left: 70px;
+  margin-top: -25px;
+
+  /* Body Small */
+  font-family: Fira Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 150%;
+
+  /* or 24px */
+
+  color: #D7D2CB;
+
+}
 color: white;
 margin-right: 30px;
 

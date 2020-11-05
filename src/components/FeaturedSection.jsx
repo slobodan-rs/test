@@ -4,6 +4,11 @@ import image1 from '../images/6.png'
 import image2 from '../images/7.png'
 import image3 from '../images/8.png'
 const Section = styled.section`
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  position: relative;
+  top: 1620px;
+}
 position: relative;
 top: 2600px;
 `
@@ -11,6 +16,20 @@ const Container = styled.div``
 const Row = styled.div``
 const TitleContainer = styled.div``
 const Title = styled.h1`
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  position: relative;
+  left: 10%;
+  font-family: Charter;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 120%;
+
+  /* or 38px */
+
+  color: #686058;
+}
 position: relative;
 left: 10%;
 font-family: Charter;
@@ -26,6 +45,13 @@ color: #686058;
 
 const GalleryContainer = styled.div``
 const ImgContainer = styled.div`
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  justify-content: left;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 30px 0 0 0;
+}
 
   justify-content: left;
   display: flex;
@@ -33,16 +59,49 @@ const ImgContainer = styled.div`
   padding: 30px 0 0 0;
 `
 const ImgDiv = styled.div`
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  margin-left: 2px;
+}
 
 margin-left: 20px;
 `
+const ImgDiv1 = styled.div`
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  margin-left: 170px;
+  margin-top: -260px;
+}
 
+margin-left: 20px;
+`
 const Img = styled.img`
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  width: 120px;
+  height: 150px;
+  background-color: grey;
+}
   width: 300px;
   height: 250px;
   background-color: grey;
 `
 const Text = styled.h4`
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  text-align: left;
+  font-family: Fira Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 8px;
+  line-height: 150%;
+
+  /* identical to box height, or 24px */
+  text-transform: uppercase;
+
+  /* Gray 2 */
+  color: #555C5E;
+}
 text-align: center;
 font-family: Fira Sans;
 font-style: normal;
@@ -57,6 +116,20 @@ text-transform: uppercase;
 color: #555C5E;
 `
 const Text1 = styled.h4`
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  text-align: left;
+  font-family: Charter;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 8px;
+  line-height: 120%;
+
+  /* identical to box height, or 29px */
+
+  /* Gray 1 */
+  color: #3C4143;
+}
 text-align: center;
 font-family: Charter;
 font-style: normal;
@@ -70,6 +143,20 @@ line-height: 120%;
 color: #3C4143;
 `
 const Text2 = styled.h4`
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  text-align: left;
+  font-family: Charter;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 10px;
+  line-height: 120%;
+
+  /* identical to box height, or 22px */
+
+  /* Black */
+  color: #242728;
+}
 text-align: center;
 font-family: Charter;
 font-style: normal;
@@ -83,6 +170,20 @@ line-height: 120%;
 color: #242728;
 `
 const Text3 = styled.h4`
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  text-align: left;
+  font-family: Fira Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 9px;
+  line-height: 150%;
+
+  /* identical to box height, or 24px */
+
+  /* Gray 2 */
+  color: #555C5E;
+}
 text-align: center;
 font-family: Fira Sans;
 font-style: normal;
@@ -118,13 +219,13 @@ class FeaturedSection extends Component {
                   <Text3>40 m2 • 13 064 visitors / day</Text3>
                   </ImgDiv>
 
-                  <ImgDiv>
+                  <ImgDiv1>
                   <Img src={image2} alt="test" />
                   <Text>Norrmalm, Stockholm</Text>
                   <Text1>Space For Beautiful Things</Text1>
                   <Text2>from 8 000 kr / day</Text2>
                   <Text3>40 m2 • 3 296 visitors / day</Text3>
-                  </ImgDiv>
+                  </ImgDiv1>
 
                   <ImgDiv>
                   <Img src={image3} alt="test" />
@@ -133,13 +234,13 @@ class FeaturedSection extends Component {
                   <Text2>from 5 000 kr / day</Text2>
                   <Text3>60 m2</Text3>
                   </ImgDiv>
-                  <ImgDiv>
+                  <ImgDiv1>
                   <Img src={image3} alt="test" />
                   <Text>Kungsholmen, Stockholm</Text>
                   <Text1>Minimalistic Space</Text1>
                   <Text2>from 5 000 kr / day</Text2>
                   <Text3>60 m2</Text3>
-                  </ImgDiv>
+                  </ImgDiv1>
                   </ImgContainer>
                    </GalleryContainer>
          </Container>
