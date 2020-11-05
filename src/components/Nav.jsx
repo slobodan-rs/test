@@ -30,6 +30,7 @@ const Nav = styled.nav`
         display: ${({ expand }) => expand ? 'block' : 'inline-block'};
         z-index: 1;
         background-color: white;
+        transition: height 0.2s;
     }
 `
 export default Nav

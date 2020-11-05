@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useCallback, useEffect, useRef } from 'react'
 import styled from 'styled-components'
 import { Link, BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 
@@ -411,8 +411,14 @@ const IdeaCardWrapper = styled.div`
 `
 const FloatRight = styled.div`
   float: right;
+
   @media(max-width: 1024px){
-    display:none;
+    display: ${({ show }) => show ? 'flex' : 'none'};
+    flex-direction: column;
+    width: 170px;
+    float: none;
+    margin: 0 auto;
+    text-align: center;
   }
 `
 const StyledSearchInput = styled.input`
@@ -439,10 +445,30 @@ const StyledSearchInput = styled.input`
           outline: none;
         }
         @media(max-width: 1024px){
-          display: none;
+          display: ${({ searchIcon }) => searchIcon ? 'flex' : 'none'};
+          background-image: none;
+          width: 45%;
+          padding: 30px;
+          left: 85px;
+          border: none;
         }
 `
+const SearchIcon = styled.div`
+    display: none;
 
+    @media(max-width: 1024px){
+        display: block;
+        position: relative;
+        width: 38px;
+        height: 38px;
+        top: 17px;
+        float: right;
+        background-image: url(${search});
+        background-repeat: no-repeat;
+        background-size: 40px;
+        border: none;
+    }
+`
 
 
 
@@ -453,6 +479,22 @@ export const App = () => {
 
   const [burgerMenu, setBurgerMenu] = React.useState(false)
   const [navExpand, setNavExpend] = React.useState(false)
+  const [searchField, setSeacrhField] = React.useState(false)
+  const inputRef = useRef()
+
+  const handleNav = () => {
+    !navExpand ? setNavExpend(true) : setNavExpend(false)
+
+  }
+  const handleSearchIcon = () => {
+    setNavExpend(false)
+    searchField ? setSeacrhField(false) : setSeacrhField(true)
+  }
+
+  // Uncommet when pagination is done
+  // useEffect(() => {
+  //   inputRef.current.focus()
+  // }, [searchField]);
 
   let frontColor = '#FFFF'
   let backColor = '#0F6B5C'
@@ -467,10 +509,11 @@ export const App = () => {
         <Router>
           {/* --------- LANDING PAGE --------- */}
           <Route exact path="/">
-            <Nav onClick={() => !navExpand ? setNavExpend(true) : setNavExpend(false)} expand={navExpand} >
+            <Nav onClick={handleNav} expand={navExpand} >
               <CompanyIconMain href='https://www.xnomad.co/' mobile={!burgerMenu ? setBurgerMenu(true) : burgerMenu} />
-              <StyledSearchInput type="text" placeholder="Search retail spaces..." />
-              <FloatRight>
+              <SearchIcon onClick={handleSearchIcon} />
+              <StyledSearchInput type="text" placeholder="Search retail spaces..." searchIcon={searchField} ref={inputRef} />
+              <FloatRight show={navExpand}>
                 <Link to="/"></Link>
                 <Link to="/add-listening">ADD LISTENING</Link>
                 <Link to="/for-brands">FOR BRANDS</Link>
