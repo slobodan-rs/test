@@ -11,7 +11,6 @@ import search from './icons/search.svg'
 
 //Components
 import { OptionDivTitles } from './consts.js'
-import Home from './Home.jsx'
 import IdeaSection from './components/IdeaSection'
 import IdeaSectionDiscript from './components/IdeaSectionDiscript'
 import IdeaForm from './components/IdeaForm'
@@ -709,7 +708,6 @@ export const App = () => {
                 </DataAnalyticsText>
               </DataAnalyticsDisplayer>
             </DataAnalyticsDiv>
-            <Home />
             {/* --------- / ENQUIRY PAGE 1 --------- */}
           </Route>
 

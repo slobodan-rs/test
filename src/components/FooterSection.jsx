@@ -16,7 +16,7 @@ position:relative;
 background-color: #D7D2CB;
 padding: ${props => props.nopadd ? "0" : "7%"};
 display: flex;
-top: 2450px;
+top: 3000px;
 `
 const Image = styled.img`
 width: 10vw;
@@ -93,9 +93,15 @@ const Txt1 = styled.p`
   margin-right: 50px;
 }
 font-family: sans-serif;
-font-size: 18px;
+font-size: 16px;
 font-weight: ${props => props.bold ? "bold" : "none"};
 color: #333333;
+margin-top: -35px;
+margin-right: 20px;
+clear: both;
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
 `
 const Txtcontainer = styled.div`
 @media only screen and (max-width: 768px) {

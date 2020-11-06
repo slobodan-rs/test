@@ -68,12 +68,18 @@ const ImgDiv = styled.div`
 @media only screen and (max-width: 768px) {
   /* For mobile phones: */
 }
-margin-left: 20px;
+margin-left: 100px;
 `
 
 const Img = styled.img`
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+
   width: 100px;
   height: 200px;
+}
+  width: 200px;
+  height: 300px;
 `
 const Text = styled.h4`
 @media only screen and (max-width: 768px) {
@@ -109,7 +115,7 @@ const Text1 = styled.h4`
 font-family: Fira Sans;
 font-style: normal;
 font-weight: normal;
-font-size: 16px;
+font-size: 12px;
 line-height: 150%;
 
 /* or 24px */
@@ -160,9 +166,18 @@ const ButtonDiv = styled.div`
   margin-left: 100px;
   font-size: 12px;
 }
+padding-top:17px;
+`
+const ButtonDiv1 = styled.div`
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  position: relative;
+  top: -150px;
+  margin-left: 100px;
+  font-size: 12px;
+}
 padding-top:0px;
 `
-
 
 class GuideSection extends Component {
   render() {
@@ -204,9 +219,9 @@ class GuideSection extends Component {
          <Img src={image6} alt="test" />
            <Text>Ecommerce edition</Text>
         <Text1>Moving from online to <br />offline</Text1>
-        <ButtonDiv>
+        <ButtonDiv1>
         <Button1>Download guide</Button1>
-        </ButtonDiv>
+        </ButtonDiv1>
          </ImgDiv>
 
          <ImgDiv>
@@ -214,18 +229,18 @@ class GuideSection extends Component {
            <Text>Agency guide</Text>
 
          <Text1>Deliver the best experience <br /> for clients</Text1>
-         <ButtonDiv>
+         <ButtonDiv1>
          <Button1>Download guide</Button1>
-         </ButtonDiv>
+         </ButtonDiv1>
          </ImgDiv>
 
          <ImgDiv>
          <Img src={image8} alt="test" />
            <Text>How to create buzz</Text>
          <Text1>marketing and messaging <br /> success</Text1>
-         <ButtonDiv>
+         <ButtonDiv1>
          <Button1>Download guide</Button1>
-         </ButtonDiv>
+         </ButtonDiv1>
          </ImgDiv>
          </ImgContainer>
                    </GalleryContainer>

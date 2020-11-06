@@ -13,7 +13,7 @@ width: full-width;
 height: 480px;
 background-color: #F0EEEA;
 position: relative;
-top: 2840px;
+top: 3000px;
 `
 const Container = styled.div``
 const Row = styled.div``

@@ -14,23 +14,25 @@ width: full-width;
 height: 4px;
 background-color: white;
 position: relative;
-top: 2750px;
+top: 2850px;
 left: 486px;
 `
 const Logocontainer = styled.div`
+position: relative;
 width: 100%;
 display: flex;
 background-color: #D7D2CB;
-padding-top: 2%;
+margin-left: -35%;
 padding-bottom: 2%;
 `
 const Imagescontainer = styled.div`
 width: 90%;
+position:relative;
 display: flex;
 align-items: center;
 justify-content: center;
-margin-left: 5%;
-margin-right: 5%;
+margin-top: 2%;
+margin-left: -10%
 `
 const Image = styled.img`
 margin-right: ${props => props.right};

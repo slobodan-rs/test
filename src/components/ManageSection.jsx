@@ -55,7 +55,7 @@ text-align: center;
 `
 const Image = styled.img`
 padding: ${props => props.padd};
-padding-left: ${props => props.left};
+padding-left: 10%;
 padding-bottom: ${props => props.bottom};
 padding-top: ${props => props.top};
 width: ${props => props.width};
@@ -73,7 +73,7 @@ class ManageSection extends Component {
          </Title>
          </TitleContainer>
         </Row>
-        <Image src={trusted} width="75%" padd="5%"/>
+        <Image src={trusted} width="75%" padd="1%"/>
          </Container>
          </Section>
     )
