@@ -24,7 +24,6 @@ clear: both;
   /* or 38px */
 
   /* Black */
-
   color: #242728;
   @media(max-width: 1024px){
     position: relative;
@@ -32,7 +31,7 @@ clear: both;
     overflow: visible;
     width: 10%;
     clear: both;
-    font-size: 28px;
+    font-size: 18px;
     margin-left: -10px;
   }
 `
@@ -55,7 +54,7 @@ color: black;
   margin-top: -60px;
   width: 100%;
   font-family: Fira Sans;
-  font-size: 18px;
+  font-size: 19px;
   line-height: 150%;
   color: #242728;
   margin-left: -10px;
