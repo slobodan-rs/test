@@ -31,6 +31,7 @@ import Nav from './components/Nav'
 import EnquiryStep2 from './components/EnquiryStep2'
 import FooterSection from './components/FooterSection'
 import PartnerSection from './components/PartnerSection'
+import About from './About'
 // <<<<<<< HEAD
 
 // =======
@@ -731,7 +732,7 @@ export const App = () => {
                 )
               })}
             </Header>
-            <EnquiryStep2 />
+            <About />
             {/* <Home /> */}
             {/* --------- / ENQUIRY PAGE 2 --------- */}
           </Route>
