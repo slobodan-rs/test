@@ -14,7 +14,7 @@ width: full-width;
 height: 4px;
 background-color: white;
 position: relative;
-top: 1750px;
+top: 250px;
 left: 486px;
 `
 const Logocontainer = styled.div`

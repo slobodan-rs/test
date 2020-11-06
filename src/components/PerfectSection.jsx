@@ -14,7 +14,7 @@ const Section = styled.section`
   height: 480px;
   background-color: #F0EEEA;
   position: relative;
-  top: 1775px;
+  top: 320px;
 }
 
 `

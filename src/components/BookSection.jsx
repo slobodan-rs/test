@@ -19,7 +19,7 @@ const Section = styled.section`
   height: 474px;
   background-color: #686058;
   position: relative;
-  top: 1500px;
+  top: 200px;
 }
 
 `

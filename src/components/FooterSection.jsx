@@ -16,7 +16,7 @@ position:relative;
 background-color: #D7D2CB;
 padding: ${props => props.nopadd ? "0" : "7%"};
 display: flex;
-top: 1775px;
+top: 300px;
 `
 const Image = styled.img`
 width: 10vw;
