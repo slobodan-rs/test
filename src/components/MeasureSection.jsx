@@ -12,7 +12,7 @@ const Section = styled.section`
 @media only screen and (min-width: 1024px){
 
   position: relative;
-  top: 2600px;
+  top: 1500px;
 }
 
 `
