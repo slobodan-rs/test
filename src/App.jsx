@@ -438,7 +438,7 @@ const FloatRight = styled.div`
 const StyledSearchInput = styled.input`
   position: absolute;
   top: 0%;
-  width: 900px;
+  width: 300px;
   border: 1px solid #d7dadb;
   border-right: none;
   border-bottom: none;

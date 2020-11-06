@@ -80,11 +80,7 @@ class TrustedSVG extends Component {
 export default TrustedSVG
 
 const Wrapper = styled.div`
-    position: absolute;
-    width: 1027px;
-    height: 27.77px;
-    left: 486px;
-    top: 776px;
+    padding-top: 40px;
     @media(max-width: 1024px){
         display: none;
     }

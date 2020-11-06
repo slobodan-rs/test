@@ -14,19 +14,22 @@ class SelectSection extends Component {
             <Wrapper>
                 <ImgDiv>
                     <StyledH1>Where your customer<br></br> meets your brand</StyledH1>
-                    <StyledSelect1 name="Size">
-                        <option value="">Size</option>
-                    </StyledSelect1>
-                    <StyledSelect2 name="Month">
-                        <option value="">Month</option>
-                    </StyledSelect2>
-                    <StyledSelect3 name="Location">
-                        <option value="">Location</option>
-                    </StyledSelect3>
-                    <StyledButton>Browse our spaces</StyledButton>
+                    <SelectWrapper>
+                        <StyledSelect1 name="Size">
+                            <option value="">Size</option>
+                        </StyledSelect1>
+                        <StyledSelect2 name="Month">
+                            <option value="">Month</option>
+                        </StyledSelect2>
+                        <StyledSelect3 name="Location">
+                            <option value="">Location</option>
+                        </StyledSelect3>
+                        <StyledButton>Browse our spaces</StyledButton>
+                    </SelectWrapper>
                 </ImgDiv>
-                <Referals />
-                <TrustedSVG />
+                <Referals>
+                    <TrustedSVG />
+                </Referals>
             </Wrapper>
         )
     }
@@ -36,21 +39,14 @@ export default SelectSection
 
 // Styled Components
 const Wrapper = styled.section`
-    position: absolute;
-    left: 0%;
-    right: 0%;
-    top: 89px;
-    bottom: 0%;
-    width: 100vw;
-    margin: auto;
-
+    width: 100%;
+    text-align: center;
+    margin: 0;
+    padding: 0;
 `
 const ImgDiv = styled.div`
-    position: absolute;
     width: 100%;
-    height: 736px;
-    left: 0px;
-    top: 0px;
+    height: 900px;
     background: url(${landibgImg}), url(DSCF1674.jpg);
     background-repeat: no-repeat;
     background-size: cover;
@@ -58,7 +54,7 @@ const ImgDiv = styled.div`
 
     @media(max-width: 1024px) {
         position: absolute;
-        width: 100vw;
+        width: 100%;
         height: 475px;
         left: 0px;
         right: 0px;
@@ -69,22 +65,23 @@ const ImgDiv = styled.div`
         background-position: center;
     }
 `
+const SelectWrapper = styled.div`
+    width: 746px;
+    height: 78px;
+    display: inline-block;
+    padding-top: 28px;
+`
 const StyledH1 = styled.h1`
 /* Where your customer meets your brand */
-    position: absolute;
-    width: 866px;
-    height: 166px;
-    left: 25%;
-    top: 180px;
     font-family: Charter;
     font-style: normal;
     font-weight: bold;
     font-size: 72px;
     line-height: 115%;
     color: #FFFFFF;
+    margin: 0px;
+    padding-top: 287px;
 
-    /* or 83px */
-    text-align: center;
 
     /* White */
     color: #FFFFFF;
@@ -99,11 +96,8 @@ const StyledH1 = styled.h1`
 `
 const StyledSelect1 = styled.select`
 /* Rectangle 3 */
-    position: absolute;
     width: 121px;
     height: 68px;
-    left: 597px;
-    top: 479px;
     background: #FFFFFF;
     /* Gray 7 */
     border: 1px solid #E4E6E7;
@@ -120,11 +114,8 @@ const StyledSelect1 = styled.select`
     }
 `
 const StyledSelect2 = styled.select`
-    position: absolute;
     width: 149px;
     height: 68px;
-    left: 718px;
-    top: 479px;
     background: #FFFFFF;
     /* Gray 7 */
     border: 1px solid #E4E6E7;
@@ -141,11 +132,8 @@ const StyledSelect2 = styled.select`
     }
 `
 const StyledSelect3 = styled.select`
-    position: absolute;
     width: 168px;
     height: 68px;
-    left: 867px;
-    top: 479px;
     background: #FFFFFF;
     /* Gray 7 */
     border: 1px solid #E4E6E7;
@@ -163,16 +151,7 @@ const StyledSelect3 = styled.select`
 `
 const StyledButton = styled.button`
 /* button */
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    padding: 24px 0px 0px 24px;
-
-    position: absolute;
-    width: 210px;
-    height: 68px;
-    left: 1034px;
-    top: 479px;
+    padding: 24.5px 70px;
 
     /* Green */
     background: #0F6B5C;
@@ -198,12 +177,10 @@ const StyledButton = styled.button`
     }
 `
 const Referals = styled.div`
-    position: absolute;
-    width: 100vw;
+    width: 100%;
     height: 108px;
-    left: 0px;
-    top: 736px;
     background: #D7D2CB;
+    text-align: center;
     @media(max-width: 1024px){
         background: url(${trustedMobile});
         background-repeat: no-repeat;

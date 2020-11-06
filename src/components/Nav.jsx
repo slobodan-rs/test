@@ -7,7 +7,7 @@ const Nav = styled.nav`
     list-style-type: none;
     margin: 0;
     padding: 0;
-    display: 'inline-block';
+    display: inline-block;
     
     a {
         text-decoration: none;
