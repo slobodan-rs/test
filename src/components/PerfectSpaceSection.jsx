@@ -128,7 +128,7 @@ const Discription = styled.div`
         width: 307px;
         height: 29px;
         left: 31px;
-        top: 99px;
+        top: 110px;
         font-family: Charter;
         font-style: normal;
         font-weight: bold;
@@ -141,7 +141,7 @@ const Discription = styled.div`
         position: absolute;
         height: 22px;
         left: 31px;
-        top: 149px;
+        top: 165px;
         font-family: Charter;
         font-style: normal;
         font-weight: bold;
