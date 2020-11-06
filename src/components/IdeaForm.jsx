@@ -6,54 +6,55 @@ class IdeaForm extends Component {
     render() {
         return (
             <form>
-                <TitleDiv>Name your idea</TitleDiv>
-                <StyledTitleInput type="text" placeholder="ex. Custom made ice cream" />
-                <MessageDiv>Tell the landlord about your brand and what you want to do in the space</MessageDiv>
-                <StyledMessageInput type="text" rows='10' placeholder="Describe what your brand is about and what you want to do" />
-                <ImgDivTitle>Upload your best brand images</ImgDivTitle>
-                <ImgDivDiscription>Landlords love to see images so include some good quality product shots, press images or event photos.</ImgDivDiscription>
-                <ImgContainer>
-                    <p><i className="fas fa-plus"></i></p>
-                    <p>Add images</p>
-                </ImgContainer>
-                <SocialDiv>
-                    <h6>Your social handles</h6>
-                </SocialDiv>
-                <SocialDiv optional>
-                    <p>optional</p>
-                </SocialDiv>
-                {/*--------- Input Feelds ------------*/}
-                <StyledIconInsta>
-                    <i className="fab fa-instagram" ></i>
-                </StyledIconInsta>
-                <StyledSocialInputInsta type="text" placeholder="@yourbrand" />
-                <StyledIconFace>
-                    <i className="fab fa-facebook-f"></i>
-                </StyledIconFace>
-                <StyledSocialInputFace type="text" placeholder="@yourbrand" />
-                <StyledIconTwitter>
-                    <i className="fab fa-twitter"></i>
-                </StyledIconTwitter>
-                <StyledSocialInputTwitter type="text" placeholder="@yourbrand" />
-                <StyledIconWeb>
-                    <i className="fas fa-globe"></i>
-                </StyledIconWeb>
-                <StyledSocialInputWeb type="text" placeholder="@yourbrand" />
-                <SelectTitle>
-                    <h6>How did you discover xNomad?</h6>
-                </SelectTitle>
-                <StyledSelect >
-                    <option value="Select your option">Select your option</option>
-                    <option value="1"></option>
-                    <option value="2"></option>
-                </StyledSelect>
-                <ButtonsDiv>
-                    <PrevBtn>Previous Step</PrevBtn>
-                    <NextBtn>Next</NextBtn>
-                </ButtonsDiv>
+                <Wrapper>
+                    <TitleDiv>Name your idea</TitleDiv>
+                    <StyledTitleInput type="text" placeholder="ex. Custom made ice cream" />
+                    <MessageDiv>Tell the landlord about your brand and what you want to do in the space</MessageDiv>
+                    <StyledMessageInput type="text" rows='10' placeholder="Describe what your brand is about and what you want to do" />
+                    <ImgDivTitle>Upload your best brand images</ImgDivTitle>
+                    <ImgDivDiscription>Landlords love to see images so include some good quality product shots, press images or event photos.</ImgDivDiscription>
+                    <ImgContainer>
+                        <p><i className="fas fa-plus"></i></p>
+                        <p>Add images</p>
+                    </ImgContainer>
+                    <SocialDiv>
+                        <h6>Your social handles</h6>
+                    </SocialDiv>
+                    <SocialDiv optional>
+                        <p>optional</p>
+                    </SocialDiv>
+                    {/*--------- Input Feelds ------------*/}
+                    <StyledIconInsta>
+                        <i className="fab fa-instagram" ></i>
+                    </StyledIconInsta>
+                    <StyledSocialInputInsta type="text" placeholder="@yourbrand" />
+                    <StyledIconFace>
+                        <i className="fab fa-facebook-f"></i>
+                    </StyledIconFace>
+                    <StyledSocialInputFace type="text" placeholder="@yourbrand" />
+                    <StyledIconTwitter>
+                        <i className="fab fa-twitter"></i>
+                    </StyledIconTwitter>
+                    <StyledSocialInputTwitter type="text" placeholder="@yourbrand" />
+                    <StyledIconWeb>
+                        <i className="fas fa-globe"></i>
+                    </StyledIconWeb>
+                    <StyledSocialInputWeb type="text" placeholder="@yourbrand" />
+                    <SelectTitle>
+                        <h6>How did you discover xNomad?</h6>
+                    </SelectTitle>
+                    <StyledSelect >
+                        <option value="Select your option">Select your option</option>
+                        <option value="1"></option>
+                        <option value="2"></option>
+                    </StyledSelect>
+                    <ButtonsDiv>
+                        <PrevBtn>Previous Step</PrevBtn>
+                        <NextBtn>Next</NextBtn>
+                    </ButtonsDiv>
 
-                {/*----------- Filled Page -----------*/}
-                {/* <CoverImg />
+                    {/*----------- Filled Page -----------*/}
+                    {/* <CoverImg />
                 <StyledButton>REPLACE COVER IMAGE</StyledButton>
                 <ImgDivOne></ImgDivOne>
                 <ImgDivTwo></ImgDivTwo>
@@ -62,6 +63,7 @@ class IdeaForm extends Component {
                     <PrevBtn>Previous Step</PrevBtn>
                     <SendToBtn>Send to landlord</SendToBtn>
                 </ButtonsDiv> */}
+                </Wrapper>
             </form>
         )
     }
@@ -70,6 +72,11 @@ class IdeaForm extends Component {
 export default IdeaForm
 
 // Slyled Components
+const Wrapper = styled.section`
+    @media(max-width: 1024px){
+        margin: 16px;
+    }
+`
 const TitleDiv = styled.h6`
 /* Name your idea */
     position: absolute;
@@ -86,7 +93,7 @@ const TitleDiv = styled.h6`
 
     @media(max-width: 1024px){
         position: absolute;
-        width: 80%;
+        width: 90%;
         height: 22px;
         left: 0;
         top: 345px;
@@ -599,22 +606,33 @@ const StyledSelect = styled.select`
 `
 const ButtonsDiv = styled.div`
     display: flex;
-    margin-top: 7vh;
-    width: 50vw;
-    height: 15vh;
-    margin-left: 5vw;
+    margin-top: 64px;
+    width: 345px;
+    height: 168px;
     position: absolute;
-    left: -32px;
+    left: 64px;
     top: 1450px;
 
-    @media(max-width: 1024px){
-        margin: 0px;
+    @media(max-width: 768px){
+        margin: 1px;
         position: absolute;
-        padding: 10px 10px 10px 10px;
+        padding: 10px;
         width: 95%;
         height: 52px;
-        left: 0%;
-        right: 0%;
+        left: 0;
+        right: 0;
+        bottom: 0px;
+        top: 2529px;
+        box-shadow: 0px 8px 28px rgba(0, 0, 0, 0.28);
+    }
+    @media (min-width: 1024px) and (max-width: 1024px){
+        margin: 0px;
+        position: absolute;
+        padding: 10px;
+        width: 99%;
+        height: 52px;
+        left: 0;
+        right: 0;
         bottom: 0px;
         top: 2529px;
         box-shadow: 0px 8px 28px rgba(0, 0, 0, 0.28);
@@ -664,6 +682,6 @@ const NextBtn = styled.button`
         left: 0%;
         right: 0%;
         bottom: 0px;
-        margin-left: 40px;
+        margin-left: 42px;
     }
 `

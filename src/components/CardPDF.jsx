@@ -61,12 +61,13 @@ class CardPDF extends Component {
 export default CardPDF
 
 const CardDiv = styled.div`
-    /* position: absolute;
     width: 421px;
     height: 723px;
-    left: 955px;
-    top: 189px;
-    background-color: #F0EEEA; */
+    @media(max-width: 1024px){
+        width: 343px;
+        height: 766px;
+        padding-left: 5px;
+    }
 
 `
 const CardTopTitle = styled.p`

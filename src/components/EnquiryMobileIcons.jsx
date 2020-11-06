@@ -23,11 +23,9 @@ export default EnquiryMobileIcons
 const Wrapper = styled.div`
     display: none;
     @media(max-width: 1024px){
+        height: 32px;
         display: block;
-        position: absolute;
-        left: 52%;
-        right: 21.33%;
-        top: 22px;
-        bottom: 23.33%;
+        padding: 14px 16px;
+        float: right;
     }
 `

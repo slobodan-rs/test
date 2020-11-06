@@ -136,8 +136,12 @@ border: 1px solid grey;
 width: 230px;
 border-radius: 5px;
 padding:14px;
-@media(max-width: 1024px){
+@media(max-width: 767px){
     width: 84vw;
+    margin-bottom: 20px;
+  }
+  @media (min-width: 768px) and (max-width: 1024px){
+    width: 85vw;
     margin-bottom: 20px;
   }
 `
@@ -152,8 +156,12 @@ border: 1px solid grey;
 width: 230px;
 border-radius: 5px;
 padding:14px;
-@media(max-width: 1024px){
+@media(max-width: 767px){
     width: 84vw;
+    margin-left: -10px;
+  }
+  @media (min-width: 768px) and (max-width: 1024px){
+    width: 85vw;
     margin-left: -10px;
   }
 `
@@ -194,28 +202,39 @@ padding:14px;
 
 const ButtonsDiv = styled.div`
 display: flex;
-margin-top: 7vh;
-width: 50vw;
-margin-left: 5vw;
-@media(max-width: 1024px){
+margin-top: 64px;
+width: 345px;
+padding-left: 100px;
+@media(max-width: 767px){
         position: absolute;
-        padding: 10px;
-        width: 94vw;
+        width: 100%;
         height: 52px;
         left: 0%;
         right: 0%;
         bottom: 0px;
         top: 1329px;
         box-shadow: 0px 8px 28px rgba(0, 0, 0, 0.28);
-        margin-left: -5px;
+        margin: 0 10px 0 -7px;
+        padding: 10px 27px;
     }
+    @media (min-width: 768px) and (max-width: 1024px){
+        position: absolute;
+        width: 100%;
+        height: 52px;
+        left: 0%;
+        right: 0%;
+        bottom: 0px;
+        top: 1329px;
+        box-shadow: 0px 8px 28px rgba(0, 0, 0, 0.28);
+        margin: 0 10px 0 -7px;
+        padding: 10px 80px 10px 27px;
+  }
 `
 const PrevBtn = styled.button`
 background-color: white;
 border: 1px solid black;
 width:160px;
 height:50px;
-border-radius: 5px;
 border-color:  #0F6B5C;
 color: #0F6B5C;
 font-weight: 500;
@@ -236,7 +255,6 @@ color: white;
 width:100px;
 height:50px;
 margin-left: 20px;
-border-radius: 5px;
 font-weight: 500;
 font-size: 16px;
 line-height: 20px;
@@ -256,11 +274,17 @@ const RewievCardWrapper = styled.div`
     left: 955px;
     top: 189px;
     background-color: #F0EEEA;
-    @media(max-width: 1024px){
-        left: 5vw;
+    @media(max-width: 767px){
+        left: 20px;
         top: 839px;
         width: 90%;
     }
+    @media (min-width: 768px) and (max-width: 1024px){
+      left: 16px;
+      top: 839px;
+      width: 343px;
+      height: 766px;
+  }
 `
 const FormWrapper = styled.div`
   position: relative;
