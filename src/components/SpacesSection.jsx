@@ -44,15 +44,16 @@ const Wrapper = styled.div`
     flex-wrap: wrap;
     justify-content: space-evenly;
     text-align: left;
+
     @media(max-width: 1024px){
         width: 100%;
     }
 `
 const TitleH4 = styled.h4`
-    position: absolute;
+    margin-top: 80px;
+    margin-left: 275px;
+    margin-bottom: 40px;
     height: 38px;
-    left: 175px;
-    top: 924px;
     font-family: Charter;
     font-style: normal;
     font-weight: bold;
@@ -60,19 +61,14 @@ const TitleH4 = styled.h4`
     line-height: 120%;
     color: #686058;
     @media(max-width: 1024px){
-        position: relative;
-        left: 0;
-        top: 759px;
         font-size: 28px;
-        text-align: center
+        text-align: center;
+        margin: 48px 16px 16px 16px;
     }
 `
 const ArticleOne = styled.article`
-    position: absolute;
     width: 421px;
     height: 561px;
-    left: 10%;
-    top: 1072px;
     background: #F0EEEA;
     border-radius: 2px;
 
@@ -83,7 +79,7 @@ const ArticleOne = styled.article`
         font-size: 24px;
         line-height: 120%;
         color: #242728;
-        padding: 0px 40px 0px 40px;
+        padding: 20px 30px 10px 30px;
     }
     div {
         font-family: Fira Sans;
@@ -91,44 +87,38 @@ const ArticleOne = styled.article`
         font-weight: normal;
         font-size: 16px;
         line-height: 150%;
-        padding: 0px 40px 20px 40px;
+        padding: 10px 30px 10px 30px;
     }
-    @media(max-width: 1024px){
-        width: 93%;
+    @media(max-width: 768px){
+        width: 100%;
         height: 128px;
-        left: 16px;
-        top: 857px;
+        margin: 16px;
 
         h5{
             position: absolute;
-            width: 207px;
             height: 24px;
-            left: 104px;
-            top: 0px;
+            left: 124px;
+            top: 953px;
             font-family: Charter;
             font-size: 20px;
             z-index: 1;
         }
         div{
             position: absolute;
-            width: 207px;
+            width: 137px;
             height: 48px;
-            left: 104px;
-            top: 60px;
+            left: 124px;
+            top: 1005px;
 
             &:nth-child(3){
             display: none;
             }
         }
-        
     }
 `
 const ArticleTwo = styled.article`
-    position: absolute;
     width: 422px;
     height: 561px;
-    left: 40%;
-    top: 1072px;
     background: #F0EEEA;
     border-radius: 2px;
 
@@ -139,7 +129,7 @@ const ArticleTwo = styled.article`
         font-size: 24px;
         line-height: 120%;
         color: #242728;
-        padding: 0px 40px 0px 40px;
+        padding: 20px 30px 10px 30px;
     }
     div {
         font-family: Fira Sans;
@@ -147,43 +137,38 @@ const ArticleTwo = styled.article`
         font-weight: normal;
         font-size: 16px;
         line-height: 150%;
-        padding: 0px 40px 20px 40px;
+        padding: 10px 30px 10px 30px;
     }
-    @media(max-width: 1024px){
-        width: 93%;
+    @media(max-width: 768px){
+        width: 100%;
         height: 128px;
-        left: 16px;
-        top: 1001px;
+        margin: 16px;
+
         h5{
             position: absolute;
-            width: 207px;
             height: 24px;
-            left: 104px;
-            top: 0px;
+            left: 124px;
+            top: 1116px;
             font-family: Charter;
             font-size: 20px;
             z-index: 1;
         }
         div{
             position: absolute;
-            width: 207px;
+            width: 137px;
             height: 48px;
-            left: 104px;
-            top: 60px;
+            left: 124px;
+            top: 1165px;
 
-           &:nth-child(3){
+            &:nth-child(3){
             display: none;
             }
-
         }
     }
 `
 const ArticleThree = styled.article`
-    position: absolute;
     width: 422px;
     height: 561px;
-    left: 70%;
-    top: 1072px;
     background: #F0EEEA;
     border-radius: 2px;
 
@@ -194,7 +179,7 @@ const ArticleThree = styled.article`
         font-size: 24px;
         line-height: 120%;
         color: #242728;
-        padding: 0px 40px 0px 40px;
+        padding: 20px 30px 10px 30px;
     }
     div {
         font-family: Fira Sans;
@@ -202,39 +187,39 @@ const ArticleThree = styled.article`
         font-weight: normal;
         font-size: 16px;
         line-height: 150%;
-        padding: 0px 40px 20px 40px;
+        padding: 10px 30px 10px 30px;
     }
-    @media(max-width: 1024px){
-        width: 93%;
+    @media(max-width: 768px){
+        width: 100%;
         height: 128px;
-        left: 16px;
-        top: 1145px;
+        margin: 16px;
+
         h5{
             position: absolute;
-            width: 207px;
             height: 24px;
-            left: 104px;
-            top: 0px;
+            left: 124px;
+            top: 1273px;
             font-family: Charter;
             font-size: 20px;
+            z-index: 1;
         }
         div{
             position: absolute;
-            width: 207px;
+            width: 137px;
             height: 48px;
-            left: 104px;
-            top: 60px;
+            left: 124px;
+            top: 1325px;
 
             &:nth-child(3){
             display: none;
             }
-        }   
+        }
     }
 `
 const ArticleImg = styled.img`
     width: 421px;
     height: 315px;
-    @media(max-width: 1024px){
+    @media(max-width: 768px){
         width: 112px;
         height: 112px;
         padding: 10px;

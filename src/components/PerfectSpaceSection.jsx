@@ -11,14 +11,15 @@ class PerfectSpaceSection extends Component {
                 <Title>
                     <h4>A perfect space for your brand</h4>
                 </Title>
-                <StyledImgDiv />
-                <Discription>
-                    <div>Östermalm, Stockholm</div>
-                    <h5>Grev Turegatan</h5>
-                    <h6>5 000 kr/week</h6>
-                    <div>Here you have an unique opportunity to pop up at one of Stockholms best locations. The space offers generous display windows facing the buzzing street of Grev Turegatan. The store is unfurnished and can easily be fabricated to your needs.</div>
-                    <div>32 m2 • 16 000 visitors/week</div>
-                </Discription>
+                <StyledImgDiv>
+                    <Discription>
+                        <div>Östermalm, Stockholm</div>
+                        <h5>Grev Turegatan</h5>
+                        <h6>5 000 kr/week</h6>
+                        <div>Here you have an unique opportunity to pop up at one of Stockholms best locations. The space offers generous display windows facing the buzzing street of Grev Turegatan. The store is unfurnished and can easily be fabricated to your needs.</div>
+                        <div>32 m2 • 16 000 visitors/week</div>
+                    </Discription>
+                </StyledImgDiv>
             </>
         )
     }
@@ -27,11 +28,10 @@ export default PerfectSpaceSection
 
 //Styled Components
 const Title = styled.div`
-    position: absolute;
-    width: 452px;
     height: 38px;
-    left: 175px;
-    top: 1643px;
+    margin-top: 80px;
+    margin-left: 275px;
+    margin-bottom: 40px;
     h4 {
         font-family: Charter;
         font-style: normal;
@@ -41,40 +41,44 @@ const Title = styled.div`
         color: #686058;
     }
     @media(max-width: 1024px){
-        left: 16px;
-        top: 1321px;
-        width: 90%;
+        text-align: center;
+        margin: 48px 16px 0px 16px;
         h4{
             font-size: 28px;
         }
     }
 `
 const StyledImgDiv = styled.div`
-    position: absolute;
-    width: 1572px;
+    margin: auto;
+    width: 1312px;
     height: 725px;
-    left: 10%;
-    top: 1781px;
     background: url(${perfectSpace});
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center; 
 
-    @media(max-width: 1024px){
+    @media(max-width: 767px){
+        height: 100%;
         width: 100%;
-        left: 0;
-        top: 1239px;
         background-size: 100%;
+        margin-top: 50px;
+    }
+    @media(min-width: 768px) and (max-width: 1024px){
+        height: 100%;
+        width: 100%;
+        background-size: 100%;
+        margin-top: 50px;
     }
 `
 const Discription = styled.div`
-    position: absolute;
+    position: relative;
     width: 756px;
     height: 353px;
-    left: 375px;
-    top: 2259px;
+    left: 135px;
+    top: 500px;
     background: #F0EEEA;
     border-radius: 2px;
+    
     div {
     :nth-child(1) {
         position: absolute;
@@ -124,7 +128,7 @@ const Discription = styled.div`
         width: 307px;
         height: 29px;
         left: 31px;
-        top: 59px;
+        top: 99px;
         font-family: Charter;
         font-style: normal;
         font-weight: bold;
@@ -137,7 +141,7 @@ const Discription = styled.div`
         position: absolute;
         height: 22px;
         left: 31px;
-        top: 109px;
+        top: 149px;
         font-family: Charter;
         font-style: normal;
         font-weight: bold;
@@ -145,15 +149,15 @@ const Discription = styled.div`
         line-height: 120%;
         color: #242728;
     }
-    @media(max-width: 1024px){
+    @media(max-width: 768px){
         width: 92%;
         height: 179px;
         left: 16px;
-        top: 1650px;
+        top: 100px;
 
         div {
             :nth-child(1) {
-                top: 20px;
+                top: 30px;
                 font-size: 14px;
             }
             :nth-child(4) {
@@ -166,13 +170,17 @@ const Discription = styled.div`
         }
         h5 {
             font-size: 20px;
-            top: 20px;
+            top: 50px;
         }
         h6 {
-            top: 40px;
+            top: 80px;
             font-size: 20px;
         }
 
     }
-`
+    @media(min-width: 769px) and (max-width: 1024px){
+        left: 150px;
+        top: 200px;
+    }
 
+`

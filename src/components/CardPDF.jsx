@@ -80,6 +80,7 @@ margin-left: 20px;
 `
 const CardImageDiv = styled.div`
 display: flex;
+padding: 20px 0;
 `
 const CardImage = styled.img`
 width: 169px;
@@ -93,9 +94,10 @@ color: #868F92;
 `
 const Line = styled.hr`
 margin-top: 25px;
-width: 80%;
+margin: auto;
+width: 85%;
 background-color: #868F92;
-
+text-align: center;
 `
 const CardCalendar = styled.div`
     color: #868F92;
@@ -106,6 +108,7 @@ const CardCalendar = styled.div`
     font-weight: normal;
     font-size: 18px;
     line-height: 150%;
+    padding: 10px 20px 20px 20px;
 
     img {
         position: relative;
@@ -138,6 +141,7 @@ color: black;
 margin-left: 30px;
 margin-top: 20px;
 width: 70%;
+padding-bottom: 24px;
 `
 const CardSpan1 = styled.span`
     color: #868F92;
@@ -196,10 +200,10 @@ const DownloadBtn = styled.button`
 `
 const CardFooter = styled.div`
 color: #868F92;
-margin-top: 20px;
+margin-top: 30px;
 text-align: center;
 @media(max-width: 1024px){
-        margin-top: 10px;
+        margin-top: 15px;
     }
 `
 

@@ -95,11 +95,29 @@ const CompanyIconMain = styled.img`
   background-repeat: no-repeat;
   background-position: center;
 
-  @media (max-width: 1024px) {
+  @media (max-width: 767px) {
     background: ${({ mobile }) =>
     mobile ? `url(${XnomadMobile})` : `url(${Xnomad})`};
     position: relative;
     left: 20%;
+    background-size: 50px;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  @media (min-width: 768px) and (max-width: 925px) {
+    background: ${({ mobile }) =>
+    mobile ? `url(${XnomadMobile})` : `url(${Xnomad})`};
+    position: relative;
+    left: 35%;
+    background-size: 50px;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  @media (min-width: 925px) and (max-width: 1024px) {
+    background: ${({ mobile }) =>
+    mobile ? `url(${XnomadMobile})` : `url(${Xnomad})`};
+    position: relative;
+    left: 38%;
     background-size: 50px;
     background-repeat: no-repeat;
     background-position: center;
@@ -442,7 +460,7 @@ const StyledSearchInput = styled.input`
   border-right: none;
   border-bottom: none;
   border-top: none;
-  padding: 38px 40px;
+  padding: 35px 40px;
   background-image: url(${search});
   background-repeat: no-repeat;
   background-position-x: 10px;
@@ -477,7 +495,7 @@ const SearchIcon = styled.div`
     top: 17px;
     float: right;
     background-image: url(${search});
-    background-repeat: no-repeat;
+    margin-right: 10px;
     background-size: 40px;
     border: none;
   }

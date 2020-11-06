@@ -53,12 +53,8 @@ const ImgDiv = styled.div`
     background-position: center; 
 
     @media(max-width: 1024px) {
-        position: absolute;
         width: 100%;
         height: 475px;
-        left: 0px;
-        right: 0px;
-        top: 0px;
         background: linear-gradient(0deg, rgba(25, 25, 25, 0.25), rgba(25, 25, 25, 0.25)), url(${landibgImg}), url(DSCF1674.jpg);
         background-repeat: no-repeat;
         background-size: cover;
@@ -70,6 +66,10 @@ const SelectWrapper = styled.div`
     height: 78px;
     display: inline-block;
     padding-top: 28px;
+    @media(max-width: 1024px){
+        width: 210px;
+        height: 68px;
+    }
 `
 const StyledH1 = styled.h1`
 /* Where your customer meets your brand */
@@ -86,12 +86,9 @@ const StyledH1 = styled.h1`
     /* White */
     color: #FFFFFF;
     @media(max-width: 1024px){
-        position: relative;
         font-size: 40px;
         line-height: 115%;
-        text-align: center;
-        top: 50px;
-        left: -230px;
+        padding-top: 88px;
     }
 `
 const StyledSelect1 = styled.select`
@@ -151,7 +148,8 @@ const StyledSelect3 = styled.select`
 `
 const StyledButton = styled.button`
 /* button */
-    padding: 24.5px 70px;
+    padding: 24.6px 70px;
+    height: 68px;
 
     /* Green */
     background: #0F6B5C;
@@ -169,11 +167,9 @@ const StyledButton = styled.button`
     color: #FFFFFF;
 
     @media(max-width: 1024px){
-        position: absolute;
         width: 210px;
         height: 68px;
-        left: calc(50% - 210px/2 - 0.5px);
-        top: 294px;
+        padding: 10px;
     }
 `
 const Referals = styled.div`

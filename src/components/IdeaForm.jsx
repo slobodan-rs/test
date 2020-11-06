@@ -83,7 +83,7 @@ const TitleDiv = styled.h6`
     width: 644px;
     height: 22px;
     left: 64px;
-    top: 341px;
+    top: 371px;
 
     font-family: Charter;
     font-style: normal;
@@ -96,7 +96,7 @@ const TitleDiv = styled.h6`
         width: 90%;
         height: 22px;
         left: 0;
-        top: 345px;
+        top: 395px;
         padding: 16px;
     }
 `
@@ -157,7 +157,7 @@ const MessageDiv = styled.h6`
     width: 610px;
     height: 22px;
     left: 64px;
-    top: 415px;
+    top: 455px;
     padding: 24px 0 16px 0;
 
     font-family: Charter;
@@ -170,7 +170,7 @@ const MessageDiv = styled.h6`
         width: 80%;
         height: 44px;
         left: 0px;
-        top: 477px;
+        top: 527px;
         padding: 16px;
     }
 `
@@ -220,7 +220,7 @@ const SocialDiv = styled.div`
     width: 224px;
     height: 22px;
     left: ${({ optional }) => optional ? '266px' : '64px'};
-    top: ${({ optional }) => optional ? '1060px' : '1035px'};
+    top: ${({ optional }) => optional ? '1070px' : '1070px'};
 
     h6 {
         font-family: Charter;
@@ -242,7 +242,7 @@ const SocialDiv = styled.div`
         width: 164px;
         height: 22px;
         left: ${({ optional }) => optional ? '184px' : '16px'};
-        top: ${({ optional }) => optional ? '1173px' : '1149px'};
+        top: ${({ optional }) => optional ? '1173px' : '1173px'};
         p{
             font-family: Charter;
             font-style: normal;
@@ -451,7 +451,7 @@ const ImgDivTitle = styled.h6`
     width: 322px;
     height: 22px;
     left: 64px;
-    top: 685px;
+    top: 715px;
 
     font-family: Charter;
     font-style: normal;
@@ -464,7 +464,7 @@ const ImgDivTitle = styled.h6`
         width: 343px;
         height: 22px;
         left: 0;
-        top: 747px;
+        top: 777px;
         padding: 16px;
     }
 `
@@ -528,9 +528,9 @@ const ImgContainer = styled.div`
     }
     p:first-child{
         position: absolute;
-        left: 48.61%;
+        left: 45.61%;
         right: 69.93%;
-        top: 33.23%;
+        top: 40.23%;
         bottom: 58.92%;
     }
     @media(max-width: 1024px) {
@@ -543,13 +543,13 @@ const ImgContainer = styled.div`
         width: 93px;
         height: 20px;
         left: 0px;
-        top: 1038px;
+        top: 1058px;
 
         :nth-child(2){
             width: 93px;
             height: 20px;
-            left: calc(50% - 93px/2);
-            top: 100px;
+            left: calc(50% - 110px/2);
+            top: 120px;
             z-index: 1;
         }
     }
@@ -560,7 +560,7 @@ const SelectTitle = styled.div`
     width: 644px;
     height: 22px;
     left: 64px;
-    top: 1363px;
+    top: 1393px;
 
     h6 {
         font-family: Charter;
@@ -575,7 +575,7 @@ const SelectTitle = styled.div`
         width: 90%;
         height: 22px;
         left: 16px;
-        top: 1477px;
+        top: 1507px;
     }
 `
 const StyledSelect = styled.select`
