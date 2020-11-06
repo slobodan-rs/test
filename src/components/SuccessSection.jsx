@@ -10,8 +10,11 @@ const Section = styled.section`
   top: 1500px;
   margin-left: -90px;
 }
-position: relative;
-top: 2600px;
+@media only screen and (min-width: 1024px){
+  position: relative;
+  top: 2600px;
+}
+
 `
 const Container = styled.div``
 const Row = styled.div``
@@ -32,17 +35,20 @@ const Title = styled.h1`
 
   color: #686058;
 }
-position: relative;
-left: 10%;
-font-family: Charter;
-font-style: normal;
-font-weight: bold;
-font-size: 32px;
-line-height: 120%;
+@media only screen and (min-width: 1024px){
+  position: relative;
+  left: 10%;
+  font-family: Charter;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 32px;
+  line-height: 120%;
 
-/* or 38px */
+  /* or 38px */
 
-color: #686058;
+  color: #686058;;
+}
+
 `
 
 const GalleryContainer = styled.div``
@@ -52,10 +58,14 @@ const ImgContainer = styled.div`
   /* For mobile phones: */
 
 }
-  justify-content: center;
-  display: flex;
-  flex-wrap: wrap;
-  padding: 30px 0 0 0;
+
+  @media only screen and (min-width: 1024px){
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 30px 0 0 0;
+    margin-left: -70px;
+  }
 `
 const ImgDiv = styled.div`
 
@@ -66,7 +76,10 @@ const ImgDiv = styled.div`
 width: 100px;
 height: 20px;
 }
-margin-left: 100px;
+@media only screen and (min-width: 1024px){
+margin-left: -40px;
+}
+
 `
 const ImgDiv1 = styled.div`
 
@@ -77,7 +90,10 @@ width: 100px;
 height: 20px;
 margin-top:-100px;
 }
+@media only screen and (min-width: 1024px){
 margin-left: 100px;
+}
+
 `
 const Img = styled.img`
 
@@ -87,9 +103,12 @@ const Img = styled.img`
   height: 230px;
   background-color: grey;
 }
-  width: 600px;
-  height: 430px;
+@media only screen and (min-width: 1024px){
+  width: 500px;
+  height: 330px;
   background-color: grey;
+}
+
 `
 const Text = styled.h4`
 
@@ -98,15 +117,18 @@ const Text = styled.h4`
   font-size: 15px;
   margin-left: 30px;
 }
-font-family: Charter;
-font-style: normal;
-font-weight: bold;
-font-size: 24px;
-line-height: 120%;
+@media only screen and (min-width: 1024px){
+  font-family: Charter;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 120%;
 
-/* identical to box height, or 29px */
+  /* identical to box height, or 29px */
 
-color: #111118;
+  color: #111118;
+}
+
 
 
 `
@@ -116,15 +138,18 @@ const Text1 = styled.h4`
   /* For mobile phones: */
   display: none;
 }
-font-family: Fira Sans;
-font-style: normal;
-font-weight: normal;
-font-size: 18px;
-line-height: 150%;
-left: 30px;
-/* or 27px */
+@media only screen and (min-width: 1024px){
+  font-family: Fira Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 150%;
+  left: 30px;
+  /* or 27px */
 
-color: #111118;
+  color: #111118;
+}
+
 `
 const Textdiv = styled.div`
 
@@ -138,13 +163,16 @@ const Textdiv = styled.div`
   background: #F0EEEA;
   border-radius: 2px;
 }
-position: absolute;
-width: 533px;
-height: 335px;
-top: 350px;
-left: 300px;
-background: #F0EEEA;
-border-radius: 2px;
+@media only screen and (min-width: 1024px){
+  position: absolute;
+  width: 433px;
+  height: 385px;
+  top: 350px;
+  left: 200px;
+  background: #F0EEEA;
+  border-radius: 2px;
+}
+
 `
 const Textdiv1 = styled.div`
 
@@ -158,13 +186,16 @@ const Textdiv1 = styled.div`
   background: #F0EEEA;
   border-radius: 2px;
 }
-position: absolute;
-width: 533px;
-height: 335px;
-top: 350px;
-left: 1000px;
-background: #F0EEEA;
-border-radius: 2px;
+@media only screen and (min-width: 1024px){
+  position: absolute;
+  width: 433px;
+  height: 385px;
+  top: 350px;
+  left: 790px;
+  background: #F0EEEA;
+  border-radius: 2px;
+}
+
 `
 const ButtonDiv = styled.div`
 
@@ -174,9 +205,12 @@ const ButtonDiv = styled.div`
   left: 25%;
   padding-top: 250px;
 }
-position: relative;
-left: 30%;
-padding-top: 250px;
+@media only screen and (min-width: 1024px){
+  position: relative;
+  left: 30%;
+  padding-top: 350px;
+}
+
 `
 const Button = styled.button `
 
@@ -186,6 +220,7 @@ const Button = styled.button `
   width: 270px;
   height: 64px;
 }
+@media only screen and (min-width: 1024px){
   position: absolute;
 width: 533px;
 height: 64px;
@@ -206,6 +241,8 @@ text-transform: uppercase;
 
 /* White */
 color: #FFFFFF;
+}
+
 `
 const SDiv = styled.div`
 @media only screen and (max-width: 768px) {

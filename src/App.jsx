@@ -28,7 +28,6 @@ import CardPDF from './components/CardPDF'
 import SuccessSection from './components/SuccessSection'
 import PerfectSection from './components/PerfectSection'
 import Nav from './components/Nav'
-import EnquiryStep2 from './components/EnquiryStep2'
 import FooterSection from './components/FooterSection'
 import PartnerSection from './components/PartnerSection'
 import About from './About'
@@ -81,7 +80,7 @@ const CompanyIconMobile = styled.img`
     width: 45px;
     height: 45px;
     padding: 8px 16px;
-  
+
     &:hover {
       cursor: pointer;
     }
@@ -409,7 +408,7 @@ const IdeaCardWrapper = styled.div`
   left: 955px;
   top: 189px;
   background-color: #f0eeea;
-  
+
   @media (max-width: 767px) {
     left: 16px;
     top: 1659px;

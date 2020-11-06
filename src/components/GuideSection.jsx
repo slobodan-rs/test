@@ -14,17 +14,21 @@ const Section = styled.section`
   position: relative;
   top: 1550px;
 }
-width: full-width;
-height: 474px;
-background-color: white;
-position: relative;
-top: 2700px;
+@media only screen and (min-width: 1024px){
+  width: full-width;
+  height: 474px;
+  background-color: white;
+  position: relative;
+  top: 2700px;
+}
+
 `
 const Container = styled.div``
 const Row = styled.div``
 const TitleContainer = styled.div`
 `
 const Title = styled.h1`
+
 position: relative;
 position: relative;
 left: 10%;
@@ -48,7 +52,10 @@ clear: both;
    overflow: hidden;
    white-space: nowrap;
 }
-margin-top: 10px;
+@media only screen and (min-width: 1024px){
+
+}
+
 `
 const ImgContainer = styled.div`
 @media only screen and (max-width: 768px) {
@@ -59,16 +66,23 @@ clear: both;
    overflow: hidden;
    white-space: nowrap;
 }
+@media only screen and (min-width: 1024px){
   justify-content: center;
   display: flex;
   flex-wrap: wrap;
   padding: 30px 0 0 0;
+  margin-left: -100px;
+}
+
 `
 const ImgDiv = styled.div`
 @media only screen and (max-width: 768px) {
   /* For mobile phones: */
 }
-margin-left: 100px;
+@media only screen and (min-width: 1024px){
+margin-left: 20px;
+}
+
 `
 
 const Img = styled.img`
@@ -78,8 +92,11 @@ const Img = styled.img`
   width: 100px;
   height: 200px;
 }
+@media only screen and (min-width: 1024px){
   width: 200px;
   height: 300px;
+}
+
 `
 const Text = styled.h4`
 @media only screen and (max-width: 768px) {
@@ -92,17 +109,20 @@ const Text = styled.h4`
    text-align: left;
    font-size: 16px;
 }
-font-family: Charter;
-font-style: normal;
-font-weight: bold;
-font-size: 18px;
-line-height: 120%;
+@media only screen and (min-width: 1024px){
+  font-family: Charter;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 120%;
 
-/* identical to box height, or 22px */
+  /* identical to box height, or 22px */
 
-/* Black */
-color: #242728;
-text-align: left;
+  /* Black */
+  color: #242728;
+  text-align: left;
+}
+
 `
 const Text1 = styled.h4`
 @media only screen and (max-width: 768px) {

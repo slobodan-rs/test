@@ -82,12 +82,6 @@ margin-top: -1150px;
 }
 `
 
-const LoginDiv = styled.div`
-  background-color: white;
-  height: 35vh;
-  width: 15vw;
-  opacity: 1;
-`
 const CompanyContainer = styled.div``
 const CompanyTitle = styled.div`
 font-family: Charter;

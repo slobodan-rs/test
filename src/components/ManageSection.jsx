@@ -11,11 +11,14 @@ const Section = styled.section`
   position: relative;
   top: 1450px;
 }
-width: full-width;
-height: 350px;
-background-color: #F0EEEA;
-position: relative;
-top: 2550px;
+@media only screen and (min-width: 1024px){
+  width: full-width;
+  height: 350px;
+  background-color: #F0EEEA;
+  position: relative;
+  top: 2550px;
+}
+
 `
 const Container = styled.div``
 const Row = styled.div``
@@ -39,19 +42,22 @@ const Title = styled.h1`
   padding-top:30px;
   text-align: center;
 }
-font-family: Charter;
-font-style: normal;
-font-weight: bold;
-font-size: 45px;
-line-height: 120%;
+@media only screen and (min-width: 1024px){
+  font-family: Charter;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 45px;
+  line-height: 120%;
 
-/* or 54px */
-text-align: center;
+  /* or 54px */
+  text-align: center;
 
-/* Brown */
-color: #686058;
-padding-top:30px;
-text-align: center;
+  /* Brown */
+  color: #686058;
+  padding-top:30px;
+  text-align: center;
+}
+
 `
 const Image = styled.img`
 padding: ${props => props.padd};
@@ -59,8 +65,9 @@ padding-left: 10%;
 padding-bottom: ${props => props.bottom};
 padding-top: ${props => props.top};
 width: ${props => props.width};
+@media only screen and (min-width: 1024px){
+}
 `
-
 class ManageSection extends Component {
   render() {
     return (

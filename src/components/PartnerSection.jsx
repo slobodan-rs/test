@@ -22,7 +22,7 @@ position: relative;
 width: 100%;
 display: flex;
 background-color: #D7D2CB;
-margin-left: -35%;
+margin-left: -40%;
 padding-bottom: 2%;
 `
 const Imagescontainer = styled.div`

@@ -4,19 +4,21 @@ import image1 from '../images/6.png'
 import image2 from '../images/7.png'
 import image3 from '../images/8.png'
 const Section = styled.section`
-@media only screen and (max-width: 768px) {
+@media only screen and (min-width: 320px) {
   /* For mobile phones: */
   position: relative;
   top: 1620px;
 }
-position: relative;
-top: 2600px;
+@media only screen and (min-width: 1024px){
+  position: relative;
+  top: 2600px;
+}
 `
 const Container = styled.div``
 const Row = styled.div``
 const TitleContainer = styled.div``
 const Title = styled.h1`
-@media only screen and (max-width: 768px) {
+@media only screen and (min-width: 320px) {
   /* For mobile phones: */
   position: relative;
   left: 10%;
@@ -30,64 +32,77 @@ const Title = styled.h1`
 
   color: #686058;
 }
-position: relative;
-left: 10%;
-font-family: Charter;
-font-style: normal;
-font-weight: bold;
-font-size: 32px;
-line-height: 120%;
+@media only screen and (min-width: 1024px){
+  position: relative;
+  left: 10%;
+  font-family: Charter;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 32px;
+  line-height: 120%;
 
-/* or 38px */
+  /* or 38px */
 
-color: #686058;
+  color: #686058;
+}
+
 `
 
 const GalleryContainer = styled.div``
 const ImgContainer = styled.div`
-@media only screen and (max-width: 768px) {
+@media only screen and (min-width: 320px) {
   /* For mobile phones: */
   justify-content: left;
   display: flex;
   flex-wrap: wrap;
   padding: 30px 0 0 0;
 }
-
+@media only screen and (min-width: 1024px){
   justify-content: left;
   display: flex;
   flex-wrap: wrap;
   padding: 30px 0 0 0;
+}
+
 `
 const ImgDiv = styled.div`
-@media only screen and (max-width: 768px) {
+@media only screen and (min-width: 320px) {
   /* For mobile phones: */
   margin-left: 2px;
 }
+@media only screen and (min-width: 1024px){
+margin-left: 10px;
+}
 
-margin-left: 20px;
 `
 const ImgDiv1 = styled.div`
-@media only screen and (max-width: 768px) {
+@media only screen and (min-width: 320px) {
   /* For mobile phones: */
   margin-left: 170px;
   margin-top: -260px;
 }
+@media only screen and (min-width: 1024px){
+margin-left: 10px;
+margin-top: 0px;
+}
 
-margin-left: 20px;
 `
 const Img = styled.img`
-@media only screen and (max-width: 768px) {
+@media only screen and (min-width: 320px) {
   /* For mobile phones: */
   width: 120px;
   height: 150px;
   background-color: grey;
 }
-  width: 300px;
+@media only screen and (min-width: 1024px){
+  width: 250px;
   height: 250px;
   background-color: grey;
+}
+
 `
 const Text = styled.h4`
-@media only screen and (max-width: 768px) {
+@media only screen and (min-width: 320px) {
   /* For mobile phones: */
   text-align: left;
   font-family: Fira Sans;
@@ -102,21 +117,24 @@ const Text = styled.h4`
   /* Gray 2 */
   color: #555C5E;
 }
-text-align: center;
-font-family: Fira Sans;
-font-style: normal;
-font-weight: normal;
-font-size: 16px;
-line-height: 150%;
+@media only screen and (min-width: 1024px){
+  text-align: center;
+  font-family: Fira Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 150%;
 
-/* identical to box height, or 24px */
-text-transform: uppercase;
+  /* identical to box height, or 24px */
+  text-transform: uppercase;
 
-/* Gray 2 */
-color: #555C5E;
+  /* Gray 2 */
+  color: #555C5E;
+}
+
 `
 const Text1 = styled.h4`
-@media only screen and (max-width: 768px) {
+@media only screen and (min-width: 320px) {
   /* For mobile phones: */
   text-align: left;
   font-family: Charter;
@@ -130,20 +148,23 @@ const Text1 = styled.h4`
   /* Gray 1 */
   color: #3C4143;
 }
-text-align: center;
-font-family: Charter;
-font-style: normal;
-font-weight: bold;
-font-size: 24px;
-line-height: 120%;
+@media only screen and (min-width: 1024px){
+  text-align: center;
+  font-family: Charter;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 15px;
+  line-height: 120%;
 
-/* identical to box height, or 29px */
+  /* identical to box height, or 29px */
 
-/* Gray 1 */
-color: #3C4143;
+  /* Gray 1 */
+  color: #3C4143;
+}
+
 `
 const Text2 = styled.h4`
-@media only screen and (max-width: 768px) {
+@media only screen and (min-width: 320px) {
   /* For mobile phones: */
   text-align: left;
   font-family: Charter;
@@ -157,20 +178,23 @@ const Text2 = styled.h4`
   /* Black */
   color: #242728;
 }
-text-align: center;
-font-family: Charter;
-font-style: normal;
-font-weight: bold;
-font-size: 18px;
-line-height: 120%;
+@media only screen and (min-width: 1024px){
+  text-align: center;
+  font-family: Charter;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 120%;
 
-/* identical to box height, or 22px */
+  /* identical to box height, or 22px */
 
-/* Black */
-color: #242728;
+  /* Black */
+  color: #242728;
+}
+
 `
 const Text3 = styled.h4`
-@media only screen and (max-width: 768px) {
+@media only screen and (min-width: 320px) {
   /* For mobile phones: */
   text-align: left;
   font-family: Fira Sans;
@@ -184,17 +208,20 @@ const Text3 = styled.h4`
   /* Gray 2 */
   color: #555C5E;
 }
-text-align: center;
-font-family: Fira Sans;
-font-style: normal;
-font-weight: normal;
-font-size: 16px;
-line-height: 150%;
+@media only screen and (min-width: 1024px){
+  text-align: center;
+  font-family: Fira Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 13px;
+  line-height: 150%;
 
-/* identical to box height, or 24px */
+  /* identical to box height, or 24px */
 
-/* Gray 2 */
-color: #555C5E;
+  /* Gray 2 */
+  color: #555C5E;
+}
+
 `
 
 class FeaturedSection extends Component {

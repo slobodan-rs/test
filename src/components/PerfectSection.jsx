@@ -9,11 +9,14 @@ const Section = styled.section`
   position: relative;
   top: 2490px;
 }
-width: full-width;
-height: 480px;
-background-color: #F0EEEA;
-position: relative;
-top: 3000px;
+@media only screen and (min-width: 1024px){
+  width: full-width;
+  height: 480px;
+  background-color: #F0EEEA;
+  position: relative;
+  top: 2875px;
+}
+
 `
 const Container = styled.div``
 const Row = styled.div``
@@ -37,20 +40,23 @@ const Text = styled.h4`
 
   text-align: left;
 }
-position: relative;
-font-family: Charter;
-font-style: normal;
-font-weight: bold;
-font-size: 45px;
-line-height: 120%;
+@media only screen and (min-width: 1024px){
+  position: relative;
+  font-family: Charter;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 45px;
+  line-height: 120%;
 
-/* or 54px */
+  /* or 54px */
 
-color: #111118;
-padding-top:70px;
+  color: #111118;
+  padding-top:70px;
 
-text-align: left;
-left: 10%;
+  text-align: left;
+  left: 10%;
+}
+
 `
 const Text1 = styled.h4`
 @media only screen and (max-width: 768px) {
@@ -69,19 +75,22 @@ const Text1 = styled.h4`
   text-align: left;
   margin-left: -20px;
 }
-position: relative;
-font-family: Fira Sans;
-font-style: normal;
-font-weight: normal;
-font-size: 18px;
-line-height: 150%;
+@media only screen and (min-width: 1024px){
+  position: relative;
+  font-family: Fira Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 150%;
 
-/* or 27px */
+  /* or 27px */
 
-color: #111118;
+  color: #111118;
 
-text-align: left;
-left: 10%;
+  text-align: left;
+  left: 10%;
+}
+
 `
 const ButtonDiv = styled.div`
 @media only screen and (max-width: 768px) {
@@ -90,9 +99,12 @@ const ButtonDiv = styled.div`
   left: 10%;
   padding-top: 20px;
 }
-position: relative;
-left: 60%;
-padding-top: -100px;
+@media only screen and (min-width: 1024px){
+  position: relative;
+  left: 60%;
+  top: -40%;
+}
+
 `
 const Button = styled.button`
 @media only screen and (max-width: 768px) {
@@ -101,27 +113,30 @@ const Button = styled.button`
   width: 250px;
   height: 64px;
 }
-position: relative;
-width: 533px;
-height: 64px;
+@media only screen and (min-width: 1024px){
+  position: relative;
+  width: 480px;
+  height: 64px;
 
-/* Green */
-background: #0F6B5C;
-border-radius: 2px;
+  /* Green */
+  background: #0F6B5C;
+  border-radius: 2px;
 
-font-family: Fira Sans;
-font-style: normal;
-font-weight: 500;
-font-size: 16px;
-line-height: 20px;
+  font-family: Fira Sans;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
 
-/* identical to box height, or 125% */
-text-align: center;
-letter-spacing: 0.5px;
-text-transform: uppercase;
+  /* identical to box height, or 125% */
+  text-align: center;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
 
-/* White */
-color: #FFFFFF;
+  /* White */
+  color: #FFFFFF;
+}
+
 `
 class PerfectSection extends Component {
   render() {
