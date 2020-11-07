@@ -6,33 +6,45 @@ import CardPDF from './components/CardPDF'
 const Section = styled.section``
 const FirstView = styled.div`
   display: flex;
-  margin-top: 7vh;
-  width: 50vw;
+  margin-top: 63px;
+  width: 50%;
+  @media(max-width: 1024px){
+    width: 100%;
+    margin-top: 23px;
+    
+  }
 `
 const FirstViewLeft = styled.div`
-  margin-left: 5vw;
+  margin-left: 64px;
+  @media(max-width: 1024px){
+    margin-left: 16px;
+    
+  }
 `
 
 const TitleText = styled.p`
-clear: both;
+    clear: both;
     display: inline-block;
     overflow: hidden;
     white-space: nowrap;
-  font-weight: bold;
-  font-size: 32px;
-  line-height: 120%;
+    font-weight: bold;
+    font-size: 32px;
+    line-height: 120%;
   /* or 38px */
 
   /* Black */
   color: #242728;
   @media(max-width: 1024px){
     position: relative;
-    top: -50px;
+    top: 0px;
+    left: 0px;
     overflow: visible;
-    width: 10%;
-    clear: both;
-    font-size: 18px;
-    margin-left: -10px;
+    font-family: Charter;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 28px;
+    line-height: 120%;
+    margin-top: 16px;
   }
 `
 const TitleSubText1 = styled.p`
@@ -43,6 +55,7 @@ font-style: normal;
 font-weight: 500;
 font-size: 14px;
 line-height: 20px;
+margin-top: 39px;
 /* identical to box height, or 125% */
 
 letter-spacing: 0.5px;
@@ -51,13 +64,14 @@ letter-spacing: 0.5px;
 
 color: black;
 @media(max-width: 1024px) {
-  margin-top: -60px;
+  margin-top: 10px;
   width: 100%;
   font-family: Fira Sans;
-  font-size: 19px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
   line-height: 150%;
   color: #242728;
-  margin-left: -10px;
 
 }
 `
@@ -66,7 +80,7 @@ margin-top: 20px;
 margin-left: 200px;
 `
 const FormDiv = styled.div`
-margin-left: 5vw;
+margin-left: 64px;
 font-weight: bold;
 font-size: 20px;
 line-height: 120%;
@@ -77,7 +91,7 @@ line-height: 120%;
 color: #242728;
 margin-top: -1150px;
 @media(max-width: 1024px){
-  margin-left: 3vw;
+  margin-left: 16px;
 }
 `
 
@@ -96,7 +110,7 @@ width: 500px;
 border-radius: 5px;
 padding:14px;
 @media(max-width: 1024px){
-    width: 100%;
+  width: 95%;
   }
 
 `
@@ -105,6 +119,7 @@ const FLnameContainer = styled.div`
   display: inline-block;
   overflow: hidden;
   white-space: nowrap;
+  
 
   @media(max-width: 1024px){
     display: flex;
@@ -123,6 +138,7 @@ font-style: normal;
 font-weight: bold;
 font-size: 18px;
 line-height: 120%;
+margin: 16px 0;
 `
 const FirstnameInput = styled.input`
 border: 1px solid grey;
@@ -130,11 +146,11 @@ width: 230px;
 border-radius: 5px;
 padding:14px;
 @media(max-width: 767px){
-    width: 84vw;
+    width: 82vw;
     margin-bottom: 20px;
   }
   @media (min-width: 768px) and (max-width: 1024px){
-    width: 85vw;
+    width: 84vw;
     margin-bottom: 20px;
   }
 `
@@ -150,11 +166,11 @@ width: 230px;
 border-radius: 5px;
 padding:14px;
 @media(max-width: 767px){
-    width: 84vw;
+    width: 82vw;
     margin-left: -10px;
   }
   @media (min-width: 768px) and (max-width: 1024px){
-    width: 85vw;
+    width: 84vw;
     margin-left: -10px;
   }
 `
@@ -165,14 +181,16 @@ font-style: normal;
 font-weight: bold;
 font-size: 18px;
 line-height: 120%;
+margin: 16px 0;
 `
 const EmailInput = styled.input`
 border: 1px solid grey;
 width: 500px;
 border-radius: 5px;
 padding:14px;
+
 @media(max-width: 1024px){
-  width: 100%;
+  width: 95%;
   }
 `
 const PhoneContainer = styled.div``
@@ -182,6 +200,7 @@ font-style: normal;
 font-weight: bold;
 font-size: 18px;
 line-height: 120%;
+margin: 16px 0;
 `
 const PhoneInput = styled.input`
 border: 1px solid grey;
@@ -189,7 +208,7 @@ width: 500px;
 border-radius: 5px;
 padding:14px;
 @media(max-width: 1024px){
-    width: 100%;
+    width: 95%;
   }
 `
 
@@ -197,7 +216,7 @@ const ButtonsDiv = styled.div`
 display: flex;
 margin-top: 64px;
 width: 345px;
-padding-left: 100px;
+margin-left: 64px;
 @media(max-width: 767px){
         position: absolute;
         width: 100%;
@@ -268,13 +287,13 @@ const RewievCardWrapper = styled.div`
     top: 189px;
     background-color: #F0EEEA;
     @media(max-width: 767px){
-        left: 20px;
-        top: 839px;
+        left: 12px;
+        top: 809px;
         width: 90%;
     }
     @media (min-width: 768px) and (max-width: 1024px){
       left: 16px;
-      top: 839px;
+      top: 749px;
       width: 343px;
       height: 766px;
   }

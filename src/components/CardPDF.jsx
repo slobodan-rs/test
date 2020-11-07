@@ -50,7 +50,7 @@ class CardPDF extends Component {
                     <CardSpan5>SEK 217 000 </CardSpan5>
                 </CardInfoDiv>
                 <Line />
-                <DownloadBtn>DOWNLOAD ESTIMATE AS PDF</DownloadBtn>
+                <DownloadBtn>DOWNLOAD PDF</DownloadBtn>
                 <CardFooter>The estimate is an approximation of final cost</CardFooter>
             </CardDiv>
 
@@ -66,12 +66,13 @@ const CardDiv = styled.div`
     @media(max-width: 1024px){
         width: 343px;
         height: 766px;
-        padding-left: 5px;
+        margin-left: auto;
+        padding-right: 10px;
     }
 
 `
 const CardTopTitle = styled.p`
-padding-top: 20px;
+margin-top: 24px;
 margin-left: 30px;
 color: #555C5E;
 `
@@ -185,11 +186,11 @@ margin-right: 40px;
 text-align: right;
 `
 const DownloadBtn = styled.button`
-    margin-top: 20px;
+    margin-top: 24px;
     background-color: #0f6b5c;
     color: white;
     width:370px;
-    height:50px;
+    height:68px;
     margin-left: 20px;
     border: 1px solid #0f6b5c;
     @media(max-width: 1024px){
@@ -202,8 +203,19 @@ const CardFooter = styled.div`
 color: #868F92;
 margin-top: 30px;
 text-align: center;
+font-family: Fira Sans;
+font-style: normal;
+font-weight: normal;
+font-size: 16px;
+line-height: 150%;
+
+/* Gray 2 */
+color: #555C5E;
 @media(max-width: 1024px){
         margin-top: 15px;
+        width: 291px;
+        margin-left: 26px;
+        
     }
 `
 
