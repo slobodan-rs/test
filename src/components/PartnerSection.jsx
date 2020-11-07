@@ -19,7 +19,7 @@ left: 486px;
 `
 const Logocontainer = styled.div`
 position: relative;
-width: 100%;
+width: 120%;
 display: flex;
 background-color: #D7D2CB;
 margin-left: -40%;

@@ -206,6 +206,7 @@ const TitleSubText1 = styled.p`
   /* Black */
 
   color: #242728;
+  margin-top: 30px;
 `
 const TitleSubText2 = styled.a`
   font-family: Fira Sans;
@@ -221,6 +222,9 @@ const TitleSubText2 = styled.a`
   /* Green */
 
   color: #0f6b5c;
+  position:relative;
+  top: 15px;
+
 `
 const OptionDiv = styled.div`
   border: 1px solid #bcc1c3;

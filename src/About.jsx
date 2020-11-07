@@ -11,14 +11,14 @@ const FirstView = styled.div`
   @media(max-width: 1024px){
     width: 100%;
     margin-top: 23px;
-    
+
   }
 `
 const FirstViewLeft = styled.div`
   margin-left: 64px;
   @media(max-width: 1024px){
     margin-left: 16px;
-    
+
   }
 `
 
@@ -119,7 +119,7 @@ const FLnameContainer = styled.div`
   display: inline-block;
   overflow: hidden;
   white-space: nowrap;
-  
+
 
   @media(max-width: 1024px){
     display: flex;
@@ -130,6 +130,7 @@ const FLnameContainer = styled.div`
 
 const FirstnameContainer = styled.div`
 display: inline-block;
+margin-top: 30px;
 
 `
 const FirstnameTitle = styled.p`
@@ -174,7 +175,9 @@ padding:14px;
     margin-left: -10px;
   }
 `
-const EmailContainer = styled.div``
+const EmailContainer = styled.div`
+margin-top: 50px;
+`
 const EmailTitle = styled.p`
 font-family: Charter;
 font-style: normal;
@@ -193,7 +196,9 @@ padding:14px;
   width: 95%;
   }
 `
-const PhoneContainer = styled.div``
+const PhoneContainer = styled.div`
+margin-top: 50px;
+`
 const PhoneTitle = styled.p`
 font-family: Charter;
 font-style: normal;
