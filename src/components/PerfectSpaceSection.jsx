@@ -7,7 +7,7 @@ import perfectSpace from '../images/perfect-space.jpeg'
 class PerfectSpaceSection extends Component {
     render() {
         return (
-            <>
+            <Wrapper>
                 <Title>
                     <h4>A perfect space for your brand</h4>
                 </Title>
@@ -20,13 +20,22 @@ class PerfectSpaceSection extends Component {
                         <div>32 m2 • 16 000 visitors/week</div>
                     </Discription>
                 </StyledImgDiv>
-            </>
+            </Wrapper>
         )
     }
 }
 export default PerfectSpaceSection
 
 //Styled Components
+
+const Wrapper = styled.section`
+    width: 100%;
+    height: 1000px;
+
+    @media(max-width: 1024px){
+        height: 100%;
+    }
+`
 const Title = styled.div`
     height: 38px;
     margin-top: 80px;
