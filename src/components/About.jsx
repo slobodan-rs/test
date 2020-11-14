@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import styled from 'styled-components'
 
-import CardPDF from './components/CardPDF'
+import CardPDF from './CardPDF'
 
 const Section = styled.section``
 const FirstView = styled.div`

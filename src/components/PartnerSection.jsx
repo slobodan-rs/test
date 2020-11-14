@@ -1,66 +1,52 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
-import logos from '../assets/logos.png'
-const Section = styled.section`
-@media only screen and (max-width: 768px) {
-  /* For mobile phones: */
-  width: full-width;
-  height: 4px;
-  background-color: white;
-  position: relative;
-  top: 2500px;
-}
-width: full-width;
-height: 4px;
-background-color: white;
-position: relative;
-top: 250px;
-left: 486px;
-`
-const Logocontainer = styled.div`
-position: relative;
-width: 120%;
-display: flex;
-background-color: #D7D2CB;
-margin-left: -40%;
-padding-bottom: 2%;
-`
-const Imagescontainer = styled.div`
-width: 90%;
-position:relative;
-display: flex;
-align-items: center;
-justify-content: center;
-margin-top: 2%;
-margin-left: -10%
-`
-const Image = styled.img`
-margin-right: ${props => props.right};
-width: ${props => props.width ? "40vw" : "100%"};
-max-width: ${props => props.max};
-`
-const Maintxt = styled.h1`
-color: #686058;
-font-size: ${props => props.fontsize};
-padding-left: ${props => props.no ? "0" : "20%"};
-padding-right: ${props => props.right ? "5%" : "20%"};;
-`
+
+
+import partners from '../assets/images/partners.svg'
+import partnersMobile from '../assets/images/partners-mobile.svg'
+
 
 class PartnerSection extends Component {
   render() {
     return (
-      <div>
       <Section>
-      <Logocontainer>
-             <Imagescontainer>
-                 <Maintxt fontsize="1vw" no right>Proud partners:</Maintxt>
-                 <Image src={logos} width="80vw" max="70%"/>
-             </Imagescontainer>
-         </Logocontainer>
-         </Section>
+        <Partners />
+      </Section>
 
-            </div>
     )
   }
 }
 export default PartnerSection;
+
+//Styled Components
+const Section = styled.section`
+  width: 100%;
+  height: 108px;
+  background: #D7D2CB;
+
+  @media(max-width: 768px){
+    height: 208px;
+  }
+  @media(min-width: 768px) and (max-width: 1024px){
+    height: 108px;
+    }
+`
+const Partners = styled.div`
+    background-image: url(${partners});
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    height: 108px;
+
+    @media(max-width: 767px){
+      background-image: url(${partnersMobile});
+      background-repeat: no-repeat;
+      background-position: center;
+      width: 100%;
+      height: 208px;
+    }
+
+    @media(min-width: 768px) and (max-width: 1024px){
+      background-size: 80%;
+    }
+`

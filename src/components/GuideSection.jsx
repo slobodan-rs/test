@@ -1,274 +1,206 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
-import image4 from '../images/14.png'
-import image5 from '../images/15.png'
-import image6 from '../images/16.png'
-import image7 from '../images/17.png'
-import image8 from '../images/18.png'
+
+// Images
+import image4 from '../assets/images/14.png'
+import image5 from '../assets/images/15.png'
+import image6 from '../assets/images/16.png'
+import image7 from '../assets/images/17.png'
+import image8 from '../assets/images/18.png'
+
+class GuideSection extends Component {
+  render() {
+    return (
+      <Section>
+        <Title>Free guides to your success</Title>
+        <ContainerWrapper>
+
+          <Container>
+            <Img src={image8} alt="How to get started" />
+            <MobileWrapper>
+              <ContainerTitle>How to get started</ContainerTitle>
+              <Dicription>An introduction to pop-ups</Dicription>
+              <Button>Download Guide</Button>
+            </MobileWrapper>
+          </Container>
+
+          <Container>
+            <Img src={image7} alt="Fashion edition" />
+            <MobileWrapper>
+              <ContainerTitle>Fashion edition</ContainerTitle>
+              <Dicription>A guide for fashion brands</Dicription>
+              <Button>Download Guide</Button>
+            </MobileWrapper>
+          </Container>
+
+          <Container>
+            <Img src={image6} alt="Ecommerce edition" />
+            <MobileWrapper>
+              <ContainerTitle>Ecommerce edition</ContainerTitle>
+              <Dicription>Moving from online to offline</Dicription>
+              <Button>Download Guide</Button>
+            </MobileWrapper>
+          </Container>
+
+          <Container>
+            <Img src={image4} alt="Agency guide" />
+            <MobileWrapper>
+              <ContainerTitle>Agency guide</ContainerTitle>
+              <Dicription>Deliver the best experience for clients</Dicription>
+              <Button>Download Guide</Button>
+            </MobileWrapper>
+          </Container>
+
+          <Container>
+            <Img src={image5} alt="How to create buzz" />
+            <MobileWrapper>
+              <ContainerTitle>How to create buzz</ContainerTitle>
+              <Dicription>marketing and messaging success</Dicription>
+              <Button>Download Guide</Button>
+            </MobileWrapper>
+          </Container>
+
+        </ContainerWrapper>
+      </Section >
+    )
+  }
+}
+export default GuideSection;
+
+//Styled Components
 const Section = styled.section`
-@media only screen and (max-width: 768px) {
-  /* For mobile phones: */
-  width: full-width;
-  height: 474px;
-  background-color: white;
-  position: relative;
-  top: 1550px;
-}
-@media only screen and (min-width: 1024px){
-  width: full-width;
-  height: 474px;
-  background-color: white;
-  position: relative;
-  top: 220px;
-}
-
+  width: 100%;
+  height: 100%;
+  padding-bottom: 71px;
 `
-const Container = styled.div``
-const Row = styled.div``
-const TitleContainer = styled.div`
+const Title = styled.h4`
+  margin-left: 275px;
+  margin-bottom: 41px;
+  font-family: Charter;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 32px;
+  line-height: 120%;
+  color: #686058;
+
+  @media(max-width: 767px){
+    width: 263px;
+    margin-left: 16px;
+    margin-top: 96px;
+    font-size: 28px;
+  }
+  @media(min-width: 768px) and (max-width: 1024px){
+    margin-left: 16px;
+    font-size: 28px;
+    text-align: center;
+  }
 `
-const Title = styled.h1`
-
-position: relative;
-position: relative;
-left: 10%;
-font-family: Charter;
-font-style: normal;
-font-weight: bold;
-font-size: 32px;
-line-height: 120%;
-
-/* or 38px */
-
-color: #686058;
-`
-
-const GalleryContainer = styled.div`
-@media only screen and (max-width: 768px) {
-  /* For mobile phones: */
-
-clear: both;
-   display: inline-block;
-   overflow: hidden;
-   white-space: nowrap;
-}
-@media only screen and (min-width: 1024px){
-
-}
-
-`
-const ImgContainer = styled.div`
-@media only screen and (max-width: 768px) {
-  /* For mobile phones: */
-
-clear: both;
-   display: inline-block;
-   overflow: hidden;
-   white-space: nowrap;
-}
-@media only screen and (min-width: 1024px){
-  justify-content: center;
+const ContainerWrapper = styled.div`
+  margin: 0 175px;
   display: flex;
+  flex-direction: row;
+  justify-content: space-around;
   flex-wrap: wrap;
-  padding: 30px 0 0 0;
-  margin-left: -100px;
-}
 
+  @media(max-width: 767px){
+    margin: 0 16px;
+  }
+  @media(min-width: 768px) and (max-width: 1024px){
+    
+  }
 `
-const ImgDiv = styled.div`
-@media only screen and (max-width: 768px) {
-  /* For mobile phones: */
-}
-@media only screen and (min-width: 1024px){
-margin-left: 20px;
-}
+const Container = styled.div`
+  width: 199px;
 
+  @media(max-width: 767px){
+    padding: 30px 0;
+    width: 343px;
+    display: flex;
+    align-items: baseline;
+  }
+  @media(min-width: 768px) and (max-width: 1024px){
+    padding: 30px 0;
+  }
 `
+const MobileWrapper = styled.div`
 
+  @media(min-width: 768px) and (max-width: 1024px){
+    display: block;
+  }
+`
 const Img = styled.img`
-@media only screen and (max-width: 768px) {
-  /* For mobile phones: */
+  width: 199px;
+  height: 280px;
+  margin: auto;
+  text-align: center;
+  display: block;
 
-  width: 100px;
-  height: 200px;
-}
-@media only screen and (min-width: 1024px){
-  width: 200px;
-  height: 300px;
-}
+  @media(max-width: 767px){
+    margin-top: 30px;
+    width: 112px;
+    height: 158px;
+  }
 
+  @media(min-width: 768px) and (max-width: 1024px){
+  
+  
+  }
 `
-const Text = styled.h4`
-@media only screen and (max-width: 768px) {
-  /* For mobile phones: */
-   position: relative;
-   top: -150px;
-   display: inline-block;
-   overflow: hidden;
-   white-space: nowrap;
-   text-align: left;
-   font-size: 16px;
-}
-@media only screen and (min-width: 1024px){
+const ContainerTitle = styled.h4`
   font-family: Charter;
   font-style: normal;
   font-weight: bold;
   font-size: 18px;
   line-height: 120%;
-
-  /* identical to box height, or 22px */
-
-  /* Black */
   color: #242728;
-  text-align: left;
-}
+  margin: 37px 24px 8px 0;
 
-`
-const Text1 = styled.h4`
-@media only screen and (max-width: 768px) {
-  /* For mobile phones: */
-  position: relative;
-  top: -190px;
-  margin-left: 100px;
-  font-size: 12px;
-}
-font-family: Fira Sans;
-font-style: normal;
-font-weight: normal;
-font-size: 12px;
-line-height: 150%;
-
-/* or 24px */
-
-/* Gray 2 */
-color: #555C5E;
-text-align: left;
-`
-
-const Button1 = styled.button`
-@media only screen and (max-width: 768px) {
-  /* For mobile phones: */
-   display: inline-block;
-   overflow: hidden;
-   white-space: nowrap;
-   width: 150px;
-   height: 37px;
-   font-size: 12px;
-}
-position: absolute;
-width: 199px;
-height: 67px;
-
-border: 1px solid #0F6B5C;
-box-sizing: border-box;
-border-radius: 2px;
-
-font-family: Fira Sans;
-font-style: normal;
-font-weight: 500;
-font-size: 16px;
-line-height: 20px;
-
-/* identical to box height, or 125% */
-text-align: center;
-letter-spacing: 0.5px;
-text-transform: uppercase;
-
-color: #0F6B5C;
-
-
-`
-const ButtonDiv = styled.div`
-@media only screen and (max-width: 768px) {
-  /* For mobile phones: */
-  position: relative;
-  top: -150px;
-  margin-left: 100px;
-  font-size: 12px;
-}
-padding-top:17px;
-`
-const ButtonDiv1 = styled.div`
-@media only screen and (max-width: 768px) {
-  /* For mobile phones: */
-  position: relative;
-  top: -150px;
-  margin-left: 100px;
-  font-size: 12px;
-}
-padding-top:0px;
-`
-
-class GuideSection extends Component {
-  render() {
-    return (
-      <div>
-      <Section>
-        <Container>
-      <Row>
-         <TitleContainer>
-         <Title>
-             <h4>Free guide for your success</h4>
-         </Title>
-         </TitleContainer>
-        </Row>
-         <GalleryContainer>
-
-         <ImgContainer>
-         <ImgDiv>
-         <Img src={image4} alt="test" />
-           <Text>How to get started</Text>
-         <Text1>An introduction to pop-ups</Text1>
-         <ButtonDiv>
-         <Button1>Download guide</Button1>
-         </ButtonDiv>
-
-         </ImgDiv>
-
-         <ImgDiv>
-
-         <Img src={image5} alt="test" />
-           <Text>Fashion edition</Text>
-         <Text1>A guide for fashion brands</Text1>
-         <ButtonDiv>
-         <Button1>Download guide</Button1>
-         </ButtonDiv>
-         </ImgDiv>
-
-         <ImgDiv>
-         <Img src={image6} alt="test" />
-           <Text>Ecommerce edition</Text>
-        <Text1>Moving from online to <br />offline</Text1>
-        <ButtonDiv1>
-        <Button1>Download guide</Button1>
-        </ButtonDiv1>
-         </ImgDiv>
-
-         <ImgDiv>
-         <Img src={image7} alt="test" />
-           <Text>Agency guide</Text>
-
-         <Text1>Deliver the best experience <br /> for clients</Text1>
-         <ButtonDiv1>
-         <Button1>Download guide</Button1>
-         </ButtonDiv1>
-         </ImgDiv>
-
-         <ImgDiv>
-         <Img src={image8} alt="test" />
-           <Text>How to create buzz</Text>
-         <Text1>marketing and messaging <br /> success</Text1>
-         <ButtonDiv1>
-         <Button1>Download guide</Button1>
-         </ButtonDiv1>
-         </ImgDiv>
-         </ImgContainer>
-                   </GalleryContainer>
-         </Container>
-         </Section>
-
-            </div>
-    )
+  @media(max-width: 767px){
+    padding-left: 20px;
+    width: 100%;
   }
-}
-export default GuideSection;
+  @media(min-width: 768px) and (max-width: 1024px){
+    width: 100%;
+  }
+`
+const Dicription = styled.h4`
+  width: 199px;
+  height: 49px;
+  font-family: Fira Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 150%;
+  color: #555C5E;
+
+  @media(max-width: 767px){
+    padding-left: 20px;
+    width: 207px;
+    height: 48px;
+  }
+  @media(min-width: 768px) and (max-width: 1024px){
+  }
+`
+const Button = styled.button`
+  font-family: Fira Sans;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  color: #0F6B5C;
+  width: 199px;
+  height: 67px;
+  background-color: #FFF;
+  border: 1px solid  #0F6B5C;
+
+  @media(max-width: 767px){
+    margin-left: 20px;
+    height: 52px;
+    width: 207px;
+  }
+  @media(min-width: 768px) and (max-width: 1024px){
+  }
+`

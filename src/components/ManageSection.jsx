@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import styled from 'styled-components';
 
 //Images
-import airbnb from '../images/airbnb.svg'
-import airbnbMobile from '../images/airbnb-mobile.svg'
+import airbnb from '../assets/images/airbnb.svg'
+import airbnbMobile from '../assets/images/airbnb-mobile.svg'
 
 class ManageSection extends Component {
   render() {

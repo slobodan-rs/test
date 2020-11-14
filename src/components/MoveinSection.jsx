@@ -1,230 +1,162 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
-import icon1 from '../icons/1.png'
-import icon2 from '../icons/2.png'
-import icon3 from '../icons/3.png'
-import icon4 from '../icons/4.png'
-import icon5 from '../icons/5.png'
+
+//Images
+import icon1 from '../assets/icons/1.png'
+import icon2 from '../assets/icons/2.png'
+import icon3 from '../assets/icons/3.png'
+import icon4 from '../assets/icons/4.png'
+import icon5 from '../assets/icons/5.png'
+
+
+class MoveinSection extends Component {
+  render() {
+    return (
+      <Section>
+        <Title>Make your space move-in-ready</Title>
+        <ContainerWrapper>
+          <Container>
+            <Img src={icon5} alt="Design & furniture" />
+            <MobileWrapper>
+              <ContainerTitle>Design & furniture</ContainerTitle>
+              <Dicription>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut turpis.</Dicription>
+            </MobileWrapper>
+          </Container>
+          <Container>
+            <Img src={icon4} alt="Staffing" />
+            <MobileWrapper>
+              <ContainerTitle>Staffing</ContainerTitle>
+              <Dicription>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut turpis.</Dicription>
+            </MobileWrapper>
+          </Container>
+          <Container>
+            <Img src={icon1} alt="Influencer marketing" />
+            <MobileWrapper>
+              <ContainerTitle>Influencer marketing</ContainerTitle>
+              <Dicription>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut turpis.</Dicription>
+            </MobileWrapper>
+          </Container>
+
+          <Container>
+            <Img src={icon3} alt="Cleaning" />
+            <MobileWrapper>
+              <ContainerTitle>Cleaning</ContainerTitle>
+              <Dicription>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut turpis.</Dicription>
+            </MobileWrapper>
+          </Container>
+          <Container>
+            <Img src={icon2} alt="Data & Analytics" />
+            <MobileWrapper>
+              <ContainerTitle>Data & Analytics</ContainerTitle>
+              <Dicription>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut turpis.</Dicription>
+            </MobileWrapper>
+          </Container>
+        </ContainerWrapper>
+      </Section >
+    )
+  }
+}
+export default MoveinSection;
+
+//Styled Components
 const Section = styled.section`
-
-@media only screen and (max-width: 768px) {
-  /* For mobile phones: */
-  width: full-width;
-  height: 800px;
-  background-color: #144745;
-  position: relative;
-  top: 1500px;
-}
-@media only screen and (min-width: 1024px){
-  width: full-width;
-  height: 450px;
-  background-color: #144745;
-  position: relative;
-  top: 200px;
-}
-
+  width: 100%;
+  height: 100%;
+  background: #144745;
+  padding-bottom: 71px;
 `
-const Container = styled.div``
-const Row = styled.div``
-const TitleContainer = styled.div`
+const Title = styled.h4`
+  padding-top: 71px;
+  margin-left: 275px;
+  margin-bottom: 41px;
+  font-family: Charter;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 32px;
+  line-height: 120%;
+  color: #FFF;
+
+  @media(max-width: 767px){
+    width: 223px;
+    margin-left: 16px;
+    font-size: 28px;
+  }
+  @media(min-width: 768px) and (max-width: 1024px){
+    margin-left: 16px;
+    font-size: 28px;
+    text-align: center;
+  }
 `
-const Title = styled.h1`
-
-@media only screen and (max-width: 768px) {
-  /* For mobile phones: */
-  position: relative;
-  left: 10%;
-  color: white;
-  padding-top: 20px;
-  font-size: 20px;
-}
-@media only screen and (min-width: 1024px){
-  position: relative;
-  left: 10%;
-  color: white;
-  padding-top: 20px;
-
-`
-
-const GalleryContainer = styled.div`
-
-@media only screen and (max-width: 768px) {
-  /* For mobile phones: */
-margin-top: 20px;
-display: flex;
-clear: both;
-   display: inline-block;
-   overflow: hidden;
-   white-space: nowrap;
-}
-@media only screen and (min-width: 1024px){
-  margin-top: 50px;
-}
-
-`
-const ImgContainer = styled.div`
-
-@media only screen and (max-width: 768px) {
-  /* For mobile phones: */
+const ContainerWrapper = styled.div`
+  margin: 0 175px;
   display: flex;
+  flex-direction: row;
+  justify-content: space-around;
   flex-wrap: wrap;
-  padding: 30px 0 0 0;
-  clear: both;
-   display: inline-block;
-   overflow: hidden;
-   white-space: nowrap;
 
+  @media(max-width: 767px){
+    margin: 0 16px;
   }
-  @media only screen and (min-width: 1024px){
-    justify-content: center;
+  @media(min-width: 768px) and (max-width: 1024px){
+    
+  }
+`
+const Container = styled.div`
+  width: 199px;
+
+  @media(max-width: 767px){
+    padding: 30px 0;
+    width: 279px;
     display: flex;
-    flex-wrap: wrap;
-    padding: 30px 0 0 0;
+    align-items: baseline;
   }
-
+  @media(min-width: 768px) and (max-width: 1024px){
+    padding: 30px 0;
+  }
 `
-const ImgDiv = styled.div`
+const MobileWrapper = styled.div`
 
-@media only screen and (max-width: 768px) {
-  /* For mobile phones: */
-  margin-left: 20px;
-}
-@media only screen and (min-width: 1024px){
-  margin-left: 0px;
-}
-
+@media(min-width: 768px) and (max-width: 1024px){
+  display: block;
+  
+  }
 `
-
 const Img = styled.img`
-
-@media only screen and (max-width: 768px) {
-  /* For mobile phones: */
-  width: 50px;
-  height: 50px;
-}
-@media only screen and (min-width: 1024px){
-  width: 50px;
-  height: 50px;
-}
+  width: 84px;
+  height: 84px;
+  margin: auto;
+  text-align: center;
+  display: block;
 `
-const Text = styled.h4`
-
-@media only screen and (max-width: 768px) {
-  /* For mobile phones: */
-  margin-left: 20px;
+const ContainerTitle = styled.h4`
   font-family: Charter;
   font-style: normal;
   font-weight: bold;
   font-size: 18px;
   line-height: 120%;
-
-  /* identical to box height, or 22px */
-
   color: #F4F5F4;
-  clear: both;
-   display: inline-block;
-   overflow: hidden;
-   white-space: nowrap;
-}
-@media only screen and (min-width: 1024px){
-  margin-right: 30px;
-  font-family: Charter;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 18px;
-  line-height: 120%;
+  margin: 37px 24px 8px 0;
 
-  /* identical to box height, or 22px */
-
-  color: #F4F5F4;
-}
-
-
-
+  @media(max-width: 767px){
+    padding-left: 25px;
+    width: 100%;
+  }
+  @media(min-width: 768px) and (max-width: 1024px){
+    width: 100%;
+  }
 `
-const Text1 = styled.h4`
-
-@media only screen and (max-width: 768px) {
-  /* For mobile phones: */
-  color: white;
-  margin-left: 70px;
-  margin-top: -25px;
-
-  /* Body Small */
-  font-family: Fira Sans;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 12px;
-  line-height: 150%;
-
-  /* or 24px */
-
-  color: #D7D2CB;
-
-}
-@media only screen and (min-width: 1024px){
-  color: white;
-  margin-right: 30px;
-
-  /* Body Small */
+const Dicription = styled.h4`
   font-family: Fira Sans;
   font-style: normal;
   font-weight: normal;
   font-size: 16px;
   line-height: 150%;
-
-  /* or 24px */
-
   color: #D7D2CB;
-}
 
-`
-class MoveinSection extends Component {
-  render() {
-    return (
-      <Section>
-        <Container>
-      <Row>
-         <TitleContainer>
-         <Title>
-             <h4>Make your space move-in-ready</h4>
-         </Title>
-         </TitleContainer>
-        </Row>
-         <GalleryContainer>
-
-                  <ImgContainer>
-                  <ImgDiv>
-                  <Img src={icon5} alt="test" />
-                  <Text>Design & furniture</Text>
-                  <Text1>Lorem ipsum dolor sit <br /> amet, consectetur <br /> adipiscing elit. Ut turpis.</Text1>
-                  </ImgDiv>
-                  <ImgDiv>
-                  <Img src={icon4} alt="test" />
-                    <Text>Staffing</Text>
-                    <Text1>Lorem ipsum dolor sit <br /> amet, consectetur <br /> adipiscing elit. Ut turpis.</Text1>
-                  </ImgDiv>
-                  <ImgDiv>
-                  <Img src={icon1} alt="test" />
-                    <Text>Influencer marketing</Text>
-                  <Text1>Lorem ipsum dolor sit <br /> amet, consectetur <br /> adipiscing elit. Ut turpis.</Text1>
-                  </ImgDiv>
-
-                  <ImgDiv>
-                  <Img src={icon3} alt="test" />
-                    <Text>Cleaning</Text>
-                <Text1>Lorem ipsum dolor sit <br /> amet, consectetur <br /> adipiscing elit. Ut turpis.</Text1>
-                  </ImgDiv>
-                  <ImgDiv>
-                  <Img src={icon2} alt="test" />
-                    <Text>Data & Analytics</Text>
-                  <Text1>Lorem ipsum dolor sit <br /> amet, consectetur <br /> adipiscing elit. Ut turpis.</Text1>
-                  </ImgDiv>
-                  </ImgContainer>
-                   </GalleryContainer>
-         </Container>
-         </Section>
-    )
+  @media(max-width: 767px){
+    padding-left: 25px;
+    width: 100%;
   }
-}
-export default MoveinSection;
+  @media(min-width: 768px) and (max-width: 1024px){
+  }
+`

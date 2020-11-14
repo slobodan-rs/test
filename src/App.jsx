@@ -3,11 +3,11 @@ import styled from 'styled-components'
 import { Link, BrowserRouter as Router, Route } from 'react-router-dom'
 
 //Icons and images
-import Xnomad from './icons/Xnomad.svg'
-import XnomadMobile from './icons/XnomadMobile.svg'
-import Plus from './icons/Plus.svg'
-import Minus from './icons/Minus.svg'
-import search from './icons/search.svg'
+import Xnomad from './assets/icons/Xnomad.svg'
+import XnomadMobile from './assets/icons/XnomadMobile.svg'
+import Plus from './assets/icons/Plus.svg'
+import Minus from './assets/icons/Minus.svg'
+import search from './assets/icons/search.svg'
 
 //Components
 import { OptionDivTitles } from './consts.js'
@@ -30,7 +30,7 @@ import PerfectSection from './components/PerfectSection'
 import Nav from './components/Nav'
 import FooterSection from './components/FooterSection'
 import PartnerSection from './components/PartnerSection'
-import About from './About'
+import About from './components/About'
 // <<<<<<< HEAD
 
 // =======
@@ -569,12 +569,12 @@ export const App = () => {
             <BookSection />
             <ManageSection />
             <MeasureSection />
-            {/* <MoveinSection />
+            <MoveinSection />
             <SuccessSection />
             <GuideSection />
             <PartnerSection />
             <PerfectSection />
-            <FooterSection /> */}
+            {/* <FooterSection /> */}
             {/* --------- / LANDING PAGE --------- */}
           </Route>
 

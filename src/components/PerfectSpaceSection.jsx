@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import styled from 'styled-components'
 
 //images 
-import perfectSpace from '../images/perfect-space.jpeg'
+import perfectSpace from '../assets/images/perfect-space.jpeg'
 
 class PerfectSpaceSection extends Component {
     render() {

@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import styled from 'styled-components';
 
 // img
-import book from '../images/book.svg'
-import bookMobile from '../images/book-mobile.svg'
+import book from '../assets/images/book.svg'
+import bookMobile from '../assets/images/book-mobile.svg'
 
 
 class BookSection extends Component {

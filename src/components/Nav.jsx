@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import burger from '../icons/burger.svg'
+import burger from '../assets/icons/burger.svg'
 
 const Nav = styled.nav`
     width: 100%;

@@ -2,35 +2,35 @@ import React, { Component } from 'react';
 import styled from 'styled-components';
 
 //Images
-import chart1 from '../images/chart1.svg'
-import chart2 from '../images/chart2.svg'
-import chart3 from '../images/chart3.svg'
+import chart1 from '../assets/images/chart1.svg'
+import chart2 from '../assets/images/chart2.svg'
+import chart3 from '../assets/images/chart3.svg'
 
 class MeasureSection extends Component {
   render() {
     return (
       <Section>
         <Title>Measure your success</Title>
-        <ImgContainer>
-          <ChartWrapper>
+        <ContainerWrapper>
+          <Container>
             <Img src={chart1} alt="Daily foot Traffic" />
             <ChartTitle>Daily foot traffic</ChartTitle>
             <Discription>Understand how your customer interacts with the city,<br /> how they move around and where they shop.</Discription>
-          </ChartWrapper>
+          </Container>
 
-          <ChartWrapper>
+          <Container>
             <Img src={chart2} alt="Conversion per hour" />
             <ChartTitle>Conversion per hour</ChartTitle>
             <Discription>Track the engagement of your store by understanding<br /> who enters it and how long they stay.</Discription>
-          </ChartWrapper>
+          </Container>
 
-          <ChartWrapper>
+          <Container>
             <Img src={chart3} alt="Demographics" recenter />
             <ChartTitle>Demographics</ChartTitle>
             <Discription>Understand who your customers are, segmented by age,<br /> gender, spend.</Discription>
-          </ChartWrapper>
+          </Container>
 
-        </ImgContainer>
+        </ContainerWrapper>
       </Section>
     )
   }
@@ -62,7 +62,7 @@ const Title = styled.h4`
   }
 
 `
-const ImgContainer = styled.div`
+const ContainerWrapper = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -74,7 +74,7 @@ const ImgContainer = styled.div`
     width: 100%;
   }
 `
-const ChartWrapper = styled.div`
+const Container = styled.div`
   width: 422px;
   height: 100%;
   border-radius: 2px;
@@ -84,10 +84,10 @@ const ChartWrapper = styled.div`
 const Img = styled.img`
   width: 422px;
   height: 262px;
-  padding-left: ${({ recenter }) => recenter ? '20px' : '0'};
+  padding-left: ${({ recenter }) => recenter ? '10px' : '0'};
 
   @media(max-width: 767px){
-    width: 363px;
+    width: 343px;
   }
   @media(min-width: 768px) and (max-width: 1024px){
     text-align: center;

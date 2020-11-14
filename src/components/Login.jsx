@@ -161,8 +161,8 @@ const Radiolabel = styled.label`
   overflow: hidden;
   white-space: nowrap;
   ${props =>
-  props.disabled &&
-  `
+    props.disabled &&
+    `
     cursor: not-allowed;
     opacity: 0.4;
   `}
@@ -192,31 +192,31 @@ export const Login = () => {
             </EmailBottomText>
           </EmailContainer>
           <FLnameContainer>
-          <FirstnameContainer>
-            <FirstnameTitle>First Name</FirstnameTitle>
-            <FirstnameInput
-              type='text'
-              placeholder='First Name'
-              onChange={(e) => setTextInField(e.target.value)}
-            >
-            </FirstnameInput>{' '}
-            <FirstnameBottomText>
-              {!textInField && `You need to add First Name.`}
-            </FirstnameBottomText>
-          </FirstnameContainer>
+            <FirstnameContainer>
+              <FirstnameTitle>First Name</FirstnameTitle>
+              <FirstnameInput
+                type='text'
+                placeholder='First Name'
+                onChange={(e) => setTextInField(e.target.value)}
+              >
+              </FirstnameInput>{' '}
+              <FirstnameBottomText>
+                {!textInField && `You need to add First Name.`}
+              </FirstnameBottomText>
+            </FirstnameContainer>
 
-          <LastnameContainer>
-            <LastnameTitle>Last Name</LastnameTitle>
-            <LastnameInput
-              type='text'
-              placeholder='Last Name'
-              onChange={(e) => setTextInField(e.target.value)}
-            >
-            </LastnameInput>{' '}
-            <LastnameBottomText>
-              {!textInField && `You need to add Last Name.`}
-            </LastnameBottomText>
-          </LastnameContainer>
+            <LastnameContainer>
+              <LastnameTitle>Last Name</LastnameTitle>
+              <LastnameInput
+                type='text'
+                placeholder='Last Name'
+                onChange={(e) => setTextInField(e.target.value)}
+              >
+              </LastnameInput>{' '}
+              <LastnameBottomText>
+                {!textInField && `You need to add Last Name.`}
+              </LastnameBottomText>
+            </LastnameContainer>
           </FLnameContainer>
 
           <PasswordContainer>

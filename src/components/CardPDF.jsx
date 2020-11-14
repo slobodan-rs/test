@@ -2,9 +2,9 @@ import React, { Component } from 'react'
 import styled from 'styled-components'
 
 // imgages & icons
-import Image from '../images/image.png'
-import calendar from '../icons/calendar.svg'
-import arrow from '../icons/arrow.svg'
+import Image from '../assets/images/image.png'
+import calendar from '../assets/icons/calendar.svg'
+import arrow from '../assets/icons/arrow.svg'
 
 
 class CardPDF extends Component {

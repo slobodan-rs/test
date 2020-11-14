@@ -2,9 +2,9 @@ import React, { Component } from 'react'
 import styled from 'styled-components'
 
 //images
-import articleImg1 from '../images/landing-img1.jpg'
-import articleImg2 from '../images/landing-img2.jpeg'
-import articleImg3 from '../images/landing-img3.jpeg'
+import articleImg1 from '../assets/images/landing-img1.jpg'
+import articleImg2 from '../assets/images/landing-img2.jpeg'
+import articleImg3 from '../assets/images/landing-img3.jpeg'
 
 class SpacesSection extends Component {
     render() {
@@ -71,6 +71,7 @@ const ArticleOne = styled.article`
     height: 561px;
     background: #F0EEEA;
     border-radius: 2px;
+    margin: 10px;
 
     h5 {
         font-family: Charter;
@@ -121,6 +122,7 @@ const ArticleTwo = styled.article`
     height: 561px;
     background: #F0EEEA;
     border-radius: 2px;
+    margin: 10px;
 
     h5 {
         font-family: Charter;
@@ -171,6 +173,7 @@ const ArticleThree = styled.article`
     height: 561px;
     background: #F0EEEA;
     border-radius: 2px;
+    margin: 10px;
 
     h5 {
         font-family: Charter;

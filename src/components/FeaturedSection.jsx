@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
-import image1 from '../images/6.png'
-import image2 from '../images/7.png'
-import image3 from '../images/8.png'
-import image4 from '../images/featured-spaces-4.jpg'
+import image1 from '../assets/images/6.png'
+import image2 from '../assets/images/7.png'
+import image3 from '../assets/images/8.png'
+import image4 from '../assets/images/featured-spaces-4.jpg'
 
 class FeaturedSection extends Component {
   render() {

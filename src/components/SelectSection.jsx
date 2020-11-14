@@ -2,8 +2,8 @@ import React, { Component } from 'react'
 import styled from 'styled-components'
 
 //images
-import landibgImg from '../images/tryck-16.jpg'
-import trustedMobile from '../images/trusted-mobile.svg'
+import landibgImg from '../assets/images/tryck-16.jpg'
+import trustedMobile from '../assets/images/trusted-mobile.svg'
 
 //Components
 import TrustedSVG from './TrustedSVG'
