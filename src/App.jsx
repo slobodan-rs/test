@@ -569,12 +569,12 @@ export const App = () => {
             <BookSection />
             <ManageSection />
             <MeasureSection />
-            <MoveinSection />
+            {/* <MoveinSection />
             <SuccessSection />
             <GuideSection />
             <PartnerSection />
             <PerfectSection />
-            <FooterSection />
+            <FooterSection /> */}
             {/* --------- / LANDING PAGE --------- */}
           </Route>
 

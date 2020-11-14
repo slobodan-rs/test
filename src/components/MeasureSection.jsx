@@ -1,206 +1,127 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
-import image4 from '../images/9.png'
-import image5 from '../images/10.png'
-import image6 from '../images/11.png'
-const Section = styled.section`
-@media only screen and (max-width: 768px) {
-  /* For mobile phones: */
-  position: relative;
-  top: 1450px;
-}
-@media only screen and (min-width: 1024px){
 
-  position: relative;
-  top: 200px;
+//Images
+import chart1 from '../images/chart1.svg'
+import chart2 from '../images/chart2.svg'
+import chart3 from '../images/chart3.svg'
+
+class MeasureSection extends Component {
+  render() {
+    return (
+      <Section>
+        <Title>Measure your success</Title>
+        <ImgContainer>
+          <ChartWrapper>
+            <Img src={chart1} alt="Daily foot Traffic" />
+            <ChartTitle>Daily foot traffic</ChartTitle>
+            <Discription>Understand how your customer interacts with the city,<br /> how they move around and where they shop.</Discription>
+          </ChartWrapper>
+
+          <ChartWrapper>
+            <Img src={chart2} alt="Conversion per hour" />
+            <ChartTitle>Conversion per hour</ChartTitle>
+            <Discription>Track the engagement of your store by understanding<br /> who enters it and how long they stay.</Discription>
+          </ChartWrapper>
+
+          <ChartWrapper>
+            <Img src={chart3} alt="Demographics" recenter />
+            <ChartTitle>Demographics</ChartTitle>
+            <Discription>Understand who your customers are, segmented by age,<br /> gender, spend.</Discription>
+          </ChartWrapper>
+
+        </ImgContainer>
+      </Section>
+    )
+  }
 }
+export default MeasureSection;
+
+// Styled Components
+const Section = styled.section`
+  width: 100%;
 
 `
-const Container = styled.div``
-const Row = styled.div``
-const TitleContainer = styled.div``
-const Title = styled.h1`
-@media only screen and (max-width: 768px) {
-  /* For mobile phones: */
-  position: relative;
-  left: 3%;
-  font-family: Charter;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 24px;
-  line-height: 120%;
-
-  /* or 38px */
-
-  color: #686058;
-}
-@media only screen and (min-width: 1024px){
-  position: relative;
-  left: 10%;
+const Title = styled.h4`
+  margin-top: 40px;
+  margin-left: 275px;
+  margin-bottom: 41px;
   font-family: Charter;
   font-style: normal;
   font-weight: bold;
   font-size: 32px;
   line-height: 120%;
-
-  /* or 38px */
-
   color: #686058;
-}
+
+  @media(max-width: 767px){
+    margin-left: 16px;
+  }
+  @media(min-width: 768px) and (max-width: 1024px){
+    margin-left: 16px;
+    text-align: center;
+  }
 
 `
-
-const GalleryContainer = styled.div``
 const ImgContainer = styled.div`
-@media only screen and (max-width: 768px) {
-  /* For mobile phones: */
-  justify-content: center;
   display: flex;
+  flex-direction: row;
+  justify-content: space-around;
   flex-wrap: wrap;
-  padding: 30px 0 0 0;
-}
-@media only screen and (min-width: 1024px){
-  justify-content: center;
-  display: flex;
-  flex-wrap: wrap;
-  padding: 30px 0 0 0;
-}
-
+  @media(max-width: 767px){
+    margin-left: 16px;
+  }
+  @media(min-width: 768px) and (max-width: 1024px){
+    width: 100%;
+  }
 `
-const ImgDiv = styled.div`
-@media only screen and (max-width: 768px) {
-  /* For mobile phones: */
-margin-left: 5px;
-}
-@media only screen and (min-width: 1024px) and (max-width: 1600px){
-  position: relative;
-  left: -60px;
-}
-
-`
-const ImgDiv1 = styled.div`
-@media only screen and (max-width: 768px) {
-  /* For mobile phones: */
-margin-left: 5px;
-}
-@media only screen and (min-width: 1024px){
-  position: relative;
-left: 0%;
-}
-
-`
-const ImgDiv2 = styled.div`
-@media only screen and (max-width: 768px) {
-  /* For mobile phones: */
-margin-left: 5px;
-}
-@media only screen and (min-width: 1024px){
-  position: relative;
-  left: 3%;
-}
+const ChartWrapper = styled.div`
+  width: 422px;
+  height: 100%;
+  border-radius: 2px;
+  margin: 10px;
 
 `
 const Img = styled.img`
-@media only screen and (max-width: 768px) {
-  /* For mobile phones: */
- width: 300px;
- height: 200px;
-}
-@media only screen and (min-width: 1024px){
-  width: 300px;
-  height: 150px;
-}
+  width: 422px;
+  height: 262px;
+  padding-left: ${({ recenter }) => recenter ? '20px' : '0'};
+
+  @media(max-width: 767px){
+    width: 363px;
+  }
+  @media(min-width: 768px) and (max-width: 1024px){
+    text-align: center;
+  }
 `
-const Text = styled.h4`
-@media only screen and (max-width: 768px) {
-  /* For mobile phones: */
-  text-align: left;
+const ChartTitle = styled.h4`
   font-family: Charter;
   font-style: normal;
   font-weight: bold;
   font-size: 18px;
   line-height: 120%;
   color: #111118;
-}
-@media only screen and (min-width: 1024px){
-  text-align: left;
-  font-family: Charter;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 18px;
-  line-height: 120%;
-
-  /* identical to box height, or 22px */
-
-  color: #111118;
-}
-
+  padding: 37px 0 8px 0;
+  
+  @media(max-width: 767px){
+    padding: 0;
+  }
+  @media(min-width: 768px) and (max-width: 1024px){
+    text-align: center;
+  }
 `
-const Text1 = styled.h4`
-@media only screen and (max-width: 768px) {
-  /* For mobile phones: */
-  text-align: left;
+const Discription = styled.h4`
+  padding: 8px 0 80px 0;
   font-family: Fira Sans;
   font-style: normal;
   font-weight: normal;
   font-size: 16px;
   line-height: 150%;
-
-  /* or 24px */
-
   color: #111118;
-}
-@media only screen and (min-width: 1024px){
-  text-align: left;
-  font-family: Fira Sans;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 12px;
-  line-height: 150%;
 
-  /* or 24px */
-
-  color: #111118;
-}
-
-`
-class MeasureSection extends Component {
-  render() {
-    return (
-      <Section>
-        <Container>
-         <Row>
-          <TitleContainer>
-          <Title>
-              <h4>Measure your space</h4>
-          </Title>
-          </TitleContainer>
-         </Row>
-         <GalleryContainer>
-                  <ImgContainer>
-                  <ImgDiv>
-                  <Img src={image4} alt="test" />
-                    <Text>Daily foot traffic</Text>
-                  <Text1>Understand how your customer interacts with the city,<br /> how they move around and where they shop.</Text1>
-                  </ImgDiv>
-
-                  <ImgDiv1>
-                  <Img src={image5} alt="test" />
-                    <Text>Conversion per hour</Text>
-                  <Text1>Track the engagement of your store by understanding<br /> who enters it and how long they stay.</Text1>
-                  </ImgDiv1>
-
-                  <ImgDiv2>
-                  <Img src={image6} alt="test" />
-                    <Text>Demographics</Text>
-                  <Text1>Understand who your customers are, segmented by age,<br /> gender, spend.</Text1>
-                  </ImgDiv2>
-
-                  </ImgContainer>
-                   </GalleryContainer>
-         </Container>
-         </Section>
-    )
+  @media(max-width: 767px){
+    padding: 18px 10px 65px 0;
   }
-}
-export default MeasureSection;
+  @media(min-width: 768px) and (max-width: 1024px){
+    text-align: center;
+  }
+`
