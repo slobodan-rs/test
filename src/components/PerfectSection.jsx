@@ -54,6 +54,7 @@ const Title = styled.h3`
 
   @media(max-width: 767px){
     font-size: 32px;
+    margin: 0 16px 0 0;
   }
 `
 const Discription = styled.p`

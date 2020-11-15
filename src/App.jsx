@@ -574,7 +574,7 @@ export const App = () => {
             <GuideSection />
             <PartnerSection />
             <PerfectSection />
-            {/* <FooterSection /> */}
+            <FooterSection />
             {/* --------- / LANDING PAGE --------- */}
           </Route>
 

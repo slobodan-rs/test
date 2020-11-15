@@ -78,6 +78,10 @@ const StyledImgDiv = styled.div`
         background-size: 100%;
         margin-top: 50px;
     }
+    @media(min-width: 1280px) and (max-width: 1280px){
+        width: 97%;
+        margin: 0 auto;
+    }
 `
 const Discription = styled.div`
     position: relative;

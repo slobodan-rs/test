@@ -1,171 +1,153 @@
 import React from "react";
 import styled from 'styled-components';
+
+//Images
 import Logo from '../assets/Logo.png';
-import social from '../assets/social.png';
-const Container = styled.div`
-@media only screen and (max-width: 768px) {
-  /* For mobile phones: */
-  position:relative;
+import twitter from '../assets/icons/twitter.svg'
+import instagram from '../assets/icons/instagram.svg'
+
+
+class FooterSection extends React.Component {
+  render() {
+    return (
+      <div>
+        <Footer>
+          <Container>
+            <Block tabletFirs>
+              <img src={Logo} alt="Logo" />
+              <Social>
+                <img src={twitter} alt="Logo" />
+                <img src={instagram} alt="Logo" />
+                <img src={instagram} alt="Logo" />
+                <img src={instagram} alt="Logo" />
+              </Social>
+              <Discription>Let your idea meet your customer through easy to book and flexible pop-up spaces.</Discription>
+            </Block>
+            <Block>
+              <Title>Explore spaces</Title>
+              <Text>Norrmalm</Text>
+              <Text>Vasastan</Text>
+              <Text>Kungsholmen</Text>
+              <Text>Södermalm</Text>
+            </Block>
+            <Block reposition>
+              <Text>Galma Stan</Text>
+              <Text>Bibliotekgatan</Text>
+              <Text>Kungsgatan</Text>
+              <Text>Ostermalm</Text>
+            </Block>
+            <Block>
+              <Title>About</Title>
+              <Text>hello@xnomad.com</Text>
+              <Text>FAQ</Text>
+              <Text>About us</Text>
+              <Text>Contact us</Text>
+            </Block>
+            <Block>
+              <Title>Legal</Title>
+              <Text>Privacy Policy</Text>
+              <Text>Terms of Service</Text>
+            </Block>
+          </Container>
+          <Copyright>Copyright &#169; 2020 xNomad</Copyright>
+        </Footer>
+
+      </div>
+    )
+  }
+}
+export default FooterSection
+
+//Styled Components
+const Footer = styled.footer`
+  width: 100%;
+  height: 100%;
   background-color: #D7D2CB;
-  padding: ${props => props.nopadd ? "10%" : "10%"};
-  display: inline-block;
-  top: 2450px;
-}
-
-position:relative;
-background-color: #D7D2CB;
-padding: ${props => props.nopadd ? "0" : "7%"};
-display: flex;
-top: 300px;
+  padding-bottom: 32px;
 `
-const Image = styled.img`
-width: 10vw;
-`
-const Innercontainer = styled.div`
-@media only screen and (max-width: 768px) {
-  /* For mobile phones: */
+const Container = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin: 65px;
 
-}
+  @media(max-width: 767px){
+    margin: 48px 0;
+    padding: 48px 0 0 0;
+  }
+  @media(min-width: 768px) and (max-width: 870px){
+    margin: 225px 44px 0 44px;
+  }
+`
+const Block = styled.div`
+  margin-top: ${({ reposition }) => reposition ? '110px' : '76px'};
+
+  @media(max-width: 767px){
+    width: 100%;
+    margin: 16px;
+  }
+  @media(min-width: 768px) and (max-width: 870px){
+    width: ${({ tabletFirs }) => tabletFirs ? '100%' : '145px'};
+  }
+  
+`
+const Social = styled.div`
+  margin-top: 35px;
+
+  img {
+    padding-right: 24px;
+  }
 
 `
-const Innercontainer1 = styled.div`
-@media only screen and (max-width: 768px) {
-  /* For mobile phones: */
-  margin-right: 300px;
-  margin-top: 0px;
-}
-max-width: 25%;
-width: 30%;
-padding-right: ${props => props.right ? "0" : "5%"};
-`
-
-const Innercontainer2 = styled.div`
-@media only screen and (max-width: 768px) {
-  /* For mobile phones: */
-margin-right: 100px;
-margin-top: -50px;
-}
-max-width: 25%;
-width: 30%;
-padding-right: ${props => props.right ? "0" : "5%"};
-`
-const Innercontainer3 = styled.div`
-@media only screen and (max-width: 768px) {
-  /* For mobile phones: */
-
-}
-max-width: 25%;
-width: 30%;
-padding-right: ${props => props.right ? "0" : "5%"};
-`
-
-const Innercontainer4 = styled.div`
-@media only screen and (max-width: 768px) {
-  /* For mobile phones: */
-
-}
-max-width: 25%;
-width: 30%;
-padding-right: ${props => props.right ? "0" : "5%"};
-`
-
-const Txt = styled.p`
-@media only screen and (max-width: 768px) {
-  /* For mobile phones: */
-word-wrap: break-word
-font-size: 10px;
-clear: both;
-    display: inline-block;
-    overflow: hidden;
-    white-space: nowrap;
-}
-font-family: sans-serif;
-font-size: 18px;
-font-weight: ${props => props.bold ? "bold" : "none"};
-color: #333333;
-`
-const Txt1 = styled.p`
-@media only screen and (max-width: 768px) {
-  /* For mobile phones: */
-  font-family: sans-serif;
-  font-size: 12px;
+const Discription = styled.div`
+  margin-top: 24px;
+  width: 310px;
+  font-family: Fira Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 150%;
   color: #333333;
-  margin-right: 50px;
-}
-font-family: sans-serif;
-font-size: 16px;
-font-weight: ${props => props.bold ? "bold" : "none"};
-color: #333333;
-margin-top: -35px;
-margin-right: 20px;
-clear: both;
-    display: inline-block;
-    overflow: hidden;
-    white-space: nowrap;
 `
-const Txtcontainer = styled.div`
-@media only screen and (max-width: 768px) {
-  /* For mobile phones: */
+const Title = styled.h6`
+  font-family: Charter;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 120%;
+  color: #333333;
+  margin-bottom: 12px;
+`
+const Text = styled.div`
+  font-family: Fira Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 200%;
+  color: #333333;
+`
+const Copyright = styled.div`
+  width: 100%;
+  margin-top: 193px;
+  text-align: center;
+  font-family: Fira Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 150%;
+  color: #333333;
 
-}
-width: 100%;
-margin-top: 10%;
-text-align: center;
-
+  @media(max-width: 767px){
+    margin-top: 0; 
+  }
+  @media(min-width: 768px) and (max-width: 870px){
+    margin-top: 50px;
+  }
+  @media(min-width: 870px) and (max-width: 1024px){
+    margin-top: 0px;
+  }
 `
 
-export default class Footer extends React.Component {
-    render() {
-        return(
-            <div>
-                <Container>
-                    <Innercontainer>
-                    <Image src={Logo}/>
-                       <br></br>
-                       <br></br>
-                       <Image src={social}/>
-                       <br></br>
-                        <br></br>
-                        <br></br>
-                        <br></br>
-                        <Txt1>Let your idea meet your customer through <br /> easy to book and flexible pop-up spaces.</Txt1>
-                    </Innercontainer>
-                    <Innercontainer1>
-                        <Txt bold>Explore spaces</Txt>
-                        <Txt>Norrmalm</Txt>
-                        <Txt>Vasastan</Txt>
-                        <Txt>Kungshulmen</Txt>
-                        <Txt>Sodermalm</Txt>
-                    </Innercontainer1>
-                    <Innercontainer2>
-                        <br></br>
-                        <br></br>
-                        <Txt>Galma Stan</Txt>
-                        <Txt>Bibliotekgatan</Txt>
-                        <Txt>Kungsgatan</Txt>
-                        <Txt>Ostermalm</Txt>
-                    </Innercontainer2>
-                    <Innercontainer3>
-                        <Txt bold>About</Txt>
-                        <Txt>hello@xnomad.com</Txt>
-                        <Txt>FAQ</Txt>
-                        <Txt>About us</Txt>
-                        <Txt>Contact us</Txt>
-                    </Innercontainer3>
-                    <Innercontainer4>
-                        <Txt bold>Legal</Txt>
-                        <Txt>Privacy Policy</Txt>
-                        <Txt>Terms of Service</Txt>
-                    </Innercontainer4>
 
-                </Container>
-                <Container nopadd>
-                    <Txtcontainer>
-                        <Txt>Copyright © 2020 xNomad</Txt>
-                    </Txtcontainer>
-                </Container>
 
-            </div>
-        )
-    }
-}
