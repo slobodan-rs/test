@@ -275,6 +275,7 @@ margin-left: 20px;
 font-weight: 500;
 font-size: 16px;
 line-height: 20px;
+border: none;
 @media(max-width: 1024px){
         width: 167px;
         height: 52px;
@@ -293,8 +294,9 @@ const RewievCardWrapper = styled.div`
     background-color: #F0EEEA;
     @media(max-width: 767px){
         left: 12px;
-        top: 809px;
-        width: 90%;
+        top: 839px;
+        width: 90%; 
+        padding-bottom: 30px;
     }
     @media (min-width: 768px) and (max-width: 1024px){
       left: 16px;

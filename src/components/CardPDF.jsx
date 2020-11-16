@@ -63,10 +63,11 @@ export default CardPDF
 const CardDiv = styled.div`
     width: 421px;
     height: 723px;
+    
     @media(max-width: 1024px){
-        width: 343px;
+        width: 323px;
         height: 766px;
-        margin-left: auto;
+        margin: auto;
         padding-right: 10px;
     }
 
