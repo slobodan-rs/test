@@ -1,0 +1,1 @@
+{"version":3,"sources":["index.scss"],"names":[],"mappings":"AAAA,EACE,qBAAsB,CACtB,QAAS,CACV,KAMC,aAAc,CACd,eAAgB,CAChB,cAAe","file":"main.af9e22cb.chunk.css","sourcesContent":["* {\n  font-family: \"Charter\";\n  margin: 0;\n}\nbody {\n  // overflow-x: hidden;\n}\n\nspan {\n  color: #6d7679;\n  margin-left: 5px;\n  font-size: 14px;\n}\n"]}
